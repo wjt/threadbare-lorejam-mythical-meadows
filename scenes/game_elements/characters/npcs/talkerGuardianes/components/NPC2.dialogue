@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+~ start
+if veces_hablado == 0:
+	Alma: ¡Huye...! Ah, no importa, ya estás aquí. Nadie escapa de él.
+	Alma: Fuimos un escuadrón entero a cazar a la aberración grande. Éramos rápidos, pero él... él nos absorbió.
+	Alma: No es solo gelatina. Se ha tragado tantas almas que ha robado nuestra velocidad. 
+	Alma: Cuando lo veas subir al cielo o brillar, ¡no te quedes quieto! Caerá como un meteorito y aplastará la tierra.
+	Alma: Sus crías... esos pequeños monstruos... nacen de las almas que no pudo digerir. Ten cuidado con ellos.
+	set veces_hablado += 1
+elif veces_hablado == 1:
+	Alma: Un consejo de alguien que ya murió: no intentes atacarlo cuando va a toda velocidad. 
+	Alma: Es una pared de fuerza bruta. Solo tienes oportunidad cuando se detiene a recuperar el aliento tras estrellarse.
+	Alma: Y si ves a los pequeños... elimínalos rápido o te rodearán.
+	set veces_hablado += 1
+else:
+	Alma: Corre... no dejes que te absorba como a nosotros...
+=> END

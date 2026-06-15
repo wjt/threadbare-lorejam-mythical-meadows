@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+~ start
+if puente_abierto == false:
+	if veces_hablado == 0:
+		Alma Guardián: ¡Alto ahí, Tejedor! No des un paso más.
+		Alma Guardián: Del otro lado del puente de piedra acecha la Pudrición Mayor... el Gran Slime. 
+		Alma Guardián: Tu misión es cruzar este puente y derrotarlo para salvar lo que queda de nuestro mundo. Pero te lo advierto, es una bestia increíblemente fuerte, veloz e implacable.
+		Alma Guardián: Una vez que cruces, el puente se cerrará a tus espaldas y no habrá marcha atrás. 
+		Alma Guardián: ¿Estás completamente seguro de que quieres avanzar?
+		set veces_hablado += 1
+	else:
+		Alma Guardián: Has vuelto. ¿Ya reuniste el valor necesario para cruzar el puente de piedra y enfrentar a la Pudrición Mayor?
+	
+	- Sí, estoy listo para cumplir mi misión.
+		Alma Guardián: Que los hilos del destino te protejan, valiente. Te concedo el paso... ¡Buena suerte!
+		do abrir_puente()
+		set puente_abierto = true
+		=> END
+	- No, aún no estoy preparado.
+		Alma Guardián: Es sabio reconocer los propios límites. Regresa a hablar conmigo cuando estés listo.
+		=> END
+
+else:
+	Alma Guardián: El camino está despejado. ¿Qué esperas? ¡El destino de nuestro tapiz depende de ti!
+	=> END

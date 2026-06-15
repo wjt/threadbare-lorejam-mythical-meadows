@@ -1,0 +1,35 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+@tool
+extends NPC
+
+@export var dialogue: DialogueResource = preload("uid://cc3paugq4mma4")
+@export var muro_a_destruir: StaticBody2D 
+
+var _previous_look_at_side: Enums.LookAtSide = Enums.LookAtSide.UNSPECIFIED
+var veces_hablado: int = 0
+var puente_abierto: bool = false
+
+@onready var interact_area: InteractArea = %InteractArea
+@onready var talk_behavior: Node = %TalkBehavior
+
+func _ready() -> void:
+	super._ready()
+	if Engine.is_editor_hint():
+		return
+		
+	talk_behavior.dialogue = dialogue
+	interact_area.interaction_started.connect(_on_interaction_started)
+	interact_area.interaction_ended.connect(_on_interaction_ended)
+
+func _on_interaction_started(_player: Node2D, from_right: bool) -> void:
+	_previous_look_at_side = look_at_side
+	if look_at_side != Enums.LookAtSide.UNSPECIFIED:
+		look_at_side = Enums.LookAtSide.RIGHT if from_right else Enums.LookAtSide.LEFT
+
+func _on_interaction_ended() -> void:
+	look_at_side = _previous_look_at_side
+
+func abrir_puente() -> void:
+	if is_instance_valid(muro_a_destruir):
+		muro_a_destruir.queue_free()

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cm8lx75jvxong"
+path="res://.godot/imported/NPC2.dialogue-63d71d282964a4d474b18866fe38d729.tres"
+
+[deps]
+
+source_file="res://scenes/game_elements/characters/npcs/talker/components/NPC2.dialogue"
+dest_files=["res://.godot/imported/NPC2.dialogue-63d71d282964a4d474b18866fe38d729.tres"]
+
+[params]
+
+defaults=true

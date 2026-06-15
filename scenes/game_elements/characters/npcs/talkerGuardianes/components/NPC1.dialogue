@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+~ start
+if veces_hablado == 0:
+	Alma: ... ¿Un paso? Hace tanto tiempo que no escuchaba pasos que no fueran arrastres viscosos...
+	Alma: Mírate. Llevas el Gancho del Tejedor. Pensé que todos habían sido destruidos.
+	Alma: Este lugar solía ser un tapiz hermoso, lleno de vida y color. Pero la "Pudrición" llegó. 
+	Alma: Esa cosa gelatinosa se lo comió todo. Deshilachó nuestra historia y nos dejó así... como ecos vacíos.
+	Alma: Si tienes esa aguja contigo, quizás aún quede esperanza de remendar este mundo roto. Sigue adelante, Tejedor.
+	set veces_hablado += 1
+elif veces_hablado == 1:
+	Alma: Antes de la Pudrición, los Tejedores unían las islas con hilos de luz. 
+	Alma: El Gran Slime no solo destruyó los puentes, consumió a los Tejedores para robar su movilidad.
+	Alma: Tú eres el último. El único que puede devolverle la forma a este mundo.
+	set veces_hablado += 1
+else:
+	Alma: Sigue adelante, Tejedor. El tejido se deshace con cada segundo que pierdes...
+=> END

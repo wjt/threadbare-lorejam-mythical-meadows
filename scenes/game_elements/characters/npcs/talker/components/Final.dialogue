@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+
+~ start
+
+Alma Guardián: Lo lograste... El temblor ha cesado. El Gran Slime ya no existe.
+Alma 1: El Tapiz de nuestro mundo ya no será devorado. Míranos, nuestros hilos finalmente están en paz.
+Alma 2: No fuimos lo suficientemente rápidos en vida, pero gracias a ti, nuestra muerte no fue en vano.
+Alma 3: Eres el último Tejedor, pero mientras lleves esa aguja, nuestra historia nunca se deshilachará por completo.
+Alma Guardián: Es hora de que descansemos. Sigue adelante, héroe. El destino de los próximos reinos está en tus manos.
+Alma Guardián: Gracias... y adiós.
+
+do desaparecer_npcs()
+
+=> END

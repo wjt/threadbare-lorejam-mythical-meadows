@@ -14,7 +14,7 @@ data = {
 [sub_resource type="ImageTexture" id="ImageTexture_s6fxl"]
 image = SubResource("Image_w0gko")
 
-[node name="ErrorsPanel" type="HBoxContainer"]
+[node name="ErrorsPanel" type="HBoxContainer" unique_id=1511132399]
 visible = false
 offset_right = 1024.0
 offset_bottom = 600.0
@@ -23,7 +23,7 @@ grow_vertical = 2
 script = ExtResource("1_nfm3c")
 metadata/_edit_layout_mode = 1
 
-[node name="ErrorButton" type="Button" parent="."]
+[node name="ErrorButton" type="Button" parent="." unique_id=594287017]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -34,19 +34,19 @@ flat = true
 alignment = 0
 text_overrun_behavior = 4
 
-[node name="Spacer" type="Control" parent="."]
+[node name="Spacer" type="Control" parent="." unique_id=1799193978]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 
-[node name="PreviousButton" type="Button" parent="."]
+[node name="PreviousButton" type="Button" parent="." unique_id=1397761771]
 layout_mode = 2
 icon = SubResource("ImageTexture_s6fxl")
 flat = true
 
-[node name="CountLabel" type="Label" parent="."]
+[node name="CountLabel" type="Label" parent="." unique_id=97262094]
 layout_mode = 2
 
-[node name="NextButton" type="Button" parent="."]
+[node name="NextButton" type="Button" parent="." unique_id=909043087]
 layout_mode = 2
 icon = SubResource("ImageTexture_s6fxl")
 flat = true

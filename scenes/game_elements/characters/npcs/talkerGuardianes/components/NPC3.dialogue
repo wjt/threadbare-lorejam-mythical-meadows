@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+~ start
+if veces_hablado == 0:
+	Alma: Has llegado más lejos que ninguno. Escucho el temblor de esa bestia desde aquí.
+	Alma: Tu gancho no es un arma común. Es una herramienta de conexión. Úsala para mover el mundo a tu favor.
+	Alma: Si logras destruir el núcleo de esa abominación, quizás nuestras almas puedan por fin descansar.
+	Alma: Eres el último de nosotros. El último hilo de esperanza. 
+	Alma: Entra ahí. Y no dejes que te corte el hilo.
+	set veces_hablado += 1
+elif veces_hablado == 1:
+	Alma: Escucha bien: el Gran Slime es arrogante. 
+	Alma: Le gusta burlarse de sus víctimas, jugar con su mente creando ilusiones. 
+	Alma: Esa arrogancia es su debilidad. Aprovecha esos segundos en los que cree que ya ganó.
+	set veces_hablado += 1
+else:
+	Alma: Entra ya. Eres el último hilo... no dejes que se rompa.
+=> END

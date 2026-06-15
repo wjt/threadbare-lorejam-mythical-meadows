@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://iwc360oqr48q"]
+
+[ext_resource type="Script" uid="uid://dinshx223poy2" path="res://scenes/game_elements/characters/npcs/talkerGuardianes/components/talker.gd" id="1_d2bh4"]
+[ext_resource type="Texture2D" uid="uid://b7oyxim0s2i03" path="res://scenes/quests/lore_quests/quest_004/Npc/Ghost_Halcon_spritesheet.png" id="2_d2bh4"]
+[ext_resource type="Script" uid="uid://du8wfijr35r35" path="res://scenes/game_elements/props/interact_area/interact_area.gd" id="3_m7iqo"]
+[ext_resource type="Script" uid="uid://edcifob4jc4s" path="res://scenes/game_logic/talk_behavior.gd" id="4_3hfvt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7g4nd"]
+atlas = ExtResource("2_d2bh4")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7iqo"]
+atlas = ExtResource("2_d2bh4")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hfvt"]
+atlas = ExtResource("2_d2bh4")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yq2y"]
+atlas = ExtResource("2_d2bh4")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s8aib"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7g4nd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7iqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hfvt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yq2y")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
+radius = 49.000004
+height = 104.00001
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3eksq"]
+size = Vector2(52, 50)
+
+[node name="Talker" type="CharacterBody2D" unique_id=1086241914]
+collision_layer = 2
+motion_mode = 1
+script = ExtResource("1_d2bh4")
+sprite_frames = null
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2054175372]
+unique_name_in_owner = true
+position = Vector2(0, -30)
+sprite_frames = SubResource("SpriteFrames_s8aib")
+animation = &"idle"
+autoplay = "idle"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1164658247]
+position = Vector2(3, -19)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_3vyb7")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1202156030]
+unique_name_in_owner = true
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("3_m7iqo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=792948505]
+position = Vector2(0, -29)
+shape = SubResource("RectangleShape2D_3eksq")
+debug_color = Color(0.600391, 0.54335, 0, 0.42)
+
+[node name="TalkBehavior" type="Node" parent="." unique_id=131616442 node_paths=PackedStringArray("interact_area")]
+unique_name_in_owner = true
+script = ExtResource("4_3hfvt")
+interact_area = NodePath("../InteractArea")
+metadata/_custom_type_script = "uid://edcifob4jc4s"

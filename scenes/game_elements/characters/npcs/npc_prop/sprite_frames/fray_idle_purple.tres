@@ -1,51 +1,37 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://cpm5o35ede3qs"]
 
-[ext_resource type="Texture2D" uid="uid://caiam8drw20rr" path="res://assets/third_party/tiny-swords/Factions/Knights/Troops/Pawn/Purple/Pawn_Purple.png" id="1_ikcmy"]
+[ext_resource type="Texture2D" uid="uid://dhn1gdw73recs" path="res://scenes/quests/lore_quests/quest_004/Npc/Ghost_Caballo_spritesheet.png" id="2_xpyxp"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c5afb"]
-atlas = ExtResource("1_ikcmy")
-region = Rect2(0, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3eoe"]
+atlas = ExtResource("2_xpyxp")
+region = Rect2(0, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8qbsk"]
-atlas = ExtResource("1_ikcmy")
-region = Rect2(192, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpyxp"]
+atlas = ExtResource("2_xpyxp")
+region = Rect2(128, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h3aan"]
-atlas = ExtResource("1_ikcmy")
-region = Rect2(384, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbqye"]
+atlas = ExtResource("2_xpyxp")
+region = Rect2(0, 128, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1kcob"]
-atlas = ExtResource("1_ikcmy")
-region = Rect2(576, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iq4va"]
-atlas = ExtResource("1_ikcmy")
-region = Rect2(768, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v3p35"]
-atlas = ExtResource("1_ikcmy")
-region = Rect2(960, 0, 192, 192)
+[sub_resource type="AtlasTexture" id="AtlasTexture_i21kr"]
+atlas = ExtResource("2_xpyxp")
+region = Rect2(128, 128, 128, 128)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c5afb")
+"texture": SubResource("AtlasTexture_r3eoe")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8qbsk")
+"texture": SubResource("AtlasTexture_xpyxp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h3aan")
+"texture": SubResource("AtlasTexture_pbqye")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1kcob")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iq4va")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v3p35")
+"texture": SubResource("AtlasTexture_i21kr")
 }],
 "loop": true,
 "name": &"idle",

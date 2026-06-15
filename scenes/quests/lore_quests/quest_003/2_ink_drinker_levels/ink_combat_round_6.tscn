@@ -251,4 +251,4 @@ editor_draw_limits = true
 position = Vector2(800, 362)
 
 [connection signal="goal_reached" from="FillGameLogic" to="BackgroundMusic/ClipSwitcher" method="switch"]
-[connection signal="goal_reached" from="FillGameLogic" to="FillGameLogic/LevelCompletedAnimation" method="play" binds= ["goal_completed"]]
+[connection signal="goal_reached" from="FillGameLogic" to="FillGameLogic/LevelCompletedAnimation" method="play" binds=["goal_completed"]]

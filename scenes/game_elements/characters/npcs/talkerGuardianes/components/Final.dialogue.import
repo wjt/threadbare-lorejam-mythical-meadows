@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cvxpn1oe5hhms"
+path="res://.godot/imported/Final.dialogue-c014707b4141661914e6385e728d1def.tres"
+
+[deps]
+
+source_file="res://scenes/game_elements/characters/npcs/talkerGuardianes/components/Final.dialogue"
+dest_files=["res://.godot/imported/Final.dialogue-c014707b4141661914e6385e728d1def.tres"]
+
+[params]
+
+defaults=true

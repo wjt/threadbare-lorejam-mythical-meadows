@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dguy2hjakwvdm"
+path="res://.godot/imported/NPC1.dialogue-42adaccb0c2e22c07314774cb76ccf7b.tres"
+
+[deps]
+
+source_file="res://scenes/game_elements/characters/npcs/talkerGuardianes/components/NPC1.dialogue"
+dest_files=["res://.godot/imported/NPC1.dialogue-42adaccb0c2e22c07314774cb76ccf7b.tres"]
+
+[params]
+
+defaults=true
