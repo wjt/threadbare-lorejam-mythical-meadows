@@ -1,7 +1,5 @@
 [gd_scene format=4 uid="uid://b8dkoph4ux38e"]
 
-[ext_resource type="PackedScene" uid="uid://cintrobook0q4a" path="res://scenes/quests/lore_quests/quest_004/01-El_umbral_del_sueño/intro_storybook.tscn" id="80_intro"]
-[ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="98_hud"]
 [ext_resource type="Script" uid="uid://c8405c212rbn6" path="res://scenes/game_elements/props/background_music/components/background_music.gd" id="1_ag7vv"]
 [ext_resource type="TileSet" uid="uid://oynx002hv8tl" path="res://tiles/water.tres" id="1_elkht"]
 [ext_resource type="TileSet" uid="uid://bjx3gvah0ycl1" path="res://tiles/foam_2.tres" id="2_brig6"]
@@ -27,6 +25,8 @@
 [ext_resource type="AudioStream" uid="uid://xuqj6b5qqs3w" path="res://assets/third_party/sounds/ambient/459405__pfannkuchn__small-river-1-fast-semi-close.ogg" id="23_s6ect"]
 [ext_resource type="AudioStream" uid="uid://vgr28w2aalr1" path="res://assets/first_party/sounds/ambient/ForestAmbient.ogg" id="24_s6ect"]
 [ext_resource type="Texture2D" uid="uid://dafw2pfap83ln" path="res://scenes/quests/lore_quests/quest_004/assets/Rubber duck.png" id="25_ajjjo"]
+[ext_resource type="PackedScene" path="res://scenes/quests/lore_quests/quest_004/01-El_umbral_del_sueño/intro_storybook.tscn" id="80_intro"]
+[ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="98_hud"]
 [ext_resource type="Texture2D" uid="uid://b5ooaiyxdrp6a" path="res://scenes/game_elements/components/light_texture_256x256.tres" id="200_lighttex"]
 
 [sub_resource type="CanvasItemMaterial" id="CIM_mystic_add"]
@@ -94,9 +94,11 @@ animations = [{
 
 [node name="MythicalMeadows" type="Node2D" unique_id=78806229]
 
-[node name="IntroStorybook" parent="." unique_id=1818092593 instance=ExtResource("80_intro")]
+[node name="IntroStorybook" parent="." unique_id=2065889873 instance=ExtResource("80_intro")]
+titles = []
+pages = []
 
-[node name="HUD" parent="." unique_id=928147622 instance=ExtResource("98_hud")]
+[node name="HUD" parent="." unique_id=965472728 instance=ExtResource("98_hud")]
 
 [node name="BackgroundMusic" type="Node" parent="." unique_id=1126404391]
 script = ExtResource("1_ag7vv")

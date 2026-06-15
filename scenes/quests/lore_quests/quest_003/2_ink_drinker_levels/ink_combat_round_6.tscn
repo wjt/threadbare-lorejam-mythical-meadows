@@ -250,5 +250,5 @@ editor_draw_limits = true
 [node name="Mothsache" parent="." unique_id=1695758163 instance=ExtResource("30_4co4a")]
 position = Vector2(800, 362)
 
-[connection signal="goal_reached" from="FillGameLogic" to="BackgroundMusic/ClipSwitcher" method="switch"]
 [connection signal="goal_reached" from="FillGameLogic" to="FillGameLogic/LevelCompletedAnimation" method="play" binds=["goal_completed"]]
+[connection signal="goal_reached" from="FillGameLogic" to="BackgroundMusic/ClipSwitcher" method="switch"]

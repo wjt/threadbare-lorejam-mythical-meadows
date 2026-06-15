@@ -22,6 +22,7 @@
 [ext_resource type="SpriteFrames" uid="uid://dtoylirwywk0j" path="res://scenes/game_elements/characters/components/sprite_frames/storyweaver_blue.tres" id="26_6nsi0"]
 [ext_resource type="Script" uid="uid://csev4hv57utxv" path="res://scenes/game_logic/walk_behaviors/character_speeds.gd" id="29_fbyeg"]
 [ext_resource type="Script" uid="uid://d1ly6uhh500xu" path="res://scenes/quests/lore_quests/quest_002/1_void_runner/components/tile_map_cover.gd" id="36_tmc"]
+[ext_resource type="PackedScene" uid="uid://tdvdp0jvbt2s" path="res://scenes/quests/lore_quests/quest_004/menhir/hum_hint.tscn" id="97_humhint"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="98_hud"]
 [ext_resource type="PackedScene" uid="uid://bgrantq0abil1" path="res://scenes/quests/lore_quests/quest_004/menhir/grant_quest_abilities.tscn" id="99_gqa"]
 [ext_resource type="PackedScene" uid="uid://crqjcicx0vdu" path="res://scenes/game_elements/props/decoration/bush/bush.tscn" id="200_bush"]
@@ -172,6 +173,8 @@ size = Vector2(106.25, 103)
 [node name="ValleNocturno" type="Node2D" unique_id=1286672129]
 
 [node name="GrantQuestAbilities" parent="." unique_id=270318386 instance=ExtResource("99_gqa")]
+
+[node name="HumHint" parent="." unique_id=826733647 instance=ExtResource("97_humhint")]
 
 [node name="HUD" parent="." unique_id=444572486 instance=ExtResource("98_hud")]
 
@@ -883,7 +886,6 @@ speeds = SubResource("Speeds_chase_fast")
 curve = SubResource("Curve2D_voidchase")
 
 [node name="VoidNavRegion" type="NavigationRegion2D" parent="." unique_id=820000004]
-visible = false
 position = Vector2(320, -119)
 navigation_polygon = SubResource("NavPoly_void")
 
