@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://2s8tpjiyg06c"
+path="res://.godot/imported/dialogoScena3.dialogue-cb0a3b8393184e42d227b94f1fc81d77.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Capitulo3/dialogoScena3.dialogue"
+dest_files=["res://.godot/imported/dialogoScena3.dialogue-cb0a3b8393184e42d227b94f1fc81d77.tres"]
+
+[params]
+
+defaults=true

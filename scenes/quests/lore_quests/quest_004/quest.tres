@@ -4,8 +4,9 @@
 
 [resource]
 script = ExtResource("1_rp1q0")
-title = "Mythical Meadows"
-first_scene = "uid://bsptn2yxyv22"
+title = "The Meadows of the Forgotten Weave"
+description = "The Prairies of the Forgotten Weave were once a sacred sanctuary where stories flowed like luminous threads before being woven into the reality of the Great Tapestry, but the tragic rupture of the Master Knot has left this realm at the mercy of the void and the relentless corrosion of the Unraveled. Amid these ruined meadows, you must embark on a perilous journey to restore the flow of stories, crossing chasms and evading the guardians who now patrol the area. This journey requires channeling the energy of corrupted memories to forge a path and venture deeper in a desperate attempt to stabilize the loom before the inevitable oblivion devours everything."
+first_scene = "uid://c4m8ho2m3jchm"
 threads_to_collect = 1
 is_lore_quest = true
 metadata/_custom_type_script = "uid://dts1hwdy3phin"

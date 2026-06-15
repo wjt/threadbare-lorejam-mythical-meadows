@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://blpmnaut13ve"
+path="res://.godot/imported/dialogCap4.dialogue-be8c095afff0e9cc35dfa822ac8af17a.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Capitulo4/dialogCap4.dialogue"
+dest_files=["res://.godot/imported/dialogCap4.dialogue-be8c095afff0e9cc35dfa822ac8af17a.tres"]
+
+[params]
+
+defaults=true

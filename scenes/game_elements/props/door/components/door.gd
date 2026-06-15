@@ -33,3 +33,7 @@ func update_opened_state() -> void:
 
 	%ColliderWhenClosed.set_collision_layer_value(Enums.CollisionLayers.WALLS, not opened)
 	%ColliderWhenClosed.set_collision_mask_value(Enums.CollisionLayers.PLAYERS, not opened)
+
+
+func _on_fill_game_logic_goal_reached() -> void:
+	pass # Replace with function body.

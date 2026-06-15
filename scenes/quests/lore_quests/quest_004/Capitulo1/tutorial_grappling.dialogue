@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+~ start
+Tejedor: Esta es la primera fase para conseguir liberar las praderas de las energias del vacío!
+Tejedor: Las agujas pueden ayudarte a atravezar el vacío infinito y llegar a una plataforma para sobrevivir.
+Tejedor: Usa tu estrategia para tomar las rutas addecuadas!
+Tejedor: Si recolectas todas las monedas tendrás una gran recompensa.
+Tejedor: Estás listo para tu viaje!
+=> END
+
+~ interact
+Tejedor: Estamos cada vez mas cerca de corregir la fuga del vacío.
+Tejedor: El siguiente obstáculo puede ser peor que el anterior.
+Tejedor: Tienes que prepararte para enfrentar lo desconocido, mucha suerte.
+if all_buttons_collected():
+	Arun: encontraste todos los botones, sigamos!
+else:
+	Arun: No encontraste todos los botones, pero ahora lo importante es sobrevivir!
+Arun: Recoge el hilo y sigamos en las Praderas míticas.
+=> END
+
+~ thread_collected
+Tejedor: Estamos cada vez mas cerca de corregir la fuga del vacío.
+Tejedor: El siguiente obstáculo puede ser peor que el anterior.
+Tejedor: Tienes que prepararte para enfrentar lo desconocido, mucha suerte.
+=> END

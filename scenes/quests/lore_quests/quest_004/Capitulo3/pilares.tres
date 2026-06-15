@@ -1,0 +1,52 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://c2i571cnau5nf"]
+
+[ext_resource type="Texture2D" uid="uid://bjckrrek1pcya" path="res://scenes/quests/lore_quests/quest_004/components/tiles/elementos_pradera.png" id="1_posu8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffxw1"]
+atlas = ExtResource("1_posu8")
+region = Rect2(576, 68, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyr7l"]
+atlas = ExtResource("1_posu8")
+region = Rect2(512, 68, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gddcq"]
+atlas = ExtResource("1_posu8")
+region = Rect2(192, 318, 64, 74)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffxw1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffxw1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xyr7l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gddcq")
+}],
+"loop": true,
+"name": &"filling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffxw1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffxw1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xyr7l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gddcq")
+}],
+"loop": true,
+"name": &"shater",
+"speed": 5.0
+}]

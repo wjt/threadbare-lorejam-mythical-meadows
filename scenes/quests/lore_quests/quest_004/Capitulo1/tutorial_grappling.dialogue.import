@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dk8nh3n6xpuxu"
+path="res://.godot/imported/tutorial_grappling.dialogue-4e447c11aecf6b4659d7717ab46db3ca.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Capitulo1/tutorial_grappling.dialogue"
+dest_files=["res://.godot/imported/tutorial_grappling.dialogue-4e447c11aecf6b4659d7717ab46db3ca.tres"]
+
+[params]
+
+defaults=true

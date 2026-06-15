@@ -4,3 +4,7 @@ extends Node2D
 
 @onready var repel_powerup: CharacterBody2D = %RepelPowerup
 @onready var fill_game_logic: FillGameLogic = %FillGameLogic
+
+
+func _on_cinematic_cinematic_finished() -> void:
+	pass # Replace with function body.
