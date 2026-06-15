@@ -1,0 +1,53 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dx2ehu3qh467b"]
+
+[ext_resource type="Texture2D" uid="uid://k01b3hkme8qq" path="res://scenes/quests/lore_quests/quest_004/Components/Resources/Tree_Meadowns_Green.png" id="1_kd0kr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0h3m"]
+atlas = ExtResource("1_kd0kr")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yu2kv"]
+atlas = ExtResource("1_kd0kr")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7f54"]
+atlas = ExtResource("1_kd0kr")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7f27"]
+atlas = ExtResource("1_kd0kr")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60tvo"]
+atlas = ExtResource("1_kd0kr")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4il8"]
+atlas = ExtResource("1_kd0kr")
+region = Rect2(960, 0, 192, 192)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0h3m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yu2kv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7f54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7f27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60tvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4il8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]

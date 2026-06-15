@@ -9,7 +9,7 @@ albedo_texture = ExtResource("1_836jx")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
-[node name="3DPrototypeCube" type="CSGMesh3D"]
+[node name="3DPrototypeCube" type="CSGMesh3D" unique_id=1778926261]
 use_collision = true
 mesh = SubResource("BoxMesh_d24c3")
 material = SubResource("StandardMaterial3D_aox6v")

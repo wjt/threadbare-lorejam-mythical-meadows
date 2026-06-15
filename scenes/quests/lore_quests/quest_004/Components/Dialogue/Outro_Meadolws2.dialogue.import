@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://djxi5u7rhrgna"
+path="res://.godot/imported/Outro_Meadolws2.dialogue-d166dcf6cd0e75034a2829556e8b691e.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Components/Dialogue/Outro_Meadolws2.dialogue"
+dest_files=["res://.godot/imported/Outro_Meadolws2.dialogue-d166dcf6cd0e75034a2829556e8b691e.tres"]
+
+[params]
+
+defaults=true

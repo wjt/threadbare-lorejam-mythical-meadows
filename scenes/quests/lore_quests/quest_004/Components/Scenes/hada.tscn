@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://di85g10hr65a5"]
+
+[ext_resource type="Texture2D" uid="uid://kqexd3dki2wk" path="res://scenes/quests/lore_quests/quest_004/Components/Resources/Hada.png" id="1_2urbk"]
+[ext_resource type="Script" uid="uid://dpxs4qgr53m4v" path="res://scenes/quests/lore_quests/quest_004/Components/scripts/hada.gd" id="1_svy83"]
+[ext_resource type="Texture2D" uid="uid://dg028abnavdmg" path="res://scenes/quests/lore_quests/quest_004/Components/Resources/Brillo.png" id="2_iov2a"]
+[ext_resource type="Shader" uid="uid://cpp42wajny4d7" path="res://scenes/quests/lore_quests/quest_004/Components/shader/hada.gdshader" id="3_svy83"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5tsjo"]
+shader = ExtResource("3_svy83")
+shader_parameter/aura_color = Color(0.1882353, 0.57254905, 0.5882353, 0.46666667)
+shader_parameter/core_color = Color(0.9019608, 0.69803923, 1, 0.42745098)
+shader_parameter/pulse_speed = 2.0
+shader_parameter/rim_intensity = 1.0710000508725
+shader_parameter/particle_amt = 1.0
+shader_parameter/aura_radius = 0.35
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iov2a"]
+atlas = ExtResource("1_2urbk")
+region = Rect2(0, 0, 22, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tsjo"]
+atlas = ExtResource("1_2urbk")
+region = Rect2(22, 0, 22, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svy83"]
+atlas = ExtResource("1_2urbk")
+region = Rect2(44, 0, 22, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4e4hx"]
+atlas = ExtResource("1_2urbk")
+region = Rect2(66, 0, 22, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fqe5f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iov2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tsjo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svy83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4e4hx")
+}],
+"loop": true,
+"name": &"Hada",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2urbk"]
+radius = 32.06244
+
+[sub_resource type="Curve" id="Curve_svy83"]
+_data = [Vector2(0.08294931, 0.9731544), 0.0, 0.0, 0, 0, Vector2(0.96313363, 0.18568242), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_4e4hx"]
+curve = SubResource("Curve_svy83")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fqe5f"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(3, 1, 1)
+emission_shape = 3
+emission_box_extents = Vector3(3, 1, 1)
+gravity = Vector3(0, 98.8, 0)
+scale_min = 3.0
+scale_max = 3.0
+color = Color(0.025772477, 0.99999994, 0.9975012, 1)
+alpha_curve = SubResource("CurveTexture_4e4hx")
+
+[node name="Hada" type="CharacterBody2D" unique_id=534813662]
+scale = Vector2(2, 2)
+script = ExtResource("1_svy83")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1701384323]
+material = SubResource("ShaderMaterial_5tsjo")
+texture = ExtResource("2_iov2a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1012855937]
+sprite_frames = SubResource("SpriteFrames_fqe5f")
+animation = &"Hada"
+frame_progress = 0.5581918
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2006888027]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1771112569]
+shape = SubResource("CircleShape2D_2urbk")
+debug_color = Color(0, 0.5999527, 0.7022317, 0.41960785)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2012556273]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=558599233]
+amount = 10
+lifetime = 1.5999999999999999
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_fqe5f")

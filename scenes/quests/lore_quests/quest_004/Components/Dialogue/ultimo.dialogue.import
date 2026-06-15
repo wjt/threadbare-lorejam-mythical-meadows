@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bckvdrh66t0aq"
+path="res://.godot/imported/ultimo.dialogue-14873fb6bbef3b0d2c5d66eb19109b65.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Components/Dialogue/ultimo.dialogue"
+dest_files=["res://.godot/imported/ultimo.dialogue-14873fb6bbef3b0d2c5d66eb19109b65.tres"]
+
+[params]
+
+defaults=true

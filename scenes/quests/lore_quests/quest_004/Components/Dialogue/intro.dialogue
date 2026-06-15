@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+~ start
+do animation_player.play(&"walk_on")
+do animation_player.animation_finished
+...
+Qué extraño. Este camino no estaba aquí ayer.
+los arboles tienen un color que no reconozco. Como si absorbieran la luz en lugar de reflejarla.
+El aire huele diferente aquí. A tierra mojada... y a algo más. Algo antiguo.
+Las flores a su paso se vuelven cristal. Hermosas. Y muertas.
+do animation_player.play(&"walk_off")
+Sea lo que sea... viene de algún lugar.
+Y tengo que averiguarlo.
+=> END
+
+

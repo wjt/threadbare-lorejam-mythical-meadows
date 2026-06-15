@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d06og6bkp6is5"
+path="res://.godot/imported/hada.dialogue-42f47e25bc4cea68591339dc59b19b3b.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Components/Dialogue/hada.dialogue"
+dest_files=["res://.godot/imported/hada.dialogue-42f47e25bc4cea68591339dc59b19b3b.tres"]
+
+[params]
+
+defaults=true

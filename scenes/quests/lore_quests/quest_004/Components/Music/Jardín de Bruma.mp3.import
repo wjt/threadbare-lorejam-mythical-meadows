@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://k66i7qs2a7c8"
+path="res://.godot/imported/Jardín de Bruma.mp3-1746babf2ce78343350d224410fe19dd.mp3str"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Components/Music/Jardín de Bruma.mp3"
+dest_files=["res://.godot/imported/Jardín de Bruma.mp3-1746babf2ce78343350d224410fe19dd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

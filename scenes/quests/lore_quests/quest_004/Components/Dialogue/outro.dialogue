@@ -1,0 +1,36 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+
+~ start
+do animation_player.play(&"Walk_on")
+do animation_player.animation_finished
+
+...
+¿Qué ha sucedido?
+
+Hada: Lo siento... solo puede volver una persona a la vez.
+do animation_player.play(&"Change")
+Hada: Y para hacerlo, necesito adoptar tu apariencia.
+
+¿Entonces... ahora soy un hada?
+
+Hada: Así es.
+
+Hada: Si deseas abandonar este lugar, tendrás que encontrar a alguien que tome una apariencia diferente a la tuya.
+do animation_player.play(&"walk_off")
+
+Hada: Buena suerte encontrando a otro aventurero.
+Heyyyy...
+
+Entonces... no tengo otra opción.
+
+Tendré que esperar a que alguien más llegue.
+
+...
+
+Solo queda esperar.
+
+...
+
+=> END
+

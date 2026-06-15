@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c01hqmxt3bewy"
+path="res://.godot/imported/escena2.dialogue-8ea0d99aee98e062afe333ea8f48329d.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Components/Dialogue/escena2.dialogue"
+dest_files=["res://.godot/imported/escena2.dialogue-8ea0d99aee98e062afe333ea8f48329d.tres"]
+
+[params]
+
+defaults=true
