@@ -40,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://btwliap86meb7" path="res://scenes/quests/lore_quests/quest_004/Enemigos_Mythical_Luna/enemigo_ia_v_1_luna.tscn" id="31_bah33"]
 [ext_resource type="PackedScene" uid="uid://evb46lm6ssu2" path="res://scenes/game_elements/props/hookable_pin/hookable_pin.tscn" id="32_ncfae"]
 [ext_resource type="PackedScene" uid="uid://dohb701lxbe5s" path="res://scenes/game_elements/props/hookable_needle/hookable_needle.tscn" id="33_bah33"]
+[ext_resource type="PackedScene" uid="uid://bxwixdkg18bqf" path="res://scenes/quests/lore_quests/quest_004/Otros/SimpleNPC.tscn" id="39_cgoyd"]
 [ext_resource type="PackedScene" uid="uid://cdd1h1y3cswkl" path="res://scenes/quests/lore_quests/quest_004/Otros/Roza_azul_v1.tscn" id="41_hyumb"]
 [ext_resource type="PackedScene" uid="uid://d1iqxl3uqo2vs" path="res://scenes/quests/lore_quests/quest_004/vegetación/Flores.tscn" id="42_um857"]
 [ext_resource type="PackedScene" uid="uid://rvtd1wlkfsy2" path="res://scenes/quests/lore_quests/quest_004/vegetación/Grass.tscn" id="43_um857"]
@@ -409,6 +410,14 @@ position = Vector2(3033, -170)
 
 [node name="EnemigoIA-PRUEBA2" parent="Enemigos" unique_id=352451311 instance=ExtResource("29_a018v")]
 position = Vector2(4821, 213)
+
+[node name="SimpleNpc" parent="Enemigos" unique_id=124183913 instance=ExtResource("39_cgoyd")]
+position = Vector2(768, 193)
+npc_name = "El Sabio de las Praderas"
+dialogue_text = "Ah, viajero...
+El sendero que tienes delante conduce al Piano Primordial.
+Ve con cuidado.
+Algo extraño se agita en sus alrededores."
 
 [node name="HookablePin" parent="." unique_id=2071223292 instance=ExtResource("32_ncfae")]
 position = Vector2(5442, 291)

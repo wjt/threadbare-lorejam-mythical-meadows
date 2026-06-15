@@ -44,9 +44,15 @@
 [ext_resource type="PackedScene" uid="uid://rvtd1wlkfsy2" path="res://scenes/quests/lore_quests/quest_004/vegetación/Grass.tscn" id="45_qdj5i"]
 [ext_resource type="PackedScene" uid="uid://d1iqxl3uqo2vs" path="res://scenes/quests/lore_quests/quest_004/vegetación/Flores.tscn" id="46_2bsw8"]
 [ext_resource type="PackedScene" uid="uid://nivit6we14mn" path="res://scenes/quests/lore_quests/quest_004/arboles/Arbol_Rojo_v1.tscn" id="47_072pf"]
+[ext_resource type="PackedScene" uid="uid://bqkui35x5ly0" path="res://scenes/game_elements/props/decoration/crops/tomato.tscn" id="48_epvqn"]
 [ext_resource type="PackedScene" uid="uid://dvgcmvdlh73ef" path="res://scenes/quests/lore_quests/quest_004/Estructuras_001/CapiHouse.tscn" id="48_qmlxw"]
 [ext_resource type="PackedScene" uid="uid://bpmxth8r1wk8n" path="res://scenes/quests/lore_quests/quest_004/arboles/Arbol_Amarillo_v1.tscn" id="49_arv8p"]
-[ext_resource type="PackedScene" uid="uid://iej0rltgfnha" path="res://scenes/quests/lore_quests/quest_004/ChangeLevelZone.tscn" id="56_aofxd"]
+[ext_resource type="PackedScene" uid="uid://bbsc3wssndtfe" path="res://scenes/game_elements/props/decoration/hiding_mushroom/hiding_mushroom.tscn" id="49_yisyi"]
+[ext_resource type="PackedScene" uid="uid://cfvr32bp2achm" path="res://scenes/game_elements/props/decoration/rock/fabric_rock.tscn" id="50_1n16h"]
+[ext_resource type="PackedScene" uid="uid://v3usqiwy5wpr" path="res://scenes/game_elements/props/decoration/rock/rock.tscn" id="51_gpgac"]
+[ext_resource type="PackedScene" uid="uid://c78fj5em5tpm5" path="res://scenes/game_elements/props/decoration/crops/carrot.tscn" id="52_yy585"]
+[ext_resource type="Texture2D" uid="uid://babamhdsam5k2" path="res://scenes/game_elements/props/buildings/tower/components/Tower.png" id="53_rlp2v"]
+[ext_resource type="PackedScene" path="res://scenes/quests/lore_quests/quest_004/ChangeLevelZone.tscn" id="56_aofxd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1ewn"]
 texture = ExtResource("3_ho7cy")
@@ -1265,6 +1271,18 @@ position = Vector2(2014, -2567)
 [node name="SimpleNpc" parent="." unique_id=124183913 instance=ExtResource("44_bgq1t")]
 z_index = -1
 position = Vector2(3138, 55)
+npc_name = "El Sabio de las Praderas"
+dialogue_text = "¡Viajero!
+Gracias al destino que has regresado.
+Las Praderas Míticas están siendo atacadas.
+Las criaturas del Vacío avanzan sin descanso.
+Los habitantes han tenido que refugiarse.
+Y los líderes de los clanes corren peligro.
+Debes ir al castillo cuanto antes.
+Si los líderes caen...
+La esperanza de estas tierras caerá con ellos.
+¡Date prisa!
+"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="SimpleNpc" unique_id=1965569048]
 
@@ -2129,3 +2147,68 @@ position = Vector2(-623, 676)
 [node name="ChangeLevelZone" parent="." unique_id=1100916874 instance=ExtResource("56_aofxd")]
 position = Vector2(2012, -2208)
 next_level = "uid://bs0a3prbedffk"
+
+[node name="Decoracion" type="Node2D" parent="." unique_id=789365655]
+
+[node name="Tomato" parent="Decoracion" unique_id=1983864108 instance=ExtResource("48_epvqn")]
+position = Vector2(775, -1567)
+
+[node name="Tomato2" parent="Decoracion" unique_id=1095576644 instance=ExtResource("48_epvqn")]
+position = Vector2(824, -1482)
+
+[node name="Tomato3" parent="Decoracion" unique_id=1709358160 instance=ExtResource("48_epvqn")]
+position = Vector2(773, -1397)
+
+[node name="Tomato4" parent="Decoracion" unique_id=661208303 instance=ExtResource("48_epvqn")]
+position = Vector2(889, -1592)
+
+[node name="Tomato5" parent="Decoracion" unique_id=1908297698 instance=ExtResource("48_epvqn")]
+position = Vector2(667, -1767)
+
+[node name="Tomato6" parent="Decoracion" unique_id=1192477200 instance=ExtResource("48_epvqn")]
+position = Vector2(721, -1767)
+
+[node name="Tomato10" parent="Decoracion" unique_id=2118170206 instance=ExtResource("48_epvqn")]
+position = Vector2(715, -1698)
+
+[node name="Tomato9" parent="Decoracion" unique_id=494800959 instance=ExtResource("48_epvqn")]
+position = Vector2(666, -1706)
+
+[node name="Tomato7" parent="Decoracion" unique_id=1127428257 instance=ExtResource("48_epvqn")]
+position = Vector2(667, -1742)
+
+[node name="Tomato8" parent="Decoracion" unique_id=1598636635 instance=ExtResource("48_epvqn")]
+position = Vector2(720, -1740)
+
+[node name="Node2D3" type="Node2D" parent="." unique_id=1406527551]
+
+[node name="HidingMushroom" parent="Node2D3" unique_id=688848260 instance=ExtResource("49_yisyi")]
+position = Vector2(1889, -1190)
+
+[node name="HidingMushroom2" parent="Node2D3" unique_id=413446820 instance=ExtResource("49_yisyi")]
+position = Vector2(1597, -989)
+
+[node name="FabricRock" parent="Node2D3" unique_id=1319147835 instance=ExtResource("50_1n16h")]
+position = Vector2(2086, -795)
+
+[node name="Rock" parent="Node2D3" unique_id=2047915300 instance=ExtResource("51_gpgac")]
+position = Vector2(2209, -738)
+
+[node name="Carrot" parent="Node2D3" unique_id=1754863128 instance=ExtResource("52_yy585")]
+position = Vector2(2164, -946)
+
+[node name="Tower" type="Sprite2D" parent="Node2D3" unique_id=1428137875]
+position = Vector2(1315, -2437)
+texture = ExtResource("53_rlp2v")
+
+[node name="Tower2" type="Sprite2D" parent="Node2D3" unique_id=578801802]
+position = Vector2(1032, -2239)
+texture = ExtResource("53_rlp2v")
+
+[node name="Tower3" type="Sprite2D" parent="Node2D3" unique_id=258561201]
+position = Vector2(2755, -2586)
+texture = ExtResource("53_rlp2v")
+
+[node name="Tower4" type="Sprite2D" parent="Node2D3" unique_id=454534025]
+position = Vector2(3031, -2355)
+texture = ExtResource("53_rlp2v")

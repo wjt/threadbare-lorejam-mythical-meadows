@@ -111,7 +111,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jhxkg"]
-radius = 83.294655
+radius = 130.06152
 
 [node name="Pony0001" type="Node2D" unique_id=1512429886]
 script = ExtResource("1_ep0j3")

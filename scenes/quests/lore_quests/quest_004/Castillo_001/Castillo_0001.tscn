@@ -34,6 +34,16 @@
 [ext_resource type="PackedScene" uid="uid://b6t4ijnbuvyea" path="res://scenes/quests/lore_quests/quest_004/Gatos/Gatos_Idle/Gato_base_Idle_negro.tscn" id="26_shxjw"]
 [ext_resource type="PackedScene" uid="uid://df2uyjdiqlxn3" path="res://scenes/quests/lore_quests/quest_004/Castillo_001/Capibararey.tscn" id="27_0mlrl"]
 [ext_resource type="PackedScene" uid="uid://blikahpgw3sc" path="res://scenes/quests/lore_quests/quest_004/Castillo_001/Gato_Mago.tscn" id="32_s7xqu"]
+[ext_resource type="PackedScene" uid="uid://djmdhrse34vgq" path="res://scenes/game_elements/props/decoration/bunny/bunny.tscn" id="35_l3g1j"]
+[ext_resource type="PackedScene" uid="uid://de2aceqqvj7dr" path="res://scenes/game_elements/props/decoration/capycorn/capycorn.tscn" id="36_lt8y2"]
+[ext_resource type="PackedScene" uid="uid://c4vbokn408f2c" path="res://scenes/game_elements/props/decoration/sheep/sheep.tscn" id="37_cwa8v"]
+[ext_resource type="PackedScene" uid="uid://cr65lmm5b0ueo" path="res://scenes/game_elements/characters/npcs/cat/cat.tscn" id="38_e02qm"]
+[ext_resource type="PackedScene" uid="uid://bi4v88iaj63sm" path="res://scenes/quests/lore_quests/quest_004/Gatos/Gatos_Base_001.tscn" id="39_n543c"]
+[ext_resource type="PackedScene" uid="uid://8gg2r0pc7ev" path="res://scenes/quests/lore_quests/quest_004/Gatos/Gatos_Blanco.tscn" id="40_hog6d"]
+[ext_resource type="PackedScene" uid="uid://cv3sndpuaq2yo" path="res://scenes/quests/lore_quests/quest_004/Gatos/Gatos_Gris.tscn" id="41_gtgdl"]
+[ext_resource type="PackedScene" uid="uid://craerh8y0texu" path="res://scenes/quests/lore_quests/quest_004/Gatos/Gatos_Naranjoso.tscn" id="42_e240o"]
+[ext_resource type="PackedScene" uid="uid://c8guuuser3g2p" path="res://scenes/quests/lore_quests/quest_004/Gatos/Gatos_Negro.tscn" id="43_ogxsn"]
+[ext_resource type="PackedScene" uid="uid://bwwa8qdw76cnh" path="res://scenes/quests/lore_quests/quest_004/Gatos/Gatos_Vaca.tscn" id="44_22tpm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hf26c"]
 texture = ExtResource("12_gay1l")
@@ -363,3 +373,80 @@ height = 61.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=305028906]
 color = Color(0.5803922, 1, 1, 1)
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=600103418]
+
+[node name="Bunny" parent="." unique_id=398073521 instance=ExtResource("35_l3g1j")]
+position = Vector2(511, 774)
+
+[node name="Capycorn" parent="." unique_id=9931846 instance=ExtResource("36_lt8y2")]
+position = Vector2(385, 777)
+
+[node name="Capycorn2" parent="." unique_id=54192641 instance=ExtResource("36_lt8y2")]
+position = Vector2(454, 674)
+
+[node name="Capycorn3" parent="." unique_id=563909623 instance=ExtResource("36_lt8y2")]
+position = Vector2(497, 562)
+
+[node name="Capycorn4" parent="." unique_id=16685005 instance=ExtResource("36_lt8y2")]
+position = Vector2(585, 872)
+
+[node name="Capycorn5" parent="." unique_id=1294004322 instance=ExtResource("36_lt8y2")]
+position = Vector2(697, 756)
+
+[node name="Capycorn6" parent="." unique_id=163876030 instance=ExtResource("36_lt8y2")]
+position = Vector2(703, 437)
+
+[node name="Capycorn7" parent="." unique_id=1198056120 instance=ExtResource("36_lt8y2")]
+position = Vector2(663, 323)
+
+[node name="Bunny2" parent="." unique_id=10614644 instance=ExtResource("35_l3g1j")]
+position = Vector2(585, 673)
+
+[node name="Bunny3" parent="." unique_id=1466546849 instance=ExtResource("35_l3g1j")]
+position = Vector2(376, 567)
+
+[node name="Bunny4" parent="." unique_id=1724948284 instance=ExtResource("35_l3g1j")]
+position = Vector2(443, 857)
+
+[node name="Bunny5" parent="." unique_id=1863533748 instance=ExtResource("35_l3g1j")]
+position = Vector2(350, 364)
+
+[node name="Sheep" parent="." unique_id=2063148848 instance=ExtResource("37_cwa8v")]
+position = Vector2(649, 562)
+
+[node name="Cat" parent="." unique_id=1950923165 instance=ExtResource("38_e02qm")]
+position = Vector2(1084, 580)
+
+[node name="Cat2" parent="." unique_id=1888960543 instance=ExtResource("38_e02qm")]
+position = Vector2(1049, 444)
+
+[node name="Cat3" parent="." unique_id=1075546297 instance=ExtResource("38_e02qm")]
+position = Vector2(1226, 556)
+
+[node name="Cat4" parent="." unique_id=338940820 instance=ExtResource("38_e02qm")]
+position = Vector2(1208, 705)
+
+[node name="Cat5" parent="." unique_id=1250610358 instance=ExtResource("38_e02qm")]
+position = Vector2(1088, 331)
+
+[node name="Gatitos2" type="Node2D" parent="." unique_id=992650590]
+position = Vector2(1026, 532)
+
+[node name="GatosBase001" parent="Gatitos2" unique_id=1712679481 instance=ExtResource("39_n543c")]
+position = Vector2(304, 93)
+
+[node name="GatosBase002" parent="Gatitos2" unique_id=2028701460 instance=ExtResource("40_hog6d")]
+position = Vector2(202, 277)
+
+[node name="GatosBase003" parent="Gatitos2" unique_id=1638286973 instance=ExtResource("41_gtgdl")]
+position = Vector2(407, -5)
+
+[node name="GatosBase004" parent="Gatitos2" unique_id=503463203 instance=ExtResource("42_e240o")]
+position = Vector2(379, -190)
+
+[node name="GatosBase005" parent="Gatitos2" unique_id=1011444904 instance=ExtResource("43_ogxsn")]
+position = Vector2(342, 307)
+
+[node name="GatosBase006" parent="Gatitos2" unique_id=1855507110 instance=ExtResource("44_22tpm")]
+position = Vector2(302, 198)

@@ -289,7 +289,7 @@ stream = ExtResource("3_48vyk")
 
 [node name="Panel" type="Panel" parent="." unique_id=1323353960]
 offset_left = -78.0
-offset_top = -177.0
+offset_top = -221.0
 offset_right = 81.0
 offset_bottom = -56.0
 
@@ -297,5 +297,5 @@ offset_bottom = -56.0
 layout_mode = 0
 offset_top = 1.0
 offset_right = 159.0
-offset_bottom = 119.0
+offset_bottom = 164.0
 autowrap_mode = 2

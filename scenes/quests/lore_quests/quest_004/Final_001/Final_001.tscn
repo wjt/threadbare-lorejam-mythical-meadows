@@ -46,6 +46,8 @@
 [ext_resource type="PackedScene" uid="uid://c8guuuser3g2p" path="res://scenes/quests/lore_quests/quest_004/Gatos/Gatos_Negro.tscn" id="43_m6ei7"]
 [ext_resource type="PackedScene" uid="uid://bwwa8qdw76cnh" path="res://scenes/quests/lore_quests/quest_004/Gatos/Gatos_Vaca.tscn" id="44_wn7ck"]
 [ext_resource type="PackedScene" uid="uid://cdd1h1y3cswkl" path="res://scenes/quests/lore_quests/quest_004/Otros/Roza_azul_v1.tscn" id="46_s2wm4"]
+[ext_resource type="PackedScene" uid="uid://djmdhrse34vgq" path="res://scenes/game_elements/props/decoration/bunny/bunny.tscn" id="47_8fdt4"]
+[ext_resource type="PackedScene" uid="uid://c4vbokn408f2c" path="res://scenes/game_elements/props/decoration/sheep/sheep.tscn" id="48_gx8uw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hf26c"]
 texture = ExtResource("11_gro14")
@@ -551,3 +553,45 @@ position = Vector2(521, -192)
 
 [node name="GatosBase006" parent="Gatitos2" unique_id=367105442 instance=ExtResource("44_wn7ck")]
 position = Vector2(526, -81)
+
+[node name="Bunny" parent="." unique_id=398073521 instance=ExtResource("47_8fdt4")]
+position = Vector2(391, 798)
+
+[node name="Bunny2" parent="." unique_id=2043276715 instance=ExtResource("47_8fdt4")]
+position = Vector2(523, 808)
+
+[node name="Bunny3" parent="." unique_id=1173089285 instance=ExtResource("47_8fdt4")]
+position = Vector2(288, 872)
+
+[node name="Bunny4" parent="." unique_id=50810886 instance=ExtResource("47_8fdt4")]
+position = Vector2(266, 575)
+
+[node name="Bunny5" parent="." unique_id=1825596238 instance=ExtResource("47_8fdt4")]
+position = Vector2(338, 448)
+
+[node name="Bunny6" parent="." unique_id=1561577414 instance=ExtResource("47_8fdt4")]
+position = Vector2(284, 302)
+
+[node name="Sheep" parent="." unique_id=2063148848 instance=ExtResource("48_gx8uw")]
+position = Vector2(606, 587)
+
+[node name="Sheep2" parent="." unique_id=1606213461 instance=ExtResource("48_gx8uw")]
+position = Vector2(687, 512)
+
+[node name="Sheep3" parent="." unique_id=223881419 instance=ExtResource("48_gx8uw")]
+position = Vector2(1084, 517)
+
+[node name="Sheep4" parent="." unique_id=365644665 instance=ExtResource("48_gx8uw")]
+position = Vector2(1022, 601)
+
+[node name="Sheep5" parent="." unique_id=377022253 instance=ExtResource("48_gx8uw")]
+position = Vector2(1093, 420)
+
+[node name="Sheep6" parent="." unique_id=1398920937 instance=ExtResource("48_gx8uw")]
+position = Vector2(1350, 269)
+
+[node name="Bunny7" parent="." unique_id=512407447 instance=ExtResource("47_8fdt4")]
+position = Vector2(1181, 886)
+
+[node name="Bunny8" parent="." unique_id=490458207 instance=ExtResource("47_8fdt4")]
+position = Vector2(1234, 681)

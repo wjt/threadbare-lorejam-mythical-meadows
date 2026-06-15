@@ -1,6 +1,8 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
+
 ~ start
+
 
 AngelLuna: Así que has llegado.
 
@@ -32,25 +34,53 @@ AngelLuna: La esperanza no detuvo la caída de los tres clanes.
 
 AngelLuna: La esperanza no detuvo al Vacío.
 
-AngelLuna: La esperanza no trajo de vuelta al Ángel de la Luz.
+AngelLuna: La esperanza no salvó a mi hermana.
 
 StoryWeaver: Entonces, ¿por qué sigues luchando?
 
 AngelLuna: Porque me niego a perderlo todo.
 
-AngelLuna: Cada territorio que he reclamado.
+AngelLuna: Tú no viste lo que yo vi.
 
-AngelLuna: Cada reliquia que he protegido.
+AngelLuna: Tú no viste historias enteras desaparecer.
 
-AngelLuna: Cada clan que he encerrado.
+AngelLuna: Tú no viste al Vacío reclamarlas como si nunca hubieran existido.
 
-AngelLuna: Lo hice para mantenerlos a salvo.
+AngelLuna: Cada territorio que protegí.
 
-StoryWeaver: ¿A salvo?
+AngelLuna: Cada reliquia que oculté.
+
+AngelLuna: Cada clan que aparté del peligro.
+
+AngelLuna: Lo hice para que el Vacío no los alcanzara.
+
+StoryWeaver: ¿Y los habitantes?
+
+StoryWeaver: ¿Qué hiciste con ellos?
+
+StoryWeaver: ¿Qué pasó con los clanes desaparecidos?
+
+AngelLuna: Los puse donde el Vacío no pudiera encontrarlos.
+
+AngelLuna: Los aparté de este mundo.
+
+AngelLuna: Los sellé dentro de dominios protegidos por mi poder.
+
+AngelLuna: Allí siguen existiendo.
+
+AngelLuna: Allí siguen resistiendo.
+
+StoryWeaver: ¿Los atrapaste?
+
+AngelLuna: Los salvé.
+
+AngelLuna: Porque si permanecían aquí...
+
+AngelLuna: El Vacío los habría consumido hace mucho tiempo.
+
+StoryWeaver: ¿Y a qué precio?
 
 StoryWeaver: Les arrebataste su libertad.
-
-AngelLuna: Les di algo mejor.
 
 AngelLuna: Les di la posibilidad de existir mañana.
 
@@ -91,5 +121,7 @@ AngelLuna: Si crees que el destino puede cambiar...
 AngelLuna: Entonces enfréntame.
 
 AngelLuna: Muéstrame que aún existe un camino que yo no pude ver.
+
+AngelLuna: Muéstrame que todavía hay esperanza para estas tierras.
 
 => END
