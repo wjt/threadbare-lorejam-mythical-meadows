@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bxawie30u1tev"]
+
+[ext_resource type="Script" uid="uid://coh2bs3brsxl5" path="res://Tests/activadores/activador.gd" id="1_rb7h0"]
+[ext_resource type="Texture2D" uid="uid://dh4tixu06hfwt" path="res://assets/third_party/tiny-swords/UI/Banners/Carved_9Slides.png" id="2_vmv3c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ojci0"]
+radius = 22.022715
+
+[node name="Activador" type="Area2D" unique_id=826063473]
+script = ExtResource("1_rb7h0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=964164806]
+position = Vector2(-1.4305115e-06, 1.013279e-06)
+scale = Vector2(0.23958336, 0.23958334)
+texture = ExtResource("2_vmv3c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=335543515]
+shape = SubResource("CircleShape2D_ojci0")

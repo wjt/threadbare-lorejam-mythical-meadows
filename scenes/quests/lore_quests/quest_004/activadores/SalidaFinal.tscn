@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://csmdohe57socu"]
+
+[ext_resource type="Script" path="res://scenes/quests/lore_quests/quest_004/activadores/salida_final.gd" id="1_dr1en"]
+[ext_resource type="Texture2D" uid="uid://cepg1o3ihp055" path="res://assets/first_party/collectibles/world_spirit.png" id="2_dr1en"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dr1en"]
+radius = 31.016125
+
+[node name="SalidaFinal" type="Area2D" unique_id=2039919881]
+script = ExtResource("1_dr1en")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=863495076]
+texture = ExtResource("2_dr1en")
+
+[node name="AreaIngreso" type="CollisionShape2D" parent="." unique_id=1965230212]
+shape = SubResource("CircleShape2D_dr1en")

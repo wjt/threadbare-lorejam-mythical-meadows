@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://v2e8q55as5xv"]
+
+[ext_resource type="Script" uid="uid://bqdr8s5j6d7wt" path="res://scenes/quests/lore_quests/quest_004/Menu/menu_control.gd" id="1_56flu"]
+[ext_resource type="Script" uid="uid://c1kcd3cbk60yg" path="res://scenes/quests/lore_quests/quest_004/Menu/fondo_nubes.gd" id="1_bwcgf"]
+[ext_resource type="TileSet" uid="uid://sc4jec0yxbn" path="res://tileset-extra.tres" id="1_ubhmn"]
+[ext_resource type="Texture2D" uid="uid://dhwqkdin6refx" path="res://assets/first_party/logo/thread-256-tb.png" id="3_q7ndp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lg17a"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[node name="MenuJuego" type="Control" unique_id=1394854194]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FondoNubes" type="TileMapLayer" parent="." unique_id=1550779224]
+tile_set = ExtResource("1_ubhmn")
+script = ExtResource("1_bwcgf")
+
+[node name="CapaUI" type="CanvasLayer" parent="." unique_id=1489456152]
+
+[node name="MenuControl" type="Control" parent="CapaUI" unique_id=1121236082]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_56flu")
+
+[node name="ContenedorLogo" type="VBoxContainer" parent="CapaUI/MenuControl" unique_id=965794119]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -141.5
+offset_right = 128.0
+offset_bottom = 141.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Logo" type="TextureRect" parent="CapaUI/MenuControl/ContenedorLogo" unique_id=881888953]
+layout_mode = 2
+texture = ExtResource("3_q7ndp")
+
+[node name="MensajeBoton" type="Label" parent="CapaUI/MenuControl/ContenedorLogo" unique_id=257244959]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Presione cualquier boton"
+label_settings = SubResource("LabelSettings_lg17a")
+
+[node name="ContenedorBotones" type="VBoxContainer" parent="CapaUI/MenuControl" unique_id=21788828]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.625
+anchor_top = 0.4298611
+anchor_right = 0.70703125
+anchor_bottom = 0.5701389
+grow_horizontal = 0
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BotonNuevo" type="Button" parent="CapaUI/MenuControl/ContenedorBotones" unique_id=1335730874]
+layout_mode = 2
+text = "Nuevo juego"
+
+[node name="BotonContinuar" type="Button" parent="CapaUI/MenuControl/ContenedorBotones" unique_id=2134852916]
+layout_mode = 2
+text = "Continuar"
+
+[node name="Button3" type="Button" parent="CapaUI/MenuControl/ContenedorBotones" unique_id=1919685873]
+layout_mode = 2
+text = "Creditos"

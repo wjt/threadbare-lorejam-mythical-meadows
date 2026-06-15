@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dqmasr8fxcoe8"]
+
+[ext_resource type="Script" path="res://scenes/quests/lore_quests/quest_004/activadores/salida.gd" id="1_bmj3r"]
+[ext_resource type="Texture2D" uid="uid://5wscjc8yqqts" path="res://assets/first_party/collectibles/world_memory.png" id="2_4xfjt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q1l13"]
+radius = 79.025314
+
+[node name="Salida" type="Area2D" unique_id=1220588188]
+script = ExtResource("1_bmj3r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2139816910]
+scale = Vector2(3.015625, 2.9843745)
+texture = ExtResource("2_4xfjt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=641906154]
+shape = SubResource("CircleShape2D_q1l13")

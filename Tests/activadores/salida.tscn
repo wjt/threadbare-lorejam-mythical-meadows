@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cyx8h6ww8qy0l"]
+
+[ext_resource type="Script" uid="uid://u58xb4x7o5a3" path="res://Tests/activadores/salida.gd" id="1_bmj3r"]
+[ext_resource type="Texture2D" uid="uid://bdhfcs6igu6di" path="res://assets/third_party/tiny-swords/Deco/14.png" id="2_51wl8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q1l13"]
+radius = 106.004715
+
+[node name="Salida" type="Area2D" unique_id=1220588188]
+script = ExtResource("1_bmj3r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2139816910]
+position = Vector2(-9.499977, 1.4999914)
+scale = Vector2(4.5156255, 4.3906245)
+texture = ExtResource("2_51wl8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=641906154]
+shape = SubResource("CircleShape2D_q1l13")

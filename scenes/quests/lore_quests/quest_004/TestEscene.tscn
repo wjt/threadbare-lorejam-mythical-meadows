@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://b3mlu2qqrg3sn"]
+
+[ext_resource type="Script" uid="uid://k5kwqfbx6qwd" path="res://scenes/quests/lore_quests/quest_004/Scripts/generador_niveles.gd" id="1_e66fe"]
+[ext_resource type="TileSet" uid="uid://dl5jn340bevy7" path="res://scenes/quests/lore_quests/quest_004/TileSet_Random.tres" id="2_xfxn2"]
+[ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="3_eijgc"]
+[ext_resource type="SpriteFrames" uid="uid://dtoylirwywk0j" path="res://scenes/game_elements/characters/components/sprite_frames/storyweaver_blue.tres" id="4_u23oc"]
+[ext_resource type="Script" path="res://scenes/quests/lore_quests/quest_004/Scripts/control.gd" id="5_xfxn2"]
+
+[node name="TestEscene" type="Node2D" unique_id=804765088]
+script = ExtResource("1_e66fe")
+semilla_manual = "Semilla2"
+cantidad_salas = 7
+sala_ancho = 19
+
+[node name="SueloGlobal" type="TileMapLayer" parent="." unique_id=578593113]
+scale = Vector2(4, 4)
+tile_set = ExtResource("2_xfxn2")
+
+[node name="ParedesGlobal" type="TileMapLayer" parent="." unique_id=325784371]
+z_index = 1
+scale = Vector2(4, 4)
+tile_set = ExtResource("2_xfxn2")
+
+[node name="Player" parent="." unique_id=296354958 instance=ExtResource("3_eijgc")]
+z_index = 2
+player_name = "StoryWeaver"
+sprite_frames = ExtResource("4_u23oc")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=561010190]
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=686417615]
+
+[node name="MarcoMinimapa" type="Panel" parent="HUD" unique_id=119607314]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -334.0
+offset_right = -34.0
+offset_bottom = 200.0
+grow_horizontal = 0
+
+[node name="Minimapa" type="Control" parent="HUD/MarcoMinimapa" unique_id=1874218823]
+anchors_preset = 0
+offset_right = 333.0
+offset_bottom = 196.0
+script = ExtResource("5_xfxn2")
+
+[node name="VeloTransicion" type="ColorRect" parent="HUD" unique_id=2006202815]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnuncioNivel" type="Label" parent="HUD" unique_id=1056205296]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = -11.5
+offset_right = 92.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Nivel X Texto de Prueba"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://br0527ynvfjyc"]
+
+[ext_resource type="Script" uid="uid://8omr6r735bo5" path="res://scenes/quests/lore_quests/quest_004/Scripts/enemy_base.gd" id="1_r1j6v"]
+[ext_resource type="Texture2D" uid="uid://7afi18x3x1dm" path="res://assets/third_party/tiny-swords/Deco/18.png" id="2_wjdng"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4pdyy"]
+radius = 22.0
+height = 48.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hmtif"]
+radius = 50.0
+height = 102.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ci8mv"]
+radius = 60.0
+height = 120.0
+
+[node name="EnemyBase" type="CharacterBody2D" unique_id=2037419077]
+z_index = 2
+script = ExtResource("1_r1j6v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1963455829]
+texture = ExtResource("2_wjdng")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=907315116]
+position = Vector2(0, 52)
+shape = SubResource("CapsuleShape2D_4pdyy")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1483556269]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=530724756]
+position = Vector2(1, 25)
+shape = SubResource("CapsuleShape2D_hmtif")
+
+[node name="CooldownTimer" type="Timer" parent="." unique_id=347308268]
+wait_time = 1.5
+one_shot = true
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1124246742]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=162851471]
+position = Vector2(1, 18)
+shape = SubResource("CapsuleShape2D_ci8mv")
