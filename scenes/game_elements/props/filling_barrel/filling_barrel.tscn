@@ -238,7 +238,7 @@ position = Vector2(0, -21)
 sprite_frames = ExtResource("3_o1oxn")
 animation = &"filling"
 
-[node name="BarrelGlow" type="AnimatedSprite2D" parent="."]
+[node name="BarrelGlow" type="AnimatedSprite2D" parent="." unique_id=1636869284]
 visible = false
 sprite_frames = SubResource("SpriteFrames_ftrfy")
 animation = &"glowing"

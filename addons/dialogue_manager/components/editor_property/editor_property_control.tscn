@@ -4,39 +4,39 @@
 [ext_resource type="PackedScene" uid="uid://b16uuqjuof3n5" path="res://addons/dialogue_manager/components/editor_property/resource_button.tscn" id="2_hh3d4"]
 [ext_resource type="PackedScene" uid="uid://dnufpcdrreva3" path="res://addons/dialogue_manager/components/files_list.tscn" id="3_l8fp6"]
 
-[node name="PropertyEditorButton" type="HBoxContainer"]
+[node name="PropertyEditorButton" type="HBoxContainer" unique_id=1144694975]
 offset_right = 40.0
 offset_bottom = 40.0
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 script = ExtResource("1_het12")
 
-[node name="ResourceButton" parent="." instance=ExtResource("2_hh3d4")]
+[node name="ResourceButton" parent="." unique_id=1846356728 instance=ExtResource("2_hh3d4")]
 layout_mode = 2
 text = "<empty>"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="MenuButton" type="Button" parent="."]
+[node name="MenuButton" type="Button" parent="." unique_id=626187414]
 layout_mode = 2
 
-[node name="Menu" type="PopupMenu" parent="."]
+[node name="Menu" type="PopupMenu" parent="." unique_id=1959795396]
 
-[node name="QuickOpenDialog" type="ConfirmationDialog" parent="."]
+[node name="QuickOpenDialog" type="ConfirmationDialog" parent="." unique_id=1555570152]
 title = "Find Dialogue Resource"
 size = Vector2i(400, 600)
 min_size = Vector2i(400, 600)
 ok_button_text = "Open"
 
-[node name="FilesList" parent="QuickOpenDialog" instance=ExtResource("3_l8fp6")]
+[node name="FilesList" parent="QuickOpenDialog" unique_id=1176884478 instance=ExtResource("3_l8fp6")]
 
-[node name="NewDialog" type="FileDialog" parent="."]
+[node name="NewDialog" type="FileDialog" parent="." unique_id=1220526655]
 size = Vector2i(900, 750)
 min_size = Vector2i(900, 750)
 dialog_hide_on_ok = true
 filters = PackedStringArray("*.dialogue ; Dialogue")
 
-[node name="OpenDialog" type="FileDialog" parent="."]
+[node name="OpenDialog" type="FileDialog" parent="." unique_id=1675019976]
 title = "Open a File"
 size = Vector2i(900, 750)
 min_size = Vector2i(900, 750)
