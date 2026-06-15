@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://uw3x44u8tnok"]
+
+[ext_resource type="Texture2D" uid="uid://ci2j3sdrncqut" path="res://scenes/quests/lore_quests/quest_004/Intro/Barnaby.png" id="1_7dy1k"]
+[ext_resource type="Texture2D" uid="uid://eaof8hcafxg7" path="res://assets/first_party/user_interface/interact_indicator.png" id="2_l3e8k"]
+
+[sub_resource type="GDScript" id="GDScript_6w5mc"]
+resource_name = "barnaby"
+script/source = "extends CharacterBody2D
+
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var indicador_visual: Sprite2D = $IndicadorVisual
+
+var jugador_cerca: bool = false
+var dialogo_hecho: bool = false
+
+func _ready() -> void:
+	if indicador_visual:
+		indicador_visual.visible = false
+	if animated_sprite:
+		animated_sprite.play(\"idle\")
+		
+	# --- CONECTAR SEÑALES POR CÓDIGO ---
+	$Area2D.body_entered.connect(_on_area_2d_body_entered)
+	$Area2D.body_exited.connect(_on_area_2d_body_exited)
+
+# --- CONECTAR SEÑALES DEL AREA2D ---
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name == \"Player\" and not dialogo_hecho:
+		jugador_cerca = true
+		if indicador_visual:
+			indicador_visual.visible = true
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.name == \"Player\":
+		jugador_cerca = false
+		if indicador_visual:
+			indicador_visual.visible = false
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxwp4"]
+atlas = ExtResource("1_7dy1k")
+region = Rect2(219, 0, 217, 306)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuufu"]
+atlas = ExtResource("1_7dy1k")
+region = Rect2(436, 0, 217, 306)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26gjl"]
+atlas = ExtResource("1_7dy1k")
+region = Rect2(653, 0, 217, 306)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jtfn"]
+atlas = ExtResource("1_7dy1k")
+region = Rect2(870, 0, 217, 306)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvaiu"]
+atlas = ExtResource("1_7dy1k")
+region = Rect2(1087, 0, 217, 306)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3e8k"]
+atlas = ExtResource("1_7dy1k")
+region = Rect2(2, 306, 217, 306)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6w5mc"]
+atlas = ExtResource("1_7dy1k")
+region = Rect2(219, 306, 217, 306)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g81fm"]
+atlas = ExtResource("1_7dy1k")
+region = Rect2(436, 306, 217, 306)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6mdp"]
+atlas = ExtResource("1_7dy1k")
+region = Rect2(653, 306, 217, 306)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vf7st"]
+atlas = ExtResource("1_7dy1k")
+region = Rect2(870, 306, 217, 306)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdr63"]
+atlas = ExtResource("1_7dy1k")
+region = Rect2(1087, 306, 217, 306)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k0dgf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxwp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuufu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26gjl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jtfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvaiu")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3e8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6w5mc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g81fm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6mdp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vf7st")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdr63")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7dy1k"]
+radius = 80.0
+height = 210.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g81fm"]
+radius = 221.08144
+
+[node name="Barnaby" type="CharacterBody2D" unique_id=410363637]
+script = SubResource("GDScript_6w5mc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1361094049]
+sprite_frames = SubResource("SpriteFrames_k0dgf")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2040174754]
+position = Vector2(8, 22)
+shape = SubResource("CapsuleShape2D_7dy1k")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=646756337]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=915845135]
+visible = false
+position = Vector2(11, -8)
+shape = SubResource("CircleShape2D_g81fm")
+
+[node name="IndicadorVisual" type="Sprite2D" parent="." unique_id=2045618119]
+position = Vector2(27, -170)
+scale = Vector2(4.023438, 3.4296873)
+texture = ExtResource("2_l3e8k")

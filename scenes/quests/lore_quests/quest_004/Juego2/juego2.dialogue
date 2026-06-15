@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+~ inicio_personaje
+Wiñay: ¿Qué es esta luz brillante?
+
+Wiñay: Las mariposas parecen sentirse atraídas por ella...
+
+=> END
+
+~ inicio_juego
+Narrator: ✨MINIJUEGO: LA DANZA DE LAS MARIPOSAS ✨ Acércate a las mariposas para que te sigan
+
+Narrator: La linterna las atrae, pero la energía se gasta con el tiempo
+
+Narrator: Recoge baterías brillantes para recargar tu linterna
+
+Narrator: Evita las espinas (pierdes energía) y el viento (te empuja)
+
+Narrator: Guía las mariposas hasta el altar sagrado para completr el nivel
+
+=> END

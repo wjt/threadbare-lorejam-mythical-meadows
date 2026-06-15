@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b365beph0oojn"
+path="res://.godot/imported/juego2.dialogue-574449e4c27f15b20beef97ace5b265a.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Juego2/juego2.dialogue"
+dest_files=["res://.godot/imported/juego2.dialogue-574449e4c27f15b20beef97ace5b265a.tres"]
+
+[params]
+
+defaults=true

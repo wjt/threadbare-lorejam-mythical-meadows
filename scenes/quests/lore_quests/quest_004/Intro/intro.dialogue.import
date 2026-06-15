@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dxtwlc1u7lrrg"
+path="res://.godot/imported/intro.dialogue-36ecd507ccd89030a3cac6d0d9da4030.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Intro/intro.dialogue"
+dest_files=["res://.godot/imported/intro.dialogue-36ecd507ccd89030a3cac6d0d9da4030.tres"]
+
+[params]
+
+defaults=true

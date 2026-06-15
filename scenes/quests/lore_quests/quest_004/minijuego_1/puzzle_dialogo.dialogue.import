@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c6qyoyyl4po6o"
+path="res://.godot/imported/puzzle_dialogo.dialogue-4268073765e8d275957495e69e017760.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/minijuego_1/puzzle_dialogo.dialogue"
+dest_files=["res://.godot/imported/puzzle_dialogo.dialogue-4268073765e8d275957495e69e017760.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://6es0tvbmk3o4"]
+
+[ext_resource type="Script" uid="uid://fqb3ckc6i5m1" path="res://scenes/quests/lore_quests/quest_004/minijuego_1/golem_bullet.gd" id="1_j6f6y"]
+[ext_resource type="Texture2D" uid="uid://bjakp6o3lhvcr" path="res://assets/third_party/tiny-swords/Effects/Fire/Fire.png" id="2_ini0d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ptpnb"]
+atlas = ExtResource("2_ini0d")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxwmq"]
+atlas = ExtResource("2_ini0d")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20x4x"]
+atlas = ExtResource("2_ini0d")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_httj4"]
+atlas = ExtResource("2_ini0d")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibaut"]
+atlas = ExtResource("2_ini0d")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_foplm"]
+atlas = ExtResource("2_ini0d")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irqsb"]
+atlas = ExtResource("2_ini0d")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ce0oh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ptpnb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxwmq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20x4x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_httj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibaut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foplm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irqsb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 17.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_imuhu"]
+radius = 21.0
+
+[node name="GolemBullet" type="Area2D" unique_id=1723936574]
+script = ExtResource("1_j6f6y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=45816528]
+position = Vector2(2, 0)
+scale = Vector2(0.890625, 0.55859375)
+sprite_frames = SubResource("SpriteFrames_ce0oh")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2124436519]
+shape = SubResource("CircleShape2D_imuhu")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1913569962]
+
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

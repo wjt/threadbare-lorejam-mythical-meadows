@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://jtwmampp574s"
+path="res://.godot/imported/puzzle_dialogo_jefe.dialogue-8afd85804cf779b905bb1ef54ab7b272.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/minijuego_1/puzzle_dialogo_jefe.dialogue"
+dest_files=["res://.godot/imported/puzzle_dialogo_jefe.dialogue-8afd85804cf779b905bb1ef54ab7b272.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+~ inicio
+Wiñay: ¡Cielos, este laberinto se ve peligroso! 
+Wiñay: Debo tener mucho cuidado con los monstruos y encontrar la flor mágica en el centro.
+=> END
+
+~ final
+Wiñay: ¡Por fin la encontré! La flor mágica está a salvo.
+Wiñay: ¡Logré superar el laberinto de Mythical Meadows!
+=> END

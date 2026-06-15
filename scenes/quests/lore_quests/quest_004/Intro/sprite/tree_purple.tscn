@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://be1ektsafeymh"]
+
+[ext_resource type="SpriteFrames" uid="uid://cuokvpf58hkee" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_purple.tres" id="1_rfjqy"]
+
+[node name="TreePurple" type="Node2D" unique_id=1225357770]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1672093353]
+sprite_frames = ExtResource("1_rfjqy")

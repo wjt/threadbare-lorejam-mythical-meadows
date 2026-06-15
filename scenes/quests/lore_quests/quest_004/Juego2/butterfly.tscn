@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cj3j887nwuvb3"]
+
+[ext_resource type="Texture2D" uid="uid://bykcg0brm1nkp" path="res://scenes/quests/lore_quests/quest_004/Juego2/imagenes/mari-Sheet.png" id="1_5j06b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjqvp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78ura"]
+atlas = ExtResource("1_5j06b")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ac1db"]
+atlas = ExtResource("1_5j06b")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_we4pm"]
+atlas = ExtResource("1_5j06b")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uedhb"]
+atlas = ExtResource("1_5j06b")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v8vcn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78ura")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ac1db")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_we4pm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uedhb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Butterfly" type="CharacterBody2D" unique_id=2082503034]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=807914427]
+shape = SubResource("RectangleShape2D_yjqvp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=406628666]
+sprite_frames = SubResource("SpriteFrames_v8vcn")
+frame_progress = 0.35089526

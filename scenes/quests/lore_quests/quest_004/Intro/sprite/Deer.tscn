@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bksgbnm3xv413"]
+
+[ext_resource type="Texture2D" uid="uid://gonrpnd2r51p" path="res://scenes/quests/lore_quests/quest_004/Intro/sprite/deer.png" id="1_qwk8n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe5wu"]
+atlas = ExtResource("1_qwk8n")
+region = Rect2(0, 0, 215, 321)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8306l"]
+atlas = ExtResource("1_qwk8n")
+region = Rect2(215, 0, 215, 321)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oj3ll"]
+atlas = ExtResource("1_qwk8n")
+region = Rect2(430, 0, 215, 321)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0brw4"]
+atlas = ExtResource("1_qwk8n")
+region = Rect2(645, 0, 215, 321)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_362w1"]
+atlas = ExtResource("1_qwk8n")
+region = Rect2(860, 0, 215, 321)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ik8ip"]
+atlas = ExtResource("1_qwk8n")
+region = Rect2(1075, 0, 215, 321)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tocnn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe5wu")
+}, {
+"duration": 2.8,
+"texture": SubResource("AtlasTexture_8306l")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_oj3ll")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_0brw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_362w1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ik8ip")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[node name="Deer" type="Node2D" unique_id=2037763211]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1658829403]
+sprite_frames = SubResource("SpriteFrames_tocnn")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.70863855

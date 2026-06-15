@@ -1,0 +1,996 @@
+[gd_scene format=4 uid="uid://baksephwou3on"]
+
+[ext_resource type="Script" uid="uid://c5recbu3y7ede" path="res://scenes/quests/lore_quests/quest_004/Juego2/juego2.gd" id="1_f5c4d"]
+[ext_resource type="Script" uid="uid://d0lanjo61puvx" path="res://scenes/quests/lore_quests/quest_004/Juego2/player_light.gd" id="2_elu6d"]
+[ext_resource type="PackedScene" uid="uid://cj3j887nwuvb3" path="res://scenes/quests/lore_quests/quest_004/Juego2/butterfly.tscn" id="2_ymobo"]
+[ext_resource type="Script" uid="uid://btfut13f66xe7" path="res://scenes/quests/lore_quests/quest_004/Juego2/sacred_flower.gd" id="3_7p3u1"]
+[ext_resource type="PackedScene" uid="uid://ciw33pyykeyms" path="res://scenes/quests/lore_quests/quest_004/Juego2/victory_screen.tscn" id="3_elu6d"]
+[ext_resource type="Script" uid="uid://cnbopercg881y" path="res://scenes/quests/lore_quests/quest_004/Juego2/butterfly.gd" id="4_7p3u1"]
+[ext_resource type="Script" uid="uid://c158e67ttwunf" path="res://scenes/quests/lore_quests/quest_004/Juego2/global.gd" id="4_71er1"]
+[ext_resource type="Script" uid="uid://bv2cjdyflmasp" path="res://scenes/quests/lore_quests/quest_004/Juego2/butterfly_zone.gd" id="4_hmp8s"]
+[ext_resource type="Script" uid="uid://ibsrl84b1dod" path="res://scenes/quests/lore_quests/quest_004/Juego2/bat_predator.gd" id="6_5nc1a"]
+[ext_resource type="Script" uid="uid://buly80u70xsvx" path="res://scenes/quests/lore_quests/quest_004/Juego2/batery.gd" id="6_631if"]
+[ext_resource type="Texture2D" uid="uid://b3hnco8x0unt0" path="res://scenes/quests/lore_quests/quest_004/Juego2/imagenes/altar nuevo.png" id="6_s64d0"]
+[ext_resource type="Script" uid="uid://coj4gsde38ek5" path="res://scenes/quests/lore_quests/quest_004/Juego2/wind_zone.gd" id="8_i3vti"]
+[ext_resource type="Texture2D" uid="uid://dimeg08boa8ac" path="res://scenes/quests/lore_quests/quest_004/Juego2/imagenes/murcielago-Sheet.png" id="10_dsbss"]
+[ext_resource type="Texture2D" uid="uid://cjlv0bg7byjx0" path="res://addons/phantom_camera/icons/warning.svg" id="13_og4nr"]
+[ext_resource type="Texture2D" uid="uid://dyjhwr8pnyuhf" path="res://addons/backstitch/public/icons/CollapsibleOpen.svg" id="14_206h0"]
+[ext_resource type="Texture2D" uid="uid://d1kky83ko86li" path="res://scenes/quests/lore_quests/quest_004/minijuego_1/sprite/i/personajes/personaje/storyweaver_purple_idle.png" id="16_788s3"]
+[ext_resource type="Texture2D" uid="uid://baelulw1inl6s" path="res://assets/third_party/tiny-swords/Deco/09.png" id="16_ejmf6"]
+[ext_resource type="Script" uid="uid://bdhjixygupit1" path="res://scenes/game_elements/props/area_filler/area_filler.gd" id="19_venih"]
+[ext_resource type="Texture2D" uid="uid://ckshqoqv03xq4" path="res://scenes/quests/lore_quests/quest_004/Juego2/imagenes/brillo.png" id="20_2kcf4"]
+[ext_resource type="PackedScene" uid="uid://7873qa54birk" path="res://scenes/game_elements/props/tree/tree.tscn" id="20_56xkm"]
+[ext_resource type="SpriteFrames" uid="uid://2ek86nvw6y28" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_yellow.tres" id="21_2kcf4"]
+[ext_resource type="SpriteFrames" uid="uid://d36eq8tqdaxdy" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_green.tres" id="22_fvk1u"]
+[ext_resource type="Script" uid="uid://c8405c212rbn6" path="res://scenes/game_elements/props/background_music/components/background_music.gd" id="23_788s3"]
+[ext_resource type="AudioStream" uid="uid://bbamdm6wtjjcn" path="res://assets/first_party/music/Threadbare_Bed.ogg" id="24_3t3id"]
+[ext_resource type="TileSet" uid="uid://oynx002hv8tl" path="res://tiles/water.tres" id="25_lpntg"]
+[ext_resource type="TileSet" uid="uid://bjx3gvah0ycl1" path="res://tiles/foam_2.tres" id="26_touai"]
+[ext_resource type="TileSet" uid="uid://b8qnr0owsbhhn" path="res://tiles/exterior_floors.tres" id="27_e0s53"]
+[ext_resource type="TileSet" uid="uid://41pk6xbhypue" path="res://tiles/fence.tres" id="28_avppf"]
+[ext_resource type="TileSet" uid="uid://do0ffypatd77h" path="res://tiles/bridges.tres" id="29_7rx3o"]
+[ext_resource type="Texture2D" uid="uid://brspc1u02oawt" path="res://assets/first_party/collectibles/memory.png" id="29_fvk1u"]
+[ext_resource type="Script" uid="uid://bta7aqh71qboc" path="res://scenes/quests/lore_quests/quest_004/Juego2/thorn_patch.gd" id="30_2kcf4"]
+[ext_resource type="TileSet" uid="uid://bdc7ucso7bx0s" path="res://tiles/shadows.tres" id="30_niocr"]
+[ext_resource type="TileSet" uid="uid://dfp36ffpanjq2" path="res://tiles/elevation.tres" id="31_xk8vi"]
+[ext_resource type="Material" uid="uid://64aeyjitacv3" path="res://scenes/game_elements/props/void/void_chromakey_material.tres" id="32_jmidq"]
+[ext_resource type="TileSet" uid="uid://ciq5guijvlyb0" path="res://tiles/void_chromakey.tres" id="33_jixcv"]
+[ext_resource type="Script" uid="uid://c21mcguapmibe" path="res://scenes/quests/lore_quests/quest_004/Juego2/butterfly_manager.gd" id="34_venih"]
+[ext_resource type="PackedScene" path="res://scenes/quests/lore_quests/quest_004/minijuego_1/girasol_praderas.tscn" id="38_3t3id"]
+[ext_resource type="Texture2D" uid="uid://cnrbtah0wexs0" path="res://scenes/quests/lore_quests/quest_004/Juego2/imagenes/casa.png" id="38_788s3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ipwe"]
+size = Vector2(1205, 431)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7p3u1"]
+size = Vector2(49, 83)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t3id"]
+atlas = ExtResource("16_788s3")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpntg"]
+atlas = ExtResource("16_788s3")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_touai"]
+atlas = ExtResource("16_788s3")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e0s53"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t3id")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpntg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_touai")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dsbss"]
+load_path = "res://.godot/imported/field_of_view.png-b7b0fbf3ee540efdf07a95c8015b1044.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t320x"]
+size = Vector2(483, 267)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fvk1u"]
+load_path = "res://.godot/imported/LeftToRightWipe.png-3cd84914126a4a437404ffba2e3170a0.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_788s3"]
+size = Vector2(199, 176)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fvk1u"]
+radius = 60.074955
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s64d0"]
+atlas = ExtResource("10_dsbss")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t320x"]
+atlas = ExtResource("10_dsbss")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_og4nr"]
+atlas = ExtResource("10_dsbss")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_206h0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s64d0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t320x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_og4nr")
+}],
+"loop": true,
+"name": &"vuelo",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ky4a"]
+radius = 153.05228
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hmp8s"]
+size = Vector2(54, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3vti"]
+size = Vector2(132, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvk1u"]
+size = Vector2(125, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3t3id"]
+size = Vector2(168.5, 159.5)
+
+[node name="Minijuego2" type="Node2D" unique_id=1109368444]
+script = ExtResource("1_f5c4d")
+
+[node name="TileMapLayers" type="Node2D" parent="." unique_id=304910154]
+
+[node name="Water" type="TileMapLayer" parent="TileMapLayers" unique_id=697238894]
+z_index = -1
+tile_set = ExtResource("25_lpntg")
+
+[node name="Foam" type="TileMapLayer" parent="TileMapLayers" unique_id=1559354167]
+tile_set = ExtResource("26_touai")
+
+[node name="Dirt" type="TileMapLayer" parent="TileMapLayers" unique_id=1230347500]
+modulate = Color(4.042983e-06, 0.6507199, 0.8662625, 1)
+tile_map_data = PackedByteArray("AAAAAP//AQABAAEAAAAAAAAAAQABAAEAAAAAAAEAAQABAAEAAAAAAAIAAQABAAEAAAAAAAMAAQABAAEAAAAAAAQAAQABAAEAAAAAAAUAAQABAAEAAAAAAAYAAQABAAEAAAAAAAcAAQABAAEAAAAAAAgAAQABAAEAAAAAAAkAAQABAAEAAAAAAAoAAQABAAEAAAAAAAsAAQABAAEAAAAAAAwAAQABAAEAAAAAAA0AAQABAAEAAAAAAA4AAQABAAEAAAABAP//AQABAAEAAAABAAAAAQABAAEAAAABAAEAAQABAAEAAAABAAIAAQABAAEAAAABAAMAAQABAAEAAAABAAQAAQABAAEAAAABAAUAAQABAAEAAAABAAYAAQABAAEAAAABAAcAAQABAAEAAAABAAgAAQABAAEAAAABAAkAAQABAAEAAAABAAoAAQABAAEAAAABAAsAAQABAAEAAAABAAwAAQABAAEAAAABAA0AAQABAAEAAAABAA4AAQABAAEAAAACAP//AQABAAEAAAACAAAAAQABAAEAAAACAAEAAQABAAEAAAACAAIAAQABAAEAAAACAAMAAQABAAEAAAACAAQAAQABAAEAAAACAAUAAQABAAEAAAACAAYAAQABAAEAAAACAAcAAQABAAEAAAACAAgAAQABAAEAAAACAAkAAQABAAEAAAACAAoAAQABAAEAAAACAAsAAQABAAEAAAACAAwAAQABAAEAAAACAA0AAQABAAEAAAACAA4AAQABAAEAAAADAP//AQABAAEAAAADAAAAAQABAAEAAAADAAEAAQABAAEAAAADAAIAAQABAAEAAAADAAMAAQABAAEAAAADAAQAAQABAAEAAAADAAUAAQABAAEAAAADAAYAAQABAAEAAAADAAcAAQABAAEAAAADAAgAAQABAAEAAAADAAkAAQABAAEAAAADAAoAAQABAAEAAAADAAsAAQABAAEAAAADAAwAAQABAAEAAAADAA0AAQABAAEAAAADAA4AAQABAAEAAAAEAP//AQABAAEAAAAEAAAAAQABAAEAAAAEAAEAAQABAAEAAAAEAAIAAQABAAEAAAAEAAMAAQABAAEAAAAEAAQAAQABAAEAAAAEAAUAAQABAAEAAAAEAAYAAQABAAEAAAAEAAcAAQABAAEAAAAEAAgAAQABAAEAAAAEAAkAAQABAAEAAAAEAAoAAQABAAEAAAAEAAsAAQABAAEAAAAEAAwAAQABAAEAAAAEAA0AAQABAAEAAAAEAA4AAQABAAEAAAAFAP//AQABAAEAAAAFAAAAAQABAAEAAAAFAAEAAQABAAEAAAAFAAIAAQABAAEAAAAFAAMAAQABAAEAAAAFAAQAAQABAAEAAAAFAAUAAQABAAEAAAAFAAYAAQABAAEAAAAFAAcAAQABAAEAAAAFAAgAAQABAAEAAAAFAAkAAQABAAEAAAAFAAoAAQABAAEAAAAFAAsAAQABAAEAAAAFAAwAAQABAAEAAAAFAA0AAQABAAEAAAAFAA4AAQABAAEAAAAGAP//AQABAAEAAAAGAAAAAQABAAEAAAAGAAEAAQABAAEAAAAGAAIAAQABAAEAAAAGAAMAAQABAAEAAAAGAAQAAQABAAEAAAAGAAUAAQABAAEAAAAGAAYAAQABAAEAAAAGAAcAAQABAAEAAAAGAAgAAQABAAEAAAAGAAkAAQABAAEAAAAGAAoAAQABAAEAAAAGAAsAAQABAAEAAAAGAAwAAQABAAEAAAAGAA0AAQABAAEAAAAGAA4AAQABAAEAAAAHAP//AQABAAEAAAAHAAAAAQABAAEAAAAHAAEAAQABAAEAAAAHAAIAAQABAAEAAAAHAAMAAQABAAEAAAAHAAQAAQABAAEAAAAHAAUAAQABAAEAAAAHAAYAAQABAAEAAAAHAAcAAQABAAEAAAAHAAgAAQABAAEAAAAHAAkAAQABAAEAAAAHAAoAAQABAAEAAAAHAAsAAQABAAEAAAAHAAwAAQABAAEAAAAHAA0AAQABAAEAAAAHAA4AAQABAAEAAAAIAP//AQABAAEAAAAIAAAAAQABAAEAAAAIAAEAAQABAAEAAAAIAAIAAQABAAEAAAAIAAMAAQABAAEAAAAIAAQAAQABAAEAAAAIAAUAAQABAAEAAAAIAAYAAQABAAEAAAAIAAcAAQABAAEAAAAIAAgAAQABAAEAAAAIAAkAAQABAAEAAAAIAAoAAQABAAEAAAAIAAsAAQABAAEAAAAIAAwAAQABAAEAAAAIAA0AAQABAAEAAAAIAA4AAQABAAEAAAAJAP//AQABAAEAAAAJAAAAAQABAAEAAAAJAAEAAQABAAEAAAAJAAIAAQABAAEAAAAJAAMAAQABAAEAAAAJAAQAAQABAAEAAAAJAAUAAQABAAEAAAAJAAYAAQABAAEAAAAJAAcAAQABAAEAAAAJAAgAAQABAAEAAAAJAAkAAQABAAEAAAAJAAoAAQABAAEAAAAJAAsAAQABAAEAAAAJAAwAAQABAAEAAAAJAA0AAQABAAEAAAAJAA4AAQABAAEAAAAKAP//AQABAAEAAAAKAAAAAQABAAEAAAAKAAEAAQABAAEAAAAKAAIAAQABAAEAAAAKAAMAAQABAAEAAAAKAAQAAQABAAEAAAAKAAUAAQABAAEAAAAKAAYAAQABAAEAAAAKAAcAAQABAAEAAAAKAAgAAQABAAEAAAAKAAkAAQABAAEAAAAKAAoAAQABAAEAAAAKAAsAAQABAAEAAAAKAAwAAQABAAEAAAAKAA0AAQABAAEAAAAKAA4AAQABAAEAAAALAP//AQABAAEAAAALAAAAAQABAAEAAAALAAEAAQABAAEAAAALAAIAAQABAAEAAAALAAMAAQABAAEAAAALAAQAAQABAAEAAAALAAUAAQABAAEAAAALAAYAAQABAAEAAAALAAcAAQABAAEAAAALAAgAAQABAAEAAAALAAkAAQABAAEAAAALAAoAAQABAAEAAAALAAsAAQABAAEAAAALAAwAAQABAAEAAAALAA0AAQABAAEAAAALAA4AAQABAAEAAAAMAP//AQABAAEAAAAMAAAAAQABAAEAAAAMAAEAAQABAAEAAAAMAAIAAQABAAEAAAAMAAMAAQABAAEAAAAMAAQAAQABAAEAAAAMAAUAAQABAAEAAAAMAAYAAQABAAEAAAAMAAcAAQABAAEAAAAMAAgAAQABAAEAAAAMAAkAAQABAAEAAAAMAAoAAQABAAEAAAAMAAsAAQABAAEAAAAMAAwAAQABAAEAAAAMAA0AAQABAAEAAAAMAA4AAQABAAEAAAANAP//AQABAAEAAAANAAAAAQABAAEAAAANAAEAAQABAAEAAAANAAIAAQABAAEAAAANAAMAAQABAAEAAAANAAQAAQABAAEAAAANAAUAAQABAAEAAAANAAYAAQABAAEAAAANAAcAAQABAAEAAAANAAgAAQABAAEAAAANAAkAAQABAAEAAAANAAoAAQABAAEAAAANAAsAAQABAAEAAAANAAwAAQABAAEAAAANAA0AAQABAAEAAAANAA4AAQABAAEAAAAOAP//AQABAAEAAAAOAAAAAQABAAEAAAAOAAEAAQABAAEAAAAOAAIAAQABAAEAAAAOAAMAAQABAAEAAAAOAAQAAQABAAEAAAAOAAUAAQABAAEAAAAOAAYAAQABAAEAAAAOAAcAAQABAAEAAAAOAAgAAQABAAEAAAAOAAkAAQABAAEAAAAOAAoAAQABAAEAAAAOAAsAAQABAAEAAAAOAAwAAQABAAEAAAAOAA0AAQABAAEAAAAOAA4AAQABAAEAAAAPAP//AQABAAEAAAAPAAAAAQABAAEAAAAPAAEAAQABAAEAAAAPAAIAAQABAAEAAAAPAAMAAQABAAEAAAAPAAQAAQABAAEAAAAPAAUAAQABAAEAAAAPAAYAAQABAAEAAAAPAAcAAQABAAEAAAAPAAgAAQABAAEAAAAPAAkAAQABAAEAAAAPAAoAAQABAAEAAAAPAAsAAQABAAEAAAAPAAwAAQABAAEAAAAPAA0AAQABAAEAAAAPAA4AAQABAAEAAAAQAP//AQABAAEAAAAQAAAAAQABAAEAAAAQAAEAAQABAAEAAAAQAAIAAQABAAEAAAAQAAMAAQABAAEAAAAQAAQAAQABAAEAAAAQAAUAAQABAAEAAAAQAAYAAQABAAEAAAAQAAcAAQABAAEAAAAQAAgAAQABAAEAAAAQAAkAAQABAAEAAAAQAAoAAQABAAEAAAAQAAsAAQABAAEAAAAQAAwAAQABAAEAAAAQAA0AAQABAAEAAAAQAA4AAQABAAEAAAARAP//AQABAAEAAAARAAAAAQABAAEAAAARAAEAAQABAAEAAAARAAIAAQABAAEAAAARAAMAAQABAAEAAAARAAQAAQABAAEAAAARAAUAAQABAAEAAAARAAYAAQABAAEAAAARAAcAAQABAAEAAAARAAgAAQABAAEAAAARAAkAAQABAAEAAAARAAoAAQABAAEAAAARAAsAAQABAAEAAAARAAwAAQABAAEAAAARAA0AAQABAAEAAAARAA4AAQABAAEAAAASAP//AQABAAEAAAASAAAAAQABAAEAAAASAAEAAQABAAEAAAASAAIAAQABAAEAAAASAAMAAQABAAEAAAASAAQAAQABAAEAAAASAAUAAQABAAEAAAASAAYAAQABAAEAAAASAAcAAQABAAEAAAASAAgAAQABAAEAAAASAAkAAQABAAEAAAASAAoAAQABAAEAAAASAAsAAQABAAEAAAASAAwAAQABAAEAAAASAA0AAQABAAEAAAASAA4AAQABAAEAAAATAP//AQABAAEAAAATAAAAAQABAAEAAAATAAEAAQABAAEAAAATAAIAAQABAAEAAAATAAMAAQABAAEAAAATAAQAAQABAAEAAAATAAUAAQABAAEAAAATAAYAAQABAAEAAAATAAcAAQABAAEAAAATAAgAAQABAAEAAAATAAkAAQABAAEAAAATAAoAAQABAAEAAAATAAsAAQABAAEAAAATAAwAAQABAAEAAAATAA0AAQABAAEAAAATAA4AAQABAAEAAAAUAP//AQABAAEAAAAUAAAAAQABAAEAAAAUAAEAAQABAAEAAAAUAAIAAQABAAEAAAAUAAMAAQABAAEAAAAUAAQAAQABAAEAAAAUAAUAAQABAAEAAAAUAAYAAQABAAEAAAAUAAcAAQABAAEAAAAUAAgAAQABAAEAAAAUAAkAAQABAAEAAAAUAAoAAQABAAEAAAAUAAsAAQABAAEAAAAUAAwAAQABAAEAAAAUAA0AAQABAAEAAAAUAA4AAQABAAEAAAAVAP//AQABAAEAAAAVAAAAAQABAAEAAAAVAAEAAQABAAEAAAAVAAIAAQABAAEAAAAVAAMAAQABAAEAAAAVAAQAAQABAAEAAAAVAAUAAQABAAEAAAAVAAYAAQABAAEAAAAVAAcAAQABAAEAAAAVAAgAAQABAAEAAAAVAAkAAQABAAEAAAAVAAoAAQABAAEAAAAVAAsAAQABAAEAAAAVAAwAAQABAAEAAAAVAA0AAQABAAEAAAAVAA4AAQABAAEAAAAWAP//AQABAAEAAAAWAAAAAQABAAEAAAAWAAEAAQABAAEAAAAWAAIAAQABAAEAAAAWAAMAAQABAAEAAAAWAAQAAQABAAEAAAAWAAUAAQABAAEAAAAWAAYAAQABAAEAAAAWAAcAAQABAAEAAAAWAAgAAQABAAEAAAAWAAkAAQABAAEAAAAWAAoAAQABAAEAAAAWAAsAAQABAAEAAAAWAAwAAQABAAEAAAAWAA0AAQABAAEAAAAWAA4AAQABAAEAAAAXAP//AQABAAEAAAAXAAAAAQABAAEAAAAXAAEAAQABAAEAAAAXAAIAAQABAAEAAAAXAAMAAQABAAEAAAAXAAQAAQABAAEAAAAXAAUAAQABAAEAAAAXAAYAAQABAAEAAAAXAAcAAQABAAEAAAAXAAgAAQABAAEAAAAXAAkAAQABAAEAAAAXAAoAAQABAAEAAAAXAAsAAQABAAEAAAAXAAwAAQABAAEAAAAXAA0AAQABAAEAAAAXAA4AAQABAAEAAAAYAP//AQABAAEAAAAYAAAAAQABAAEAAAAYAAEAAQABAAEAAAAYAAIAAQABAAEAAAAYAAMAAQABAAEAAAAYAAQAAQABAAEAAAAYAAUAAQABAAEAAAAYAAYAAQABAAEAAAAYAAcAAQABAAEAAAAYAAgAAQABAAEAAAAYAAkAAQABAAEAAAAYAAoAAQABAAEAAAAYAAsAAQABAAEAAAAYAAwAAQABAAEAAAAYAA0AAQABAAEAAAAYAA4AAQABAAEAAAAZAP//AQABAAEAAAAZAAAAAQABAAEAAAAZAAEAAQABAAEAAAAZAAIAAQABAAEAAAAZAAMAAQABAAEAAAAZAAQAAQABAAEAAAAZAAUAAQABAAEAAAAZAAYAAQABAAEAAAAZAAcAAQABAAEAAAAZAAgAAQABAAEAAAAZAAkAAQABAAEAAAAZAAoAAQABAAEAAAAZAAsAAQABAAEAAAAZAAwAAQABAAEAAAAZAA0AAQABAAEAAAAZAA4AAQABAAEAAAAaAP//AQABAAEAAAAaAAAAAQABAAEAAAAaAAEAAQABAAEAAAAaAAIAAQABAAEAAAAaAAMAAQABAAEAAAAaAAQAAQABAAEAAAAaAAUAAQABAAEAAAAaAAYAAQABAAEAAAAaAAcAAQABAAEAAAAaAAgAAQABAAEAAAAaAAkAAQABAAEAAAAaAAoAAQABAAEAAAAaAAsAAQABAAEAAAAaAAwAAQABAAEAAAAaAA0AAQABAAEAAAAaAA4AAQABAAEAAAAbAP//AQABAAEAAAAbAAAAAQABAAEAAAAbAAEAAQABAAEAAAAbAAIAAQABAAEAAAAbAAMAAQABAAEAAAAbAAQAAQABAAEAAAAbAAUAAQABAAEAAAAbAAYAAQABAAEAAAAbAAcAAQABAAEAAAAbAAgAAQABAAEAAAAbAAkAAQABAAEAAAAbAAoAAQABAAEAAAAbAAsAAQABAAEAAAAbAAwAAQABAAEAAAAbAA0AAQABAAEAAAAbAA4AAQABAAEAAAAcAP//AQABAAEAAAAcAAAAAQABAAEAAAAcAAEAAQABAAEAAAAcAAIAAQABAAEAAAAcAAMAAQABAAEAAAAcAAQAAQABAAEAAAAcAAUAAQABAAEAAAAcAAYAAQABAAEAAAAcAAcAAQABAAEAAAAcAAgAAQABAAEAAAAcAAkAAQABAAEAAAAcAAoAAQABAAEAAAAcAAsAAQABAAEAAAAcAAwAAQABAAEAAAAcAA0AAQABAAEAAAAcAA4AAQABAAEAAAAdAP//AQABAAEAAAAdAAAAAQABAAEAAAAdAAEAAQABAAEAAAAdAAIAAQABAAEAAAAdAAMAAQABAAEAAAAdAAQAAQABAAEAAAAdAAUAAQABAAEAAAAdAAYAAQABAAEAAAAdAAcAAQABAAEAAAAdAAgAAQABAAEAAAAdAAkAAQABAAEAAAAdAAoAAQABAAEAAAAdAAsAAQABAAEAAAAdAAwAAQABAAEAAAAdAA0AAQABAAEAAAAdAA4AAQABAAEAAAAeAP//AQABAAEAAAAeAAAAAQABAAEAAAAeAAEAAQABAAEAAAAeAAIAAQABAAEAAAAeAAMAAQABAAEAAAAeAAQAAQABAAEAAAAeAAUAAQABAAEAAAAeAAYAAQABAAEAAAAeAAcAAQABAAEAAAAeAAgAAQABAAEAAAAeAAkAAQABAAEAAAAeAAoAAQABAAEAAAAeAAsAAQABAAEAAAAeAAwAAQABAAEAAAAeAA0AAQABAAEAAAAeAA4AAQABAAEAAAAfAP//AQABAAEAAAAfAAAAAQABAAEAAAAfAAEAAQABAAEAAAAfAAIAAQABAAEAAAAfAAMAAQABAAEAAAAfAAQAAQABAAEAAAAfAAUAAQABAAEAAAAfAAYAAQABAAEAAAAfAAcAAQABAAEAAAAfAAgAAQABAAEAAAAfAAkAAQABAAEAAAAfAAoAAQABAAEAAAAfAAsAAQABAAEAAAAfAAwAAQABAAEAAAAfAA0AAQABAAEAAAAfAA4AAQABAAEAAAAgAP//AQABAAEAAAAgAAAAAQABAAEAAAAgAAEAAQABAAEAAAAgAAIAAQABAAEAAAAgAAMAAQABAAEAAAAgAAQAAQABAAEAAAAgAAUAAQABAAEAAAAgAAYAAQABAAEAAAAgAAcAAQABAAEAAAAgAAgAAQABAAEAAAAgAAkAAQABAAEAAAAgAAoAAQABAAEAAAAgAAsAAQABAAEAAAAgAAwAAQABAAEAAAAgAA0AAQABAAEAAAAgAA4AAQABAAEAAAAhAP//AQABAAEAAAAhAAAAAQABAAEAAAAhAAEAAQABAAEAAAAhAAIAAQABAAEAAAAhAAMAAQABAAEAAAAhAAQAAQABAAEAAAAhAAUAAQABAAEAAAAhAAYAAQABAAEAAAAhAAcAAQABAAEAAAAhAAgAAQABAAEAAAAhAAkAAQABAAEAAAAhAAoAAQABAAEAAAAhAAsAAQABAAEAAAAhAAwAAQABAAEAAAAhAA0AAQABAAEAAAAhAA4AAQABAAEAAAAiAP//AQABAAEAAAAiAAAAAQABAAEAAAAiAAEAAQABAAEAAAAiAAIAAQABAAEAAAAiAAMAAQABAAEAAAAiAAQAAQABAAEAAAAiAAUAAQABAAEAAAAiAAYAAQABAAEAAAAiAAcAAQABAAEAAAAiAAgAAQABAAEAAAAiAAkAAQABAAEAAAAiAAoAAQABAAEAAAAiAAsAAQABAAEAAAAiAAwAAQABAAEAAAAiAA0AAQABAAEAAAAiAA4AAQABAAEAAAAjAP//AQABAAEAAAAjAAAAAQABAAEAAAAjAAEAAQABAAEAAAAjAAIAAQABAAEAAAAjAAMAAQABAAEAAAAjAAQAAQABAAEAAAAjAAUAAQABAAEAAAAjAAYAAQABAAEAAAAjAAcAAQABAAEAAAAjAAgAAQABAAEAAAAjAAkAAQABAAEAAAAjAAoAAQABAAEAAAAjAAsAAQABAAEAAAAjAAwAAQABAAEAAAAjAA0AAQABAAEAAAAjAA4AAQABAAEAAAA=")
+tile_set = ExtResource("27_e0s53")
+
+[node name="Grass" type="TileMapLayer" parent="TileMapLayers" unique_id=1927901473]
+tile_set = ExtResource("27_e0s53")
+
+[node name="Paths" type="TileMapLayer" parent="TileMapLayers" unique_id=1125239553]
+tile_map_data = PackedByteArray("AAAeAAkABgAAAAAAAAAeAAoABgAAAAEAAAAeAAsABgAAAAIAAAAfAAkABgACAAAAAAAfAAoABgACAAEAAAAfAAsABgACAAIAAAAMAAMABgAAAAAAAAANAAMABgABAAAAAAAOAAMABgACAAAAAAAMAAQABgAAAAIAAAANAAQABgABAAIAAAAOAAQABgACAAIAAAAXAAUABgAAAAAAAAAXAAYABgAAAAIAAAAYAAUABgABAAAAAAAYAAYABgABAAIAAAAZAAUABgACAAAAAAAZAAYABgACAAIAAAA=")
+tile_set = ExtResource("27_e0s53")
+
+[node name="Fences" type="TileMapLayer" parent="TileMapLayers" unique_id=184723524]
+tile_map_data = PackedByteArray("AAACAAcAAAABAAAAAAADAAcAAAABAAIAAAAEAAcAAAABAAIAAAAFAAcAAAABAAIAAAAGAAcAAAABAAIAAAAHAAcAAAABAAIAAAAIAAcAAAABAAIAAAASAAUAAAABAAIAAAATAAUAAAABAAIAAAAUAAUAAAABAAIAAAAVAAUAAAABAAIAAAAWAAUAAAABAAIAAAAAAAgAAAAAAAAAAAAAAAkAAAAAAAEAAAAAAAoAAAAAAAEAAAAAAAsAAAAAAAEAAAAAAAwAAAAAAAEAAAAAAA0AAAAAAAEAAAAAAA4AAAAAAAIAAAABAA4AAAABAAIAAAACAA4AAAABAAIAAAADAA4AAAABAAIAAAAEAA4AAAABAAIAAAAFAA4AAAABAAIAAAAGAA4AAAABAAIAAAAHAA4AAAABAAIAAAAIAA4AAAABAAIAAAAJAA4AAAABAAIAAAAKAA4AAAABAAIAAAALAA4AAAABAAIAAAAMAA4AAAABAAIAAAANAA4AAAABAAIAAAAOAA4AAAABAAIAAAAPAA4AAAABAAIAAAAQAA4AAAABAAIAAAARAA4AAAABAAIAAAASAA4AAAABAAIAAAATAA4AAAABAAIAAAAUAA4AAAABAAIAAAAVAA4AAAABAAIAAAAWAA4AAAABAAIAAAAXAA4AAAABAAAAAAAYAA4AAAABAAAAAAAZAA4AAAABAAIAAAAaAA4AAAABAAIAAAAbAA4AAAABAAIAAAAcAA4AAAABAAIAAAAdAA4AAAABAAIAAAAeAA4AAAABAAIAAAAfAA4AAAABAAIAAAAgAA4AAAABAAIAAAAhAA4AAAABAAIAAAAiAA4AAAACAAIAAAAiAA0AAAACAAEAAAAiAAwAAAACAAEAAAAiAAsAAAACAAEAAAAiAAoAAAACAAEAAAAiAAkAAAACAAEAAAAiAAgAAAACAAEAAAAiAAcAAAACAAEAAAANAAUAAAACAAAAAAANAAYAAAACAAEAAAANAAcAAAAAAAIAAAAOAAcAAAABAAIAAAAPAAcAAAACAAAAAAAPAAgAAAACAAEAAAABAAcAAAABAAAAAAAJAAcAAAACAAIAAAAJAAYAAAACAAEAAAAJAAUAAAAAAAAAAAAKAAUAAAABAAAAAAALAAUAAAABAAAAAAAMAAUAAAABAAAAAAAXAA8AAAABAAAAAAA=")
+tile_set = ExtResource("28_avppf")
+
+[node name="BridgeShadow" type="TileMapLayer" parent="TileMapLayers" unique_id=1333919526]
+tile_set = ExtResource("29_7rx3o")
+
+[node name="Bridges" type="TileMapLayer" parent="TileMapLayers" unique_id=1550472435]
+tile_set = ExtResource("29_7rx3o")
+
+[node name="CliffShadows" type="TileMapLayer" parent="TileMapLayers" unique_id=1953499680]
+tile_set = ExtResource("30_niocr")
+
+[node name="Cliffs" type="TileMapLayer" parent="TileMapLayers" unique_id=952717145]
+tile_set = ExtResource("31_xk8vi")
+
+[node name="Void" type="TileMapLayer" parent="TileMapLayers" unique_id=158298427]
+texture_filter = 1
+material = ExtResource("32_jmidq")
+tile_set = ExtResource("33_jixcv")
+
+[node name="Forest" type="StaticBody2D" parent="TileMapLayers" unique_id=1461576870]
+editor_description = "This uses Threadbare's \"AreaFiller\" component to place trees randomly in a given area. Try adjusting the parameters on the AreaFiller node and press \"Refill\"."
+y_sort_enabled = true
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapLayers/Forest" unique_id=431080525]
+position = Vector2(533, -211)
+shape = SubResource("RectangleShape2D_7ipwe")
+
+[node name="AreaFiller" type="Node" parent="TileMapLayers/Forest" unique_id=1137223783]
+script = ExtResource("19_venih")
+scenes = Array[PackedScene]([ExtResource("20_56xkm")])
+sprite_frames = Array[SpriteFrames]([ExtResource("21_2kcf4"), ExtResource("22_fvk1u"), ExtResource("22_fvk1u"), ExtResource("22_fvk1u")])
+metadata/_custom_type_script = "uid://bdhjixygupit1"
+
+[node name="Tree" parent="TileMapLayers/Forest" unique_id=1182216860 instance=ExtResource("20_56xkm")]
+position = Vector2(523, 125)
+scale = Vector2(0.9436444, 1.0067108)
+
+[node name="Tree2" parent="TileMapLayers/Forest" unique_id=1195849222 instance=ExtResource("20_56xkm")]
+position = Vector2(99.99998, 58)
+scale = Vector2(1.113184, 1.1827277)
+
+[node name="Tree3" parent="TileMapLayers/Forest" unique_id=1865325846 instance=ExtResource("20_56xkm")]
+position = Vector2(88, 409)
+scale = Vector2(0.9079491, 0.89297915)
+
+[node name="Tree4" parent="TileMapLayers/Forest" unique_id=706912241 instance=ExtResource("20_56xkm")]
+position = Vector2(43.999996, 559)
+scale = Vector2(1.094416, 1.1684742)
+
+[node name="Tree5" parent="TileMapLayers/Forest" unique_id=886605238 instance=ExtResource("20_56xkm")]
+position = Vector2(422.99997, 155.00003)
+scale = Vector2(0.98880094, 1.0183204)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree6" parent="TileMapLayers/Forest" unique_id=839628558 instance=ExtResource("20_56xkm")]
+position = Vector2(2187, 439)
+scale = Vector2(1.0008545, 0.9437981)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree7" parent="TileMapLayers/Forest" unique_id=1073826593 instance=ExtResource("20_56xkm")]
+position = Vector2(204.00002, 62.999992)
+scale = Vector2(1.1843371, 1.0949713)
+
+[node name="Tree8" parent="TileMapLayers/Forest" unique_id=561894730 instance=ExtResource("20_56xkm")]
+position = Vector2(1982, 166)
+scale = Vector2(0.96559054, 1.0651643)
+
+[node name="Tree9" parent="TileMapLayers/Forest" unique_id=1883560748 instance=ExtResource("20_56xkm")]
+position = Vector2(-52.05436, 241.94772)
+scale = Vector2(1.002877, 0.9765011)
+
+[node name="Tree10" parent="TileMapLayers/Forest" unique_id=1503136376 instance=ExtResource("20_56xkm")]
+position = Vector2(62.6756, 239.02135)
+scale = Vector2(1.117693, 1.0874206)
+
+[node name="Tree11" parent="TileMapLayers/Forest" unique_id=1424957137 instance=ExtResource("20_56xkm")]
+position = Vector2(542.0001, -121)
+scale = Vector2(1.0381949, 1.0544606)
+
+[node name="Tree12" parent="TileMapLayers/Forest" unique_id=1288797515 instance=ExtResource("20_56xkm")]
+position = Vector2(72.000015, 106.00001)
+scale = Vector2(0.978142, 1.0348583)
+
+[node name="Tree13" parent="TileMapLayers/Forest" unique_id=1699430464 instance=ExtResource("20_56xkm")]
+position = Vector2(322.99997, 155.00002)
+scale = Vector2(0.9844353, 1.0476297)
+
+[node name="Tree14" parent="TileMapLayers/Forest" unique_id=1101577392 instance=ExtResource("20_56xkm")]
+position = Vector2(78, 136.00002)
+scale = Vector2(1.0602809, 1.0239228)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree15" parent="TileMapLayers/Forest" unique_id=165056253 instance=ExtResource("20_56xkm")]
+position = Vector2(2038, 172)
+scale = Vector2(1.0580077, 1.0457476)
+
+[node name="Tree16" parent="TileMapLayers/Forest" unique_id=97344186 instance=ExtResource("20_56xkm")]
+position = Vector2(1538.9999, 43.000004)
+scale = Vector2(1.1031436, 1.1967103)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree17" parent="TileMapLayers/Forest" unique_id=342495969 instance=ExtResource("20_56xkm")]
+position = Vector2(749.99994, 82.99997)
+scale = Vector2(0.88363844, 0.8252952)
+
+[node name="Tree18" parent="TileMapLayers/Forest" unique_id=1543422175 instance=ExtResource("20_56xkm")]
+position = Vector2(140.60526, 42.702507)
+scale = Vector2(0.81033456, 0.84401214)
+
+[node name="Tree19" parent="TileMapLayers/Forest" unique_id=2015325980 instance=ExtResource("20_56xkm")]
+position = Vector2(45.170464, 169.35323)
+scale = Vector2(0.85733956, 0.92838824)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree20" parent="TileMapLayers/Forest" unique_id=829879943 instance=ExtResource("20_56xkm")]
+position = Vector2(952, 126)
+scale = Vector2(1.0311427, 1.038447)
+
+[node name="Tree21" parent="TileMapLayers/Forest" unique_id=42696820 instance=ExtResource("20_56xkm")]
+position = Vector2(2128, 307)
+scale = Vector2(1.1616871, 1.0655842)
+
+[node name="Tree22" parent="TileMapLayers/Forest" unique_id=1256503153 instance=ExtResource("20_56xkm")]
+position = Vector2(2121, 203)
+scale = Vector2(0.86864305, 0.9299557)
+
+[node name="Tree23" parent="TileMapLayers/Forest" unique_id=1920974594 instance=ExtResource("20_56xkm")]
+position = Vector2(339.03198, -7.323471)
+scale = Vector2(0.96201044, 0.9151595)
+
+[node name="Tree24" parent="TileMapLayers/Forest" unique_id=1498375117 instance=ExtResource("20_56xkm")]
+position = Vector2(1483, 63)
+scale = Vector2(1.0670353, 1.1737987)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree25" parent="TileMapLayers/Forest" unique_id=716386780 instance=ExtResource("20_56xkm")]
+position = Vector2(22.00003, 483)
+scale = Vector2(0.96739507, 0.95261586)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree26" parent="TileMapLayers/Forest" unique_id=316093686 instance=ExtResource("20_56xkm")]
+position = Vector2(132.99998, 310)
+scale = Vector2(1.1526139, 1.1974825)
+
+[node name="Tree27" parent="TileMapLayers/Forest" unique_id=1092289372 instance=ExtResource("20_56xkm")]
+position = Vector2(237.00002, 153)
+scale = Vector2(1.0065422, 1.0803994)
+
+[node name="Tree28" parent="TileMapLayers/Forest" unique_id=1976944148 instance=ExtResource("20_56xkm")]
+position = Vector2(459.67792, 28.936611)
+scale = Vector2(1.0790955, 1.0632309)
+
+[node name="Tree29" parent="TileMapLayers/Forest" unique_id=913389649 instance=ExtResource("20_56xkm")]
+position = Vector2(310, -80.000015)
+scale = Vector2(1.0231422, 0.9937232)
+
+[node name="Tree30" parent="TileMapLayers/Forest" unique_id=706456197 instance=ExtResource("20_56xkm")]
+position = Vector2(1667, 60.999985)
+scale = Vector2(1.2998596, 1.1824818)
+
+[node name="Tree31" parent="TileMapLayers/Forest" unique_id=1401462195 instance=ExtResource("20_56xkm")]
+position = Vector2(316.75488, 74.72743)
+scale = Vector2(0.9387665, 0.8754183)
+
+[node name="Tree32" parent="TileMapLayers/Forest" unique_id=554063743 instance=ExtResource("20_56xkm")]
+position = Vector2(539.60394, -67.804276)
+scale = Vector2(1.0461669, 1.0291582)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree33" parent="TileMapLayers/Forest" unique_id=315813673 instance=ExtResource("20_56xkm")]
+position = Vector2(53.00006, 1001.9998)
+scale = Vector2(1.0364168, 0.9924647)
+
+[node name="Tree34" parent="TileMapLayers/Forest" unique_id=919483765 instance=ExtResource("20_56xkm")]
+position = Vector2(563.84625, 36.110687)
+scale = Vector2(0.9444068, 1.0238725)
+
+[node name="Tree35" parent="TileMapLayers/Forest" unique_id=8370130 instance=ExtResource("20_56xkm")]
+position = Vector2(270, 7)
+scale = Vector2(0.9821974, 1.0447962)
+
+[node name="Tree36" parent="TileMapLayers/Forest" unique_id=1695124116 instance=ExtResource("20_56xkm")]
+position = Vector2(708.67926, -64.661316)
+scale = Vector2(0.8227171, 0.84662884)
+
+[node name="Tree37" parent="TileMapLayers/Forest" unique_id=435425913 instance=ExtResource("20_56xkm")]
+position = Vector2(1835, 72)
+scale = Vector2(1.1422975, 1.1544138)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree38" parent="TileMapLayers/Forest" unique_id=1566283608 instance=ExtResource("20_56xkm")]
+position = Vector2(508, 6.0000076)
+scale = Vector2(0.9104163, 0.92448384)
+
+[node name="Tree39" parent="TileMapLayers/Forest" unique_id=2093195354 instance=ExtResource("20_56xkm")]
+position = Vector2(22.00003, 858.0001)
+scale = Vector2(0.8350715, 0.8931964)
+
+[node name="Tree40" parent="TileMapLayers/Forest" unique_id=1604739206 instance=ExtResource("20_56xkm")]
+position = Vector2(151, 191)
+scale = Vector2(1.2120489, 1.1548411)
+
+[node name="Tree41" parent="TileMapLayers/Forest" unique_id=705141691 instance=ExtResource("20_56xkm")]
+position = Vector2(1940.9999, 57.999977)
+scale = Vector2(1.1514823, 1.0825572)
+
+[node name="Tree42" parent="TileMapLayers/Forest" unique_id=1227497793 instance=ExtResource("20_56xkm")]
+position = Vector2(664.6819, 7.1543636)
+scale = Vector2(0.9748106, 0.9679873)
+
+[node name="Tree43" parent="TileMapLayers/Forest" unique_id=717824460 instance=ExtResource("20_56xkm")]
+position = Vector2(594, 44)
+scale = Vector2(1.0436357, 1.096538)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree44" parent="TileMapLayers/Forest" unique_id=2050864685 instance=ExtResource("20_56xkm")]
+position = Vector2(1426, 39)
+scale = Vector2(1.2118458, 1.187988)
+
+[node name="Tree45" parent="TileMapLayers/Forest" unique_id=1500254528 instance=ExtResource("20_56xkm")]
+position = Vector2(1538, 149)
+scale = Vector2(0.8612578, 0.9037653)
+
+[node name="Tree46" parent="TileMapLayers/Forest" unique_id=1116627224 instance=ExtResource("20_56xkm")]
+position = Vector2(1030, 53.999954)
+scale = Vector2(0.9916459, 1.080711)
+
+[node name="Tree47" parent="TileMapLayers/Forest" unique_id=551714758 instance=ExtResource("20_56xkm")]
+position = Vector2(2222, 197)
+scale = Vector2(1.0857643, 1.0913429)
+
+[node name="Tree48" parent="TileMapLayers/Forest" unique_id=807740743 instance=ExtResource("20_56xkm")]
+position = Vector2(408.00006, -85)
+scale = Vector2(0.7914543, 0.8055921)
+
+[node name="Tree49" parent="TileMapLayers/Forest" unique_id=1287097598 instance=ExtResource("20_56xkm")]
+position = Vector2(1594.0001, 32.000004)
+scale = Vector2(0.97601926, 0.90482444)
+
+[node name="Tree50" parent="TileMapLayers/Forest" unique_id=66752503 instance=ExtResource("20_56xkm")]
+position = Vector2(1077, -2.9999924)
+scale = Vector2(1.0258154, 1.0038793)
+
+[node name="Tree51" parent="TileMapLayers/Forest" unique_id=1554253097 instance=ExtResource("20_56xkm")]
+position = Vector2(2010, 72)
+scale = Vector2(1.1917449, 1.1268523)
+
+[node name="Tree52" parent="TileMapLayers/Forest" unique_id=1725771462 instance=ExtResource("20_56xkm")]
+position = Vector2(228, 135)
+scale = Vector2(0.75124043, 0.82121533)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree53" parent="TileMapLayers/Forest" unique_id=1846252947 instance=ExtResource("20_56xkm")]
+position = Vector2(646.5388, 70.40961)
+scale = Vector2(1.0954036, 1.0545138)
+
+[node name="Tree54" parent="TileMapLayers/Forest" unique_id=1618735396 instance=ExtResource("20_56xkm")]
+position = Vector2(1759, 65.99999)
+scale = Vector2(1.0721462, 1.1488492)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree55" parent="TileMapLayers/Forest" unique_id=845100791 instance=ExtResource("20_56xkm")]
+position = Vector2(1876.9998, 46.999992)
+scale = Vector2(0.9677507, 0.9177646)
+
+[node name="Tree56" parent="TileMapLayers/Forest" unique_id=1892613815 instance=ExtResource("20_56xkm")]
+position = Vector2(806, -15.999985)
+scale = Vector2(1.0315936, 1.0713472)
+
+[node name="Tree57" parent="TileMapLayers/Forest" unique_id=1310999868 instance=ExtResource("20_56xkm")]
+position = Vector2(33.000008, 761)
+scale = Vector2(1.000803, 1.0681803)
+
+[node name="Tree58" parent="TileMapLayers/Forest" unique_id=828432560 instance=ExtResource("20_56xkm")]
+position = Vector2(614.00006, 124.00001)
+scale = Vector2(0.8916407, 0.9103164)
+
+[node name="Tree59" parent="TileMapLayers/Forest" unique_id=2108137834 instance=ExtResource("20_56xkm")]
+position = Vector2(390, 19.000002)
+scale = Vector2(0.92671424, 0.9521191)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree60" parent="TileMapLayers/Forest" unique_id=1034203173 instance=ExtResource("20_56xkm")]
+position = Vector2(260, 218)
+scale = Vector2(0.92301464, 0.9273033)
+
+[node name="Tree61" parent="TileMapLayers/Forest" unique_id=418358518 instance=ExtResource("20_56xkm")]
+position = Vector2(869, 75)
+scale = Vector2(0.99410814, 0.9377908)
+
+[node name="Tree62" parent="TileMapLayers/Forest" unique_id=2027520390 instance=ExtResource("20_56xkm")]
+position = Vector2(2057, 114.99999)
+scale = Vector2(1.1967351, 1.1055331)
+
+[node name="Tree63" parent="TileMapLayers/Forest" unique_id=1681078424 instance=ExtResource("20_56xkm")]
+position = Vector2(1069, -139.00006)
+scale = Vector2(0.802388, 0.8563258)
+
+[node name="Tree64" parent="TileMapLayers/Forest" unique_id=1947885069 instance=ExtResource("20_56xkm")]
+position = Vector2(812.93256, 28.283005)
+scale = Vector2(1.2428144, 1.183866)
+
+[node name="Tree65" parent="TileMapLayers/Forest" unique_id=330566216 instance=ExtResource("20_56xkm")]
+position = Vector2(918, 26)
+scale = Vector2(0.9372784, 0.859087)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree66" parent="TileMapLayers/Forest" unique_id=657690875 instance=ExtResource("20_56xkm")]
+position = Vector2(785.437, -38.855484)
+scale = Vector2(1.1650894, 1.1027207)
+
+[node name="Tree67" parent="TileMapLayers/Forest" unique_id=1921990952 instance=ExtResource("20_56xkm")]
+position = Vector2(1165, 75.00003)
+scale = Vector2(0.84976095, 0.84610724)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree68" parent="TileMapLayers/Forest" unique_id=568672002 instance=ExtResource("20_56xkm")]
+position = Vector2(2128, 91.999985)
+scale = Vector2(1.2356795, 1.1426313)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree69" parent="TileMapLayers/Forest" unique_id=967694725 instance=ExtResource("20_56xkm")]
+position = Vector2(889.5211, 5.8428574)
+scale = Vector2(0.8889678, 0.8271292)
+
+[node name="Tree70" parent="TileMapLayers/Forest" unique_id=1289191175 instance=ExtResource("20_56xkm")]
+position = Vector2(968.00006, -87)
+scale = Vector2(1.1543899, 1.0792053)
+
+[node name="Tree71" parent="TileMapLayers/Forest" unique_id=122943526 instance=ExtResource("20_56xkm")]
+position = Vector2(944.99084, 65.57212)
+scale = Vector2(1.1204253, 1.0844281)
+
+[node name="Tree72" parent="TileMapLayers/Forest" unique_id=937192879 instance=ExtResource("20_56xkm")]
+position = Vector2(12.999999, 618.99994)
+scale = Vector2(1.0099723, 1.0769176)
+
+[node name="Tree73" parent="TileMapLayers/Forest" unique_id=1800194530 instance=ExtResource("20_56xkm")]
+position = Vector2(2205, 85)
+scale = Vector2(0.81302536, 0.8925839)
+
+[node name="Tree74" parent="TileMapLayers/Forest" unique_id=1604018543 instance=ExtResource("20_56xkm")]
+position = Vector2(1284, 41.000004)
+scale = Vector2(1.0657846, 1.1625344)
+
+[node name="Tree75" parent="TileMapLayers/Forest" unique_id=622973671 instance=ExtResource("20_56xkm")]
+position = Vector2(2235, 398)
+scale = Vector2(0.88601166, 0.98139626)
+
+[node name="Tree76" parent="TileMapLayers/Forest" unique_id=612601206 instance=ExtResource("20_56xkm")]
+position = Vector2(1225, 6.000061)
+scale = Vector2(1.1483678, 1.0605124)
+
+[node name="Tree77" parent="TileMapLayers/Forest" unique_id=2071923378 instance=ExtResource("20_56xkm")]
+position = Vector2(1027, -114.999954)
+scale = Vector2(0.99793696, 0.9381673)
+
+[node name="Tree78" parent="TileMapLayers/Forest" unique_id=1341979480 instance=ExtResource("20_56xkm")]
+position = Vector2(2200.9998, 290)
+scale = Vector2(0.95707214, 0.9085272)
+
+[node name="Tree79" parent="TileMapLayers/Forest" unique_id=1754944609 instance=ExtResource("20_56xkm")]
+position = Vector2(26, 347)
+scale = Vector2(1.2042282, 1.1630253)
+
+[node name="Tree80" parent="TileMapLayers/Forest" unique_id=1207749039 instance=ExtResource("20_56xkm")]
+position = Vector2(1391, 79)
+scale = Vector2(1.2455566, 1.1908455)
+
+[node name="Tree81" parent="TileMapLayers/Forest" unique_id=811269744 instance=ExtResource("20_56xkm")]
+position = Vector2(1059.8826, -99.3994)
+scale = Vector2(0.8901185, 0.88946646)
+
+[node name="Tree82" parent="TileMapLayers/Forest" unique_id=495950315 instance=ExtResource("20_56xkm")]
+position = Vector2(1032.1313, 127.08353)
+scale = Vector2(0.77366775, 0.8220842)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree83" parent="TileMapLayers/Forest" unique_id=966668251 instance=ExtResource("20_56xkm")]
+position = Vector2(1241, 44)
+scale = Vector2(0.89498067, 0.8793378)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree84" parent="TileMapLayers/Forest" unique_id=1694391083 instance=ExtResource("20_56xkm")]
+position = Vector2(1349, 36)
+scale = Vector2(1.1789399, 1.181437)
+
+[node name="Tree85" parent="TileMapLayers/Forest" unique_id=600963575 instance=ExtResource("20_56xkm")]
+position = Vector2(93, 307)
+scale = Vector2(0.8917542, 0.9298732)
+
+[node name="Tree86" parent="TileMapLayers/Forest" unique_id=2046514682 instance=ExtResource("20_56xkm")]
+position = Vector2(1112, 100.000015)
+scale = Vector2(1.0741869, 1.1028868)
+sprite_frames = ExtResource("21_2kcf4")
+
+[node name="Tree87" parent="TileMapLayers/Forest" unique_id=10030103 instance=ExtResource("20_56xkm")]
+position = Vector2(1151, 30.000015)
+scale = Vector2(1.0405519, 1.1536475)
+
+[node name="PlayerLight" type="CharacterBody2D" parent="." unique_id=987093863]
+position = Vector2(256, 345)
+collision_mask = 528
+motion_mode = 1
+script = ExtResource("2_elu6d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerLight" unique_id=158529000]
+position = Vector2(-3.5, -9.5)
+shape = SubResource("RectangleShape2D_7p3u1")
+
+[node name="Camera2D" type="Camera2D" parent="PlayerLight" unique_id=1101734020]
+position = Vector2(-42, 55)
+limit_left = 3
+limit_top = -119
+limit_right = 2247
+limit_bottom = 948
+editor_draw_limits = true
+
+[node name="SpritePersonaje" type="AnimatedSprite2D" parent="PlayerLight" unique_id=23514916]
+position = Vector2(3.2499986, 6.500002)
+scale = Vector2(1.1796876, 1.0677083)
+sprite_frames = SubResource("SpriteFrames_e0s53")
+frame_progress = 0.36811775
+
+[node name="LightPosition" type="Marker2D" parent="PlayerLight" unique_id=1954688562]
+position = Vector2(73, -3)
+
+[node name="Luz" type="PointLight2D" parent="PlayerLight/LightPosition" unique_id=1129393436]
+position = Vector2(6.9999905, -7.0000067)
+scale = Vector2(0.16639748, 0.2246787)
+texture = SubResource("CompressedTexture2D_dsbss")
+
+[node name="EnergyBar" type="ProgressBar" parent="PlayerLight" unique_id=1156250374]
+offset_right = 4.0
+offset_bottom = 27.0
+
+[node name="SacredFlower" type="Area2D" parent="." unique_id=763040140]
+position = Vector2(385, 86)
+script = ExtResource("3_7p3u1")
+victory_screen_scene = ExtResource("3_elu6d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SacredFlower" unique_id=117617873]
+position = Vector2(80.5, 634.5)
+shape = SubResource("RectangleShape2D_t320x")
+
+[node name="Sprite2D" type="Sprite2D" parent="SacredFlower" unique_id=162966684]
+position = Vector2(101.000015, 635)
+scale = Vector2(4.8515625, 3.4374998)
+texture = ExtResource("6_s64d0")
+
+[node name="ProgressBar" type="ProgressBar" parent="SacredFlower" unique_id=432356522]
+visible = false
+offset_left = -399.0
+offset_top = 682.0
+offset_right = -288.0
+offset_bottom = 750.0
+
+[node name="PointLight2D" type="PointLight2D" parent="SacredFlower" unique_id=42145606]
+position = Vector2(103, 636)
+scale = Vector2(0.10260419, 0.17453706)
+texture = SubResource("CompressedTexture2D_fvk1u")
+
+[node name="GlowSprite" type="Sprite2D" parent="SacredFlower" unique_id=1301974732]
+position = Vector2(91, 614)
+scale = Vector2(0.6171877, 0.6914064)
+texture = ExtResource("20_2kcf4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SacredFlower" unique_id=1374261946]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SacredFlower/StaticBody2D" unique_id=1856941026]
+position = Vector2(90, 642)
+shape = SubResource("RectangleShape2D_788s3")
+
+[node name="ButterflyZone" type="Area2D" parent="." unique_id=204487158]
+process_mode = 4
+position = Vector2(1277, 453)
+script = ExtResource("4_hmp8s")
+butterfly_scene = ExtResource("2_ymobo")
+
+[node name="Butterfly" parent="." unique_id=2082503034 instance=ExtResource("2_ymobo")]
+position = Vector2(337, 493)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly2" parent="." unique_id=707329537 instance=ExtResource("2_ymobo")]
+position = Vector2(757, 814)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly3" parent="." unique_id=2124456770 instance=ExtResource("2_ymobo")]
+position = Vector2(295, 183)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly4" parent="." unique_id=1699587614 instance=ExtResource("2_ymobo")]
+position = Vector2(1018, 627)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly5" parent="." unique_id=53966839 instance=ExtResource("2_ymobo")]
+position = Vector2(705, 466)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly6" parent="." unique_id=1566453696 instance=ExtResource("2_ymobo")]
+position = Vector2(879, 466)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly7" parent="." unique_id=1393280531 instance=ExtResource("2_ymobo")]
+position = Vector2(1186, 485)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly8" parent="." unique_id=1351453076 instance=ExtResource("2_ymobo")]
+position = Vector2(1656, 187)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly9" parent="." unique_id=1360752237 instance=ExtResource("2_ymobo")]
+position = Vector2(1521, 262)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly10" parent="." unique_id=602172687 instance=ExtResource("2_ymobo")]
+position = Vector2(1381, 265)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly11" parent="." unique_id=1701014361 instance=ExtResource("2_ymobo")]
+position = Vector2(1530, 680)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly12" parent="." unique_id=1384788832 instance=ExtResource("2_ymobo")]
+position = Vector2(1743, 310)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly13" parent="." unique_id=384478211 instance=ExtResource("2_ymobo")]
+position = Vector2(1858, 176)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly14" parent="." unique_id=836040381 instance=ExtResource("2_ymobo")]
+position = Vector2(1739, 736)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly15" parent="." unique_id=668447894 instance=ExtResource("2_ymobo")]
+position = Vector2(1954, 448)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly16" parent="." unique_id=472544237 instance=ExtResource("2_ymobo")]
+position = Vector2(2090, 322)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly17" parent="." unique_id=1990155678 instance=ExtResource("2_ymobo")]
+position = Vector2(2055, 682)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly18" parent="." unique_id=1514167980 instance=ExtResource("2_ymobo")]
+position = Vector2(1838, 897)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly19" parent="." unique_id=226168254 instance=ExtResource("2_ymobo")]
+position = Vector2(1317, 886)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly20" parent="." unique_id=1620692869 instance=ExtResource("2_ymobo")]
+position = Vector2(1065, 862)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly21" parent="." unique_id=1005508942 instance=ExtResource("2_ymobo")]
+position = Vector2(2073, 596)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly22" parent="." unique_id=889836761 instance=ExtResource("2_ymobo")]
+position = Vector2(1504, 588)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly23" parent="." unique_id=1750376425 instance=ExtResource("2_ymobo")]
+position = Vector2(1309, 480)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly24" parent="." unique_id=1283246992 instance=ExtResource("2_ymobo")]
+position = Vector2(1130, 367)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly25" parent="." unique_id=224560303 instance=ExtResource("2_ymobo")]
+position = Vector2(1121, 560)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly26" parent="." unique_id=2075395734 instance=ExtResource("2_ymobo")]
+position = Vector2(750, 691)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly27" parent="." unique_id=1409685553 instance=ExtResource("2_ymobo")]
+position = Vector2(1848, 616)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly28" parent="." unique_id=1712984136 instance=ExtResource("2_ymobo")]
+position = Vector2(163, 577)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly29" parent="." unique_id=969514968 instance=ExtResource("2_ymobo")]
+position = Vector2(424, 845)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly30" parent="." unique_id=2073330090 instance=ExtResource("2_ymobo")]
+position = Vector2(925, 803)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly31" parent="." unique_id=197413840 instance=ExtResource("2_ymobo")]
+position = Vector2(593, 230)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly32" parent="." unique_id=1557579876 instance=ExtResource("2_ymobo")]
+position = Vector2(1032, 197)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly33" parent="." unique_id=1245685887 instance=ExtResource("2_ymobo")]
+position = Vector2(890, 607)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly34" parent="." unique_id=606668699 instance=ExtResource("2_ymobo")]
+position = Vector2(947, 324)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly35" parent="." unique_id=346669442 instance=ExtResource("2_ymobo")]
+position = Vector2(1130, 272)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly36" parent="." unique_id=391419425 instance=ExtResource("2_ymobo")]
+position = Vector2(659, 167)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly37" parent="." unique_id=1532631101 instance=ExtResource("2_ymobo")]
+position = Vector2(358, 392)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly38" parent="." unique_id=2009062000 instance=ExtResource("2_ymobo")]
+position = Vector2(1401, 666)
+script = ExtResource("4_7p3u1")
+
+[node name="Butterfly39" parent="." unique_id=1591633603 instance=ExtResource("2_ymobo")]
+position = Vector2(687, 324)
+script = ExtResource("4_7p3u1")
+
+[node name="BatPredator" type="CharacterBody2D" parent="." unique_id=920295660]
+position = Vector2(803, 200)
+script = ExtResource("6_5nc1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BatPredator" unique_id=429968273]
+position = Vector2(24, 11)
+shape = SubResource("CircleShape2D_fvk1u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BatPredator" unique_id=212154953]
+position = Vector2(17, -9)
+scale = Vector2(2.96875, 2.359375)
+sprite_frames = SubResource("SpriteFrames_206h0")
+animation = &"vuelo"
+frame_progress = 0.6541879
+
+[node name="BatPredator2" type="CharacterBody2D" parent="." unique_id=1565754849]
+position = Vector2(1813, 276)
+script = ExtResource("6_5nc1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BatPredator2" unique_id=1617596016]
+position = Vector2(29, 14)
+shape = SubResource("CircleShape2D_fvk1u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BatPredator2" unique_id=1193661199]
+position = Vector2(23, 5)
+scale = Vector2(2.96875, 2.359375)
+sprite_frames = SubResource("SpriteFrames_206h0")
+animation = &"vuelo"
+frame_progress = 0.6541879
+
+[node name="WindZone" type="Area2D" parent="." unique_id=831742980]
+position = Vector2(501, 259)
+script = ExtResource("8_i3vti")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WindZone" unique_id=804680073]
+position = Vector2(4, 67)
+shape = SubResource("CircleShape2D_5ky4a")
+
+[node name="WarningParticles" type="CPUParticles2D" parent="WindZone" unique_id=1639122413]
+position = Vector2(-80, 1)
+texture = ExtResource("13_og4nr")
+lifetime = 5.0
+
+[node name="WindParticles" type="CPUParticles2D" parent="WindZone" unique_id=483467078]
+position = Vector2(-1, -13)
+texture = ExtResource("14_206h0")
+
+[node name="Batery" type="Area2D" parent="." unique_id=1208263636]
+position = Vector2(498, 496)
+script = ExtResource("6_631if")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Batery" unique_id=1981110738]
+position = Vector2(228, 44)
+shape = SubResource("RectangleShape2D_hmp8s")
+
+[node name="Sprite2D" type="Sprite2D" parent="Batery" unique_id=1326120906]
+position = Vector2(231.99998, 39)
+scale = Vector2(1.65625, 1.9375)
+texture = ExtResource("29_fvk1u")
+
+[node name="Batery2" type="Area2D" parent="." unique_id=1449104444]
+position = Vector2(498, 496)
+script = ExtResource("6_631if")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Batery2" unique_id=190789139]
+position = Vector2(1080, 232)
+shape = SubResource("RectangleShape2D_hmp8s")
+
+[node name="Sprite2D" type="Sprite2D" parent="Batery2" unique_id=1762708665]
+position = Vector2(1086.9999, 243)
+scale = Vector2(1.65625, 1.9375)
+texture = ExtResource("29_fvk1u")
+
+[node name="Batery3" type="Area2D" parent="." unique_id=1509661486]
+position = Vector2(498, 496)
+script = ExtResource("6_631if")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Batery3" unique_id=1159778923]
+position = Vector2(1246, -332)
+shape = SubResource("RectangleShape2D_hmp8s")
+
+[node name="Sprite2D" type="Sprite2D" parent="Batery3" unique_id=1446068922]
+position = Vector2(1247, -329)
+scale = Vector2(1.65625, 1.9375)
+texture = ExtResource("29_fvk1u")
+
+[node name="ThornPatch" type="Area2D" parent="." unique_id=518961035]
+position = Vector2(780, 46)
+script = ExtResource("30_2kcf4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ThornPatch" unique_id=1895102322]
+position = Vector2(460, 95)
+shape = SubResource("RectangleShape2D_i3vti")
+
+[node name="Sprite2D" type="Sprite2D" parent="ThornPatch" unique_id=857414966]
+position = Vector2(456.5, 101.5)
+scale = Vector2(1.984375, 1.953125)
+texture = ExtResource("16_ejmf6")
+
+[node name="ThornPatch4" type="Area2D" parent="." unique_id=1437343172]
+position = Vector2(780, 46)
+script = ExtResource("30_2kcf4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ThornPatch4" unique_id=209124010]
+position = Vector2(330, 376)
+shape = SubResource("RectangleShape2D_i3vti")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ThornPatch4/CollisionShape2D" unique_id=1803445531]
+position = Vector2(-53.5, 110)
+shape = SubResource("RectangleShape2D_fvk1u")
+
+[node name="Sprite2D" type="Sprite2D" parent="ThornPatch4" unique_id=386499915]
+position = Vector2(333.00006, 369.00003)
+scale = Vector2(1.773439, 1.804687)
+texture = ExtResource("16_ejmf6")
+
+[node name="Sprite2D" type="Sprite2D" parent="ThornPatch4/Sprite2D" unique_id=137977318]
+position = Vector2(-30.449306, 70.926414)
+scale = Vector2(1.773439, 1.804687)
+texture = ExtResource("16_ejmf6")
+
+[node name="ThornPatch3" type="Area2D" parent="." unique_id=905784679]
+position = Vector2(780, 46)
+script = ExtResource("30_2kcf4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ThornPatch3" unique_id=2073564128]
+position = Vector2(930, 429)
+shape = SubResource("RectangleShape2D_i3vti")
+
+[node name="Sprite2D" type="Sprite2D" parent="ThornPatch3" unique_id=1256905042]
+position = Vector2(925, 429)
+scale = Vector2(1.984375, 1.953125)
+texture = ExtResource("16_ejmf6")
+
+[node name="ThornPatch2" type="Area2D" parent="." unique_id=1446333434]
+position = Vector2(780, 46)
+script = ExtResource("30_2kcf4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ThornPatch2" unique_id=1768467612]
+position = Vector2(469, 671)
+shape = SubResource("RectangleShape2D_i3vti")
+
+[node name="Sprite2D" type="Sprite2D" parent="ThornPatch2" unique_id=1084982810]
+position = Vector2(465, 673)
+scale = Vector2(1.984375, 1.953125)
+texture = ExtResource("16_ejmf6")
+
+[node name="VictoryScreen" parent="." unique_id=1996150763 instance=ExtResource("3_elu6d")]
+visible = false
+
+[node name="Global" type="Node" parent="." unique_id=813397424]
+script = ExtResource("4_71er1")
+
+[node name="BackgroundMusic" type="Node" parent="." unique_id=1359572575]
+script = ExtResource("23_788s3")
+stream = ExtResource("24_3t3id")
+metadata/_custom_type_script = "uid://c8405c212rbn6"
+
+[node name="ButterflyManager" type="Node" parent="." unique_id=574824037]
+script = ExtResource("34_venih")
+butterfly_scene = ExtResource("2_ymobo")
+
+[node name="Casas" type="StaticBody2D" parent="." unique_id=612898072]
+position = Vector2(1504, 349)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Casas" unique_id=603082529]
+position = Vector2(60, -14)
+shape = SubResource("RectangleShape2D_3t3id")
+
+[node name="Sprite2D" type="Sprite2D" parent="Casas" unique_id=534166683]
+position = Vector2(57, -50)
+scale = Vector2(1.390625, 1.4648438)
+texture = ExtResource("38_788s3")
+
+[node name="girasol" parent="." unique_id=688848260 instance=ExtResource("38_3t3id")]
+position = Vector2(811, 182)
+
+[node name="girasol2" parent="." unique_id=1472179867 instance=ExtResource("38_3t3id")]
+position = Vector2(918, 173)
+
+[node name="girasol3" parent="." unique_id=1898001378 instance=ExtResource("38_3t3id")]
+position = Vector2(863, 237)
+
+[node name="girasol4" parent="." unique_id=1886877690 instance=ExtResource("38_3t3id")]
+position = Vector2(1963, 609)
+
+[node name="girasol5" parent="." unique_id=275773814 instance=ExtResource("38_3t3id")]
+position = Vector2(2011, 684)
+
+[connection signal="body_entered" from="SacredFlower" to="SacredFlower" method="_on_body_entered"]
+[connection signal="body_entered" from="ButterflyZone" to="ButterflyZone" method="_on_body_entered"]
+[connection signal="body_exited" from="ButterflyZone" to="ButterflyZone" method="_on_body_exited"]
+[connection signal="body_entered" from="WindZone" to="WindZone" method="_on_body_entered"]
+[connection signal="body_exited" from="WindZone" to="WindZone" method="_on_body_exited"]

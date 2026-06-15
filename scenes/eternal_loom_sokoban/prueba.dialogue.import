@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://hhv5yf7pedex"
+path="res://.godot/imported/prueba.dialogue-c9de21145e6a29c8fd2cac73b685cfce.tres"
+
+[deps]
+
+source_file="res://scenes/eternal_loom_sokoban/prueba.dialogue"
+dest_files=["res://.godot/imported/prueba.dialogue-c9de21145e6a29c8fd2cac73b685cfce.tres"]
+
+[params]
+
+defaults=true

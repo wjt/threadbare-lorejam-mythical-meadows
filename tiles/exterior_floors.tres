@@ -1,6 +1,7 @@
 [gd_resource type="TileSet" format=3 uid="uid://b8qnr0owsbhhn"]
 
 [ext_resource type="Texture2D" uid="uid://lg5dl13njsg3" path="res://assets/first_party/tiles/Grass_And_Sand_Tiles.png" id="1_6hxsl"]
+[ext_resource type="Texture2D" uid="uid://3jofss6vm8os" path="res://scenes/quests/lore_quests/quest_004/minijuego_1/mundo_praderas.png" id="1_ssype"]
 [ext_resource type="Texture2D" uid="uid://pkm6smjl8861" path="res://assets/first_party/tiles/Grass_Tiles_Light.png" id="2_ht73d"]
 [ext_resource type="Texture2D" uid="uid://dcq6v7mx3h1fl" path="res://assets/first_party/tiles/Dirt_Tiles.png" id="3_tmal3"]
 
@@ -194,6 +195,57 @@ texture_region_size = Vector2i(64, 64)
 11:1/0 = 0
 10:1/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ht73d"]
+texture = ExtResource("1_ssype")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.3660278, 16.665527, -3.5516663, 12.294235, -6.8301315, 12.840652, -4.644493, 14.479881, -3.5516663, 12.294235)
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.0052567, 7.9229507, -0.273201, 7.9229507, -1.3660278, 7.376541, -1.9124374, 9.015778)
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.7373123, 5.7373123, -4.098076, 4.6444855, -5.7373123, 7.376541, -9.015778, 6.8301315)
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(2.458847, 11.747826, 5.1909027, 13.387062, 3.0052567, 7.376541, 1.9124374, 7.9229507)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.3660278, 7.376541, -1.9124374, 5.7373123, -2.458847, 7.9229507, -5.1909027, 5.190895)
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.27320862, 1.9124374, -1.9124374, 2.458847, -2.458847, 4.098076, -1.9124374, 4.6444855)
+8:3/0 = 0
+8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.9124374, 3.0052567, 0.27320862, 2.458847, -1.9124374, 0.273201, -0.273201, 4.6444855)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1srhd"]
 texture = ExtResource("2_ht73d")
 texture_region_size = Vector2i(64, 64)
@@ -373,8 +425,9 @@ physics_layer_0/collision_mask = 0
 physics_layer_0/collision_priority = 100.0
 physics_layer_1/collision_layer = 8
 physics_layer_1/collision_mask = 0
-physics_layer_2/collision_layer = 512
-physics_layer_2/collision_mask = 0
+physics_layer_2/collision_layer = 1
+physics_layer_3/collision_layer = 512
+physics_layer_3/collision_mask = 0
 terrain_set_0/mode = 2
 terrain_set_0/terrain_0/name = "Grass"
 terrain_set_0/terrain_0/color = Color(0.115781, 0.264059, 0.205218, 1)
@@ -387,6 +440,7 @@ terrain_set_0/terrain_3/color = Color(0.435821, 0.294287, 0.167531, 1)
 sources/1 = SubResource("TileSetAtlasSource_0wfyh")
 sources/5 = SubResource("TileSetAtlasSource_1srhd")
 sources/6 = SubResource("TileSetAtlasSource_l50s2")
+sources/2 = SubResource("TileSetAtlasSource_ht73d")
 pattern_0 = SubResource("TileMapPattern_0wfyh")
 pattern_1 = SubResource("TileMapPattern_sugp2")
 pattern_2 = SubResource("TileMapPattern_jyhfs")

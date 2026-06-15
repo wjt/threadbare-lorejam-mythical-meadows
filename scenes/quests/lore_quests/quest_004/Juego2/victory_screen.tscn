@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://ciw33pyykeyms"]
+
+[ext_resource type="Script" uid="uid://crs5ju1s50ame" path="res://scenes/quests/lore_quests/quest_004/Juego2/victory_screen.gd" id="1_24v6r"]
+[ext_resource type="Theme" uid="uid://cvitou84ni7qe" path="res://scenes/ui_elements/components/theme.tres" id="1_awxug"]
+
+[node name="VictoryScreen" type="CanvasLayer" unique_id=1996150763]
+script = ExtResource("1_24v6r")
+
+[node name="Panel" type="ColorRect" parent="." unique_id=294402697]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = -127.0
+offset_right = 202.0
+offset_bottom = 127.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_awxug")
+color = Color(0.7077841, 2.4546684e-05, 0.5146543, 0.08235294)
+
+[node name="Tittle" type="Label" parent="Panel" unique_id=743769604]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.33400002
+anchor_bottom = 0.20700002
+offset_left = 127.0
+offset_top = 21.0
+offset_right = 141.064
+offset_bottom = 5.421997
+theme_override_colors/font_color = Color(0.6814234, 0.6814234, 0.6814234, 1)
+text = "¡FLOR DESPIERTA!"
+
+[node name="ButterfliesLabel" type="Label" parent="Panel" unique_id=302266049]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.164
+anchor_bottom = 0.43300003
+offset_left = 91.0
+offset_top = 70.0
+offset_right = 261.744
+offset_bottom = -3.98201
+theme = ExtResource("1_awxug")
+theme_override_colors/font_color = Color(0.7784455, 0.7784455, 0.7784455, 1)
+text = "Mariposas salvadas 0/0"
+
+[node name="RatingLabel" type="Label" parent="Panel" unique_id=364265482]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 125.0
+offset_right = 320.0
+offset_bottom = 166.0
+theme_override_colors/font_color = Color(0.88666373, 0.70910037, 0.25731498, 1)
+text = "⭐⭐⭐⭐⭐ ORO"
+
+[node name="Continue" type="Button" parent="Panel" unique_id=26099273]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 174.0
+offset_right = 282.0
+offset_bottom = 249.0
+theme = ExtResource("1_awxug")
+text = "Continuar"
+
+[connection signal="pressed" from="Panel/Continue" to="." method="_on_continue_pressed"]

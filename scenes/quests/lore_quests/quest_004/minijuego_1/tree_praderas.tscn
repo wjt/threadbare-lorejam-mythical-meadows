@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://c7bjwxyplnqgl"]
+
+[ext_resource type="Script" uid="uid://b0b2y72gvp50f" path="res://scenes/game_elements/props/tree/components/tree.gd" id="1_r5xi3"]
+[ext_resource type="Material" uid="uid://bmwe2wu7hxepf" path="res://scenes/game_elements/props/tree/components/wind_affected_material.tres" id="2_r5kbh"]
+[ext_resource type="Texture2D" uid="uid://dbo1wbfne4r7u" path="res://scenes/quests/lore_quests/quest_004/minijuego_1/arbol praderas.png" id="3_7oqsp"]
+[ext_resource type="Script" uid="uid://cms2wqtbxjl1h" path="res://scenes/game_logic/sprite_behaviors/random_frame_sprite_behavior.gd" id="4_o2xw6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cck4h"]
+atlas = ExtResource("3_7oqsp")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71yxa"]
+atlas = ExtResource("3_7oqsp")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8g11"]
+atlas = ExtResource("3_7oqsp")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2ys5"]
+atlas = ExtResource("3_7oqsp")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bjs0m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cck4h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71yxa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8g11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2ys5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d888c"]
+radius = 16.0312
+
+[node name="Tree" type="Node2D" unique_id=1182216860]
+scale = Vector2(1.0197806, 0.9323216)
+script = ExtResource("1_r5xi3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2072962223]
+unique_name_in_owner = true
+material = ExtResource("2_r5kbh")
+position = Vector2(0, -79.7941)
+sprite_frames = SubResource("SpriteFrames_bjs0m")
+autoplay = "default"
+
+[node name="RandomFrameSpriteBehavior" type="Node2D" parent="AnimatedSprite2D" unique_id=212412706 node_paths=PackedStringArray("sprite")]
+position = Vector2(0, 79.7941)
+script = ExtResource("4_o2xw6")
+sprite = NodePath("..")
+metadata/_custom_type_script = "uid://cms2wqtbxjl1h"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=865260988]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=120328842]
+shape = SubResource("CircleShape2D_d888c")

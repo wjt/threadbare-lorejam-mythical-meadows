@@ -1,0 +1,33 @@
+~ inicio_monologo
+Wiñay: ¡Auch!... ¿Dónde... dónde estoy? Este no es el camino de vuelta a mi aldea.
+Wiñay: Todo se ve tan diferente en esta parte del bosque... Estoy completamente perdido. Tengo que buscar ayuda, y rápido.
+=> END
+
+~ encuentro_conejo
+Wiñay: ¡Oh! ¡Hola, amiguito! Qué brillo tan bonito tienes... ¿Sabes cómo salir de estas praderas?
+Spirit Bun: *Mueve sus orejas celestes con destellos y da un par de saltos suaves, mirando hacia el gran árbol trenzado*
+Wiñay: Creo que quieres que te siga... ¡Está bien, guíame!
+=> END
+
+~ encuentro_arbol
+Spirit Bun: *¡Salto místico de emoción!*
+Wiñay: Parece que está muy inquieto mirando el tronco...
+Wiñay: Creo que quiere que entre al árbol ancestral. Algo me espera ahí dentro.
+=> END
+
+~ monologo_entrada_tienda
+Wiñay: ¿Qué es esto? Qué lugar tan extraño... ¿Por qué el conejo quería que entrara a esta tienda?
+Wiñay: Bueno... le preguntaré a ese mapache de allá, tal vez sepa algo.
+=> END
+
+~ encuentro_barnaby
+Wiñay: ¡Ah... ¿Hola? Disculpa la molestia...
+Barnaby: ¡Vaya, vaya! Un pequeño visitante con ropas de la aldea baja.
+Barnaby: Soy Barnaby, guardián de hilos y remiendos. Estás en mi tienda, viajero.
+Wiñay: ¿Praderas Místicas?... Yo solo recuerdo haber pisado un destello azul y desperté en un bosque. Necesito regresar a mi hogar, mi familia debe estar buscándome.
+Barnaby: Je, volver no es tan simple como desandar tus pasos, pequeño. El bosque místico se cierra tras los perdidos.
+Barnaby: Si de verdad deseas abrir el camino de vuelta a tu aldea, tu única opción es encontrar la legendaria Flor de Seda Eterna.
+Wiñay: ¿Una flor mística? ¿Y dónde puedo hallarla?
+Barnaby: Crece en lo más lejano de estas tierras, donde los hilos del destino se enredan con la niebla.
+Barnaby: Pero cuidado... para alcanzarla deberás superar distintos desafíos en tu camino y, al final, enfrentarte a un peligroso laberinto del que pocos logran escapar. Solo quienes demuestran verdadero valor regresan a casa.
+=> END

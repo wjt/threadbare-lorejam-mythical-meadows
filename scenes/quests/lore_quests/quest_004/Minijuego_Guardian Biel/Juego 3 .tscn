@@ -1,0 +1,435 @@
+[gd_scene format=4 uid="uid://bsfxfdanc36l8"]
+
+[ext_resource type="Script" path="res://scenes/quests/lore_quests/quest_004/Minijuego_Guardian Biel/juego_3_.gd" id="1_8sb3d"]
+[ext_resource type="PackedScene" path="res://scenes/quests/lore_quests/quest_004/Minijuego_Guardian Biel/grass.tscn" id="1_pruqp"]
+[ext_resource type="TileSet" uid="uid://do0ffypatd77h" path="res://tiles/bridges.tres" id="2_buomb"]
+[ext_resource type="TileSet" uid="uid://b778cuoftt88r" path="res://tiles/elevation_2.tres" id="3_0unuw"]
+[ext_resource type="PackedScene" uid="uid://7873qa54birk" path="res://scenes/game_elements/props/tree/tree.tscn" id="4_nvn5h"]
+[ext_resource type="SpriteFrames" uid="uid://djwymcffy83" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_red.tres" id="5_8sb3d"]
+[ext_resource type="Script" uid="uid://bdhjixygupit1" path="res://scenes/game_elements/props/area_filler/area_filler.gd" id="6_rq065"]
+[ext_resource type="SpriteFrames" uid="uid://cuokvpf58hkee" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_purple.tres" id="7_oo116"]
+[ext_resource type="SpriteFrames" uid="uid://2ek86nvw6y28" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_yellow.tres" id="8_v7k7n"]
+[ext_resource type="SpriteFrames" uid="uid://brspwu70qbdaf" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_blue.tres" id="9_mxx05"]
+[ext_resource type="PackedScene" path="res://scenes/quests/lore_quests/quest_004/Minijuego_Guardian Biel/Flor.tscn" id="10_buomb"]
+[ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="11_nvn5h"]
+[ext_resource type="SpriteFrames" uid="uid://dw0cobxwe36rd" path="res://scenes/quests/lore_quests/quest_004/minijuego_1/sprite/i/personajes/personaje_frames.tres" id="12_8sb3d"]
+[ext_resource type="Script" uid="uid://rvrsomk4c34r" path="res://scenes/quests/lore_quests/quest_004/Minijuego_Guardian Biel/patrullero.gd" id="14_5do88"]
+[ext_resource type="Texture2D" uid="uid://dj0s2pt85nypf" path="res://scenes/quests/lore_quests/quest_004/Minijuego_Guardian Biel/Patrullero 1.png" id="15_0og1v"]
+[ext_resource type="Texture2D" uid="uid://8n538o4dx1ws" path="res://scenes/quests/lore_quests/quest_004/Minijuego_Guardian Biel/patrullero 2.png" id="16_wj0jo"]
+[ext_resource type="Texture2D" uid="uid://dolruslv0ftsy" path="res://scenes/quests/lore_quests/quest_004/Minijuego_Guardian Biel/patrullero 3.png" id="17_mmdw6"]
+[ext_resource type="Texture2D" uid="uid://ci4pspcylevwl" path="res://scenes/quests/lore_quests/quest_004/Minijuego_Guardian Biel/patrullero 4.png" id="18_mskcq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rq065"]
+size = Vector2(708, 615)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1f1qa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_0og1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_wj0jo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_mmdw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_mskcq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5afyr"]
+radius = 63.07139
+
+[node name="Elementos del Juego" type="Node2D" unique_id=2123711800]
+script = ExtResource("1_8sb3d")
+
+[node name="Grass" parent="." unique_id=908668732 instance=ExtResource("1_pruqp")]
+position = Vector2(703, 577)
+
+[node name="Bridges" type="TileMapLayer" parent="." unique_id=964347121]
+tile_set = ExtResource("2_buomb")
+
+[node name="Paredes" type="TileMapLayer" parent="." unique_id=969567320]
+modulate = Color(0.73, 0.41561332, 0.2336, 1)
+position = Vector2(-576, 136)
+scale = Vector2(1.0030369, 1.049765)
+tile_map_data = PackedByteArray("AAAJABEABAABAAIAAAAJABAABAABAAIAAAAJAA8ABAABAAIAAAAJABIABAABAAIAAAAJABMABAABAAIAAAAJABQABAABAAIAAAAJABUABAABAAIAAAAJABYABAABAAIAAAAKABYABAABAAIAAAAWABYABAABAAIAAAAPAP7/BAABAAIAAAAQAP7/BAABAAIAAAASAP7/BAABAAIAAAATAP7/BAABAAIAAAAUAP7/BAABAAIAAAAVAP7/BAABAAIAAAAWAP7/BAABAAIAAAAXAP7/BAABAAIAAAAYAP7/BAABAAIAAAAZAP7/BAABAAIAAAAaAP7/BAABAAIAAAAbAP7/BAABAAIAAAAcAP7/BAABAAIAAAAdAP7/BAABAAIAAAAeAP7/BAABAAIAAAAfAP7/BAABAAIAAAAgAP7/BAABAAIAAAAhAP7/BAABAAIAAAAiAP7/BAABAAIAAAAjAP7/BAABAAIAAAAkAP7/BAABAAIAAAAlAP7/BAABAAIAAAAmAP7/BAABAAIAAAAnAP7/BAABAAIAAAAoAP7/BAABAAIAAAARAP7/BAABAAIAAAAJAAIABAABAAIAAAAJAAMABAABAAIAAAAJAAQABAABAAIAAAAJAAUABAABAAIAAAAKAAIABAABAAIAAAAKAAMABAABAAIAAAAKAAQABAABAAIAAAAKAAAABAABAAIAAAAJAAkABAABAAIAAAAJAAoABAABAAIAAAATAA4ABAABAAIAAAATAA8ABAABAAIAAAATAA0ABAABAAIAAAAUAA0ABAABAAIAAAAUAA4ABAABAAIAAAAUAA8ABAABAAIAAAAUAAwABAABAAIAAAATAAwABAABAAIAAAATAAsABAABAAIAAAAUAAsABAABAAIAAAAOAP7/BAABAAIAAAAJAA4ABAABAAIAAAALABYABAABAAIAAAAMABYABAABAAIAAAANABYABAABAAIAAAAOABYABAABAAIAAAAPABYABAABAAIAAAAQABYABAABAAIAAAARABYABAABAAIAAAASABYABAABAAIAAAATABYABAABAAIAAAAUABYABAABAAIAAAAVABYABAABAAIAAAAJAAcABAABAAIAAAAJAAgABAABAAIAAAAJAAYABAABAAIAAAAJAAwABAABAAIAAAAJAAsABAABAAIAAAAJAA0ABAABAAIAAAANAAEABAABAAIAAAANAAMABAABAAIAAAAOAAEABAABAAIAAAAOAAIABAABAAIAAAAPAAEABAABAAIAAAAPAAIABAABAAIAAAAQAAEABAABAAIAAAAQAAIABAABAAIAAAANAAQABAABAAIAAAAOAAQABAABAAIAAAAKAAcABAABAAIAAAALAAcABAABAAIAAAAMAAcABAABAAIAAAANAAcABAABAAIAAAAOAAcABAABAAIAAAAPAAcABAABAAIAAAAQAAcABAABAAIAAAAQAAgABAABAAIAAAAPAAgABAABAAIAAAAPAAoABAABAAIAAAAQAAkABAABAAIAAAAPAAkABAABAAIAAAAQAAoABAABAAIAAAAOAAoABAABAAIAAAANAAoABAABAAIAAAAMAAoABAABAAIAAAAcAAcABAABAAIAAAAcAAwABAABAAIAAAAXAAcABAABAAIAAAAZAAcABAABAAIAAAAYAAcABAABAAIAAAAaAAcABAABAAIAAAAbAAcABAABAAIAAAAXAAwABAABAAIAAAAYAA8ABAABAAIAAAAZAA8ABAABAAIAAAAaAA8ABAABAAIAAAAbAA8ABAABAAIAAAAcAA8ABAABAAIAAAAXAAkABAABAAIAAAAXAAsABAABAAIAAAAXAAgABAABAAIAAAAXAAoABAABAAIAAAAdAAcABAABAAIAAAAdAAgABAABAAIAAAAdAAoABAABAAIAAAAdAAwABAABAAIAAAAYAAwABAABAAIAAAAdAAkABAABAAIAAAAdAAsABAABAAIAAAAXAA8ABAABAAIAAAAWAA8ABAABAAIAAAAVAA8ABAABAAIAAAAdAA8ABAABAAIAAAAfAA8ABAABAAIAAAAgAA8ABAABAAIAAAAgAA4ABAABAAIAAAAgAAwABAABAAIAAAAgAAsABAABAAIAAAAgAA0ABAABAAIAAAAhAA8ABAABAAIAAAAhAA4ABAABAAIAAAAhAA0ABAABAAIAAAAhAAwABAABAAIAAAAhAAsABAABAAIAAAAgAAgABAABAAIAAAAhAAgABAABAAIAAAAhAAcABAABAAIAAAAgAAcABAABAAIAAAAgAAYABAABAAIAAAAhAAYABAABAAIAAAAhAAUABAABAAIAAAAgAAUABAABAAIAAAAhAAQABAABAAIAAAAgAAQABAABAAIAAAAfAAQABAABAAIAAAAeAAQABAABAAIAAAAdAAQABAABAAIAAAAcAAQABAABAAIAAAAbAAQABAABAAIAAAAaAAQABAABAAIAAAAZAAQABAABAAIAAAAYAAQABAABAAIAAAAYAAMABAABAAIAAAAXAAMABAABAAIAAAAWAAMABAABAAIAAAAWAAQABAABAAIAAAAXAAQABAABAAIAAAAZAAMABAABAAIAAAAaAAMABAABAAIAAAAbAAMABAABAAIAAAAcAAMABAABAAIAAAAdAAMABAABAAIAAAAeAAMABAABAAIAAAAfAAMABAABAAIAAAAgAAMABAABAAIAAAAhAAMABAABAAIAAAAYAAsABAABAAIAAAAYAAoABAABAAIAAAAYAAkABAABAAIAAAAaAAgABAABAAIAAAAZAAgABAABAAIAAAAYAAgABAABAAIAAAAbAAgABAABAAIAAAAcAAkABAABAAIAAAAcAAoABAABAAIAAAAcAAsABAABAAIAAAAcAAgABAABAAIAAAAUAAgABAABAAIAAAATAAgABAABAAIAAAAUAAcABAABAAIAAAATAAcABAABAAIAAAATAAYABAABAAIAAAATAAUABAABAAIAAAATAAQABAABAAIAAAATAAMABAABAAIAAAAUAAMABAABAAIAAAAVAAMABAABAAIAAAAUAAQABAABAAIAAAAVAAQABAABAAIAAAAUAAUABAABAAIAAAAUAAYABAABAAIAAAAXAAEABAABAAIAAAAYAAEABAABAAIAAAAXAAIABAABAAIAAAAYAAIABAABAAIAAAAbAAAABAABAAIAAAAcAP//BAABAAIAAAAbAP//BAABAAIAAAAcAAAABAABAAIAAAAfAAEABAABAAIAAAAgAAEABAABAAIAAAAgAAIABAABAAIAAAAfAAIABAABAAIAAAANAA0ABAABAAIAAAAOAA0ABAABAAIAAAAPAA0ABAABAAIAAAAQAA0ABAABAAIAAAAQAA8ABAABAAIAAAAQAA4ABAABAAIAAAAPAA4ABAABAAIAAAAPAA8ABAABAAIAAAAMAA0ABAABAAIAAAAMAA4ABAABAAIAAAANAA4ABAABAAIAAAAOAA4ABAABAAIAAAAPABAABAABAAIAAAAQABAABAABAAIAAAAPABEABAABAAIAAAAQABEABAABAAIAAAALABIABAABAAIAAAAMABIABAABAAIAAAALABMABAABAAIAAAAMABMABAABAAIAAAALABEABAABAAIAAAAMABEABAABAAIAAAAQABIABAABAAIAAAAPABIABAABAAIAAAARABIABAABAAIAAAASABIABAABAAIAAAATABIABAABAAIAAAAUABIABAABAAIAAAAUABMABAABAAIAAAASABMABAABAAIAAAAPABMABAABAAIAAAAQABMABAABAAIAAAARABMABAABAAIAAAATABMABAABAAIAAAAXABIABAABAAIAAAAYABIABAABAAIAAAAXABMABAABAAIAAAAXABQABAABAAIAAAAXABUABAABAAIAAAAYABUABAABAAIAAAAYABQABAABAAIAAAAYABMABAABAAIAAAAbABIABAABAAIAAAAbABEABAABAAIAAAAbABAABAABAAIAAAAcABAABAABAAIAAAAcABEABAABAAIAAAAcABIABAABAAIAAAAbABMABAABAAIAAAAcABMABAABAAIAAAAfABMABAABAAIAAAAfABQABAABAAIAAAAfABUABAABAAIAAAAgABUABAABAAIAAAAgABQABAABAAIAAAAfABIABAABAAIAAAAgABIABAABAAIAAAAgABMABAABAAIAAAAbABYABAABAAIAAAAcABYABAABAAIAAAAdABYABAABAAIAAAAeABYABAABAAIAAAAfABYABAABAAIAAAAgABYABAABAAIAAAAhABYABAABAAIAAAAiABYABAABAAIAAAAjABYABAABAAIAAAAkABYABAABAAIAAAAlABYABAABAAIAAAAmABYABAABAAIAAAAnABYABAABAAIAAAAoABYABAABAAIAAAApABYABAABAAIAAAAYABYABAABAAIAAAAZABYABAABAAIAAAAaABYABAABAAIAAAAXABYABAABAAIAAAApAP7/BAABAAIAAAAqAP7/BAABAAIAAAArAP7/BAABAAIAAAAqABYABAABAAIAAAArABYABAABAAIAAAAiAA8ABAABAAIAAAAjAA8ABAABAAIAAAAkAA8ABAABAAIAAAAjABAABAABAAIAAAAkABAABAABAAIAAAAjABEABAABAAIAAAAkABEABAABAAIAAAAjABIABAABAAIAAAAkABIABAABAAIAAAAjABMABAABAAIAAAAkABMABAABAAIAAAAqAA8ABAABAAIAAAApAA8ABAABAAIAAAAoAA8ABAABAAIAAAAoABAABAABAAIAAAAnAA8ABAABAAIAAAAnABAABAABAAIAAAAnABUABAABAAIAAAAoABUABAABAAIAAAAnABEABAABAAIAAAAoABEABAABAAIAAAAsABEABAABAAIAAAAsABAABAABAAIAAAAsAA8ABAABAAIAAAAsAA4ABAABAAIAAAAsAA0ABAABAAIAAAAsAAwABAABAAIAAAAsAAsABAABAAIAAAAsAAoABAABAAIAAAAsAAkABAABAAIAAAAsAAgABAABAAIAAAAsAAcABAABAAIAAAAsAAYABAABAAIAAAAsAAUABAABAAIAAAAsAAQABAABAAIAAAAsAAMABAABAAIAAAAsAAIABAABAAIAAAAsAAEABAABAAIAAAAsAAAABAABAAIAAAAsAP7/BAABAAIAAAAsAP//BAABAAIAAAAsABYABAABAAIAAAAsABUABAABAAIAAAArAA8ABAABAAIAAAApABAABAABAAIAAAAqABAABAABAAIAAAArABAABAABAAIAAAAZAAoABAABAAcAAAAaAAoABAABAAcAAAAbAAoABAABAAcAAAAbAAsABAABAAcAAAAaAAsABAABAAcAAAAZAAsABAABAAcAAAAZAAwABAABAAcAAAAaAAwABAABAAcAAAAbAAwABAABAAcAAAAkAP//BAABAAIAAAAkAAAABAABAAIAAAAkAAEABAABAAIAAAAkAAIABAABAAIAAAAkAAMABAABAAIAAAAkAAQABAABAAIAAAAlAAQABAABAAIAAAAlAAMABAABAAIAAAAlAAIABAABAAIAAAAlAAEABAABAAIAAAAlAAAABAABAAIAAAAlAP//BAABAAIAAAAnAAEABAABAAIAAAAoAAEABAABAAIAAAApAAEABAABAAIAAAAqAAEABAABAAIAAAAqAAIABAABAAIAAAApAAIABAABAAIAAAApAAMABAABAAIAAAAqAAMABAABAAIAAAAqAAUABAABAAIAAAApAAUABAABAAIAAAApAAQABAABAAIAAAAqAAQABAABAAIAAAApAAcABAABAAIAAAApAAYABAABAAIAAAAqAAYABAABAAIAAAAqAAcABAABAAIAAAApAAgABAABAAIAAAAqAAgABAABAAIAAAApAAkABAABAAIAAAAqAAkABAABAAIAAAAnAAkABAABAAIAAAAoAAkABAABAAIAAAAoAAgABAABAAIAAAAnAAgABAABAAIAAAAmAAgABAABAAIAAAAmAAkABAABAAIAAAAlAAgABAABAAIAAAAlAAkABAABAAIAAAAkAAgABAABAAIAAAAkAAkABAABAAIAAAAkAAUABAABAAIAAAAlAAUABAABAAIAAAAmAAQABAABAAIAAAAnAAQABAABAAIAAAAnAAUABAABAAIAAAAmAAUABAABAAIAAAAkAAoABAABAAIAAAAlAAoABAABAAIAAAAkAAsABAABAAIAAAAlAAsABAABAAIAAAAkAAwABAABAAIAAAAlAAwABAABAAIAAAAoAAwABAABAAIAAAApAAwABAABAAIAAAAoAA0ABAABAAIAAAApAA0ABAABAAIAAAAoAA4ABAABAAIAAAApAA4ABAABAAIAAAAOAAMABAABAAIAAAANAAIABAABAAIAAAAJAAAABAABAAIAAAAJAAEABAABAAIAAAAKAAEABAABAAIAAAA=")
+tile_set = ExtResource("3_0unuw")
+
+[node name="Tree6" parent="." unique_id=1182216860 instance=ExtResource("4_nvn5h")]
+position = Vector2(277.00012, 84.99997)
+scale = Vector2(1.0311006, 1.0357279)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Trees" type="Area2D" parent="." unique_id=771899092]
+y_sort_enabled = true
+collision_layer = 0
+collision_mask = 0
+monitoring = false
+monitorable = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Trees" unique_id=636500010]
+visible = false
+polygon = PackedVector2Array(2535, -108, 2537, 360, 1743, 364, 1737, 488, 524, 499, 533, -112)
+disabled = true
+
+[node name="AreaFiller" type="Node" parent="Trees" unique_id=2040786]
+script = ExtResource("6_rq065")
+scenes = Array[PackedScene]([ExtResource("4_nvn5h")])
+sprite_frames = Array[SpriteFrames]([ExtResource("5_8sb3d")])
+minimum_separation = 200.0
+metadata/_custom_type_script = "uid://bdhjixygupit1"
+
+[node name="Tree" parent="Trees" unique_id=60206468 instance=ExtResource("4_nvn5h")]
+position = Vector2(234.00012, 768.0001)
+scale = Vector2(0.9765748, 0.98087543)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree2" parent="Trees" unique_id=2063675704 instance=ExtResource("4_nvn5h")]
+position = Vector2(2023, 350)
+scale = Vector2(0.9871148, 1.0854608)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree3" parent="Trees" unique_id=108513716 instance=ExtResource("4_nvn5h")]
+position = Vector2(337.00024, 1260.0001)
+scale = Vector2(0.8909704, 0.8298069)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree4" parent="Trees" unique_id=57751891 instance=ExtResource("4_nvn5h")]
+position = Vector2(2107, 1392)
+scale = Vector2(1.2331539, 1.1485544)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree5" parent="Trees" unique_id=226579035 instance=ExtResource("4_nvn5h")]
+position = Vector2(1914, 901)
+scale = Vector2(0.95270073, 1.0133904)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree6" parent="Trees" unique_id=581796925 instance=ExtResource("4_nvn5h")]
+position = Vector2(2124, 896)
+scale = Vector2(1.0311006, 1.0357279)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree7" parent="Trees" unique_id=2130983913 instance=ExtResource("4_nvn5h")]
+position = Vector2(1698, 193)
+scale = Vector2(0.9740492, 0.95309776)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree8" parent="Trees" unique_id=9028074 instance=ExtResource("4_nvn5h")]
+position = Vector2(1778, 622)
+scale = Vector2(0.9288809, 0.88787615)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree9" parent="Trees" unique_id=857321735 instance=ExtResource("4_nvn5h")]
+position = Vector2(1214, 282)
+scale = Vector2(0.86106634, 0.901177)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree10" parent="Trees" unique_id=1054188336 instance=ExtResource("4_nvn5h")]
+position = Vector2(1425, 565)
+scale = Vector2(0.8093397, 0.849106)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree11" parent="Trees" unique_id=290954001 instance=ExtResource("4_nvn5h")]
+position = Vector2(731, 1286)
+scale = Vector2(1.2492167, 1.1745033)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree12" parent="Trees" unique_id=1990947904 instance=ExtResource("4_nvn5h")]
+position = Vector2(459, 969)
+scale = Vector2(1.1795515, 1.1654558)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree13" parent="Trees" unique_id=430142595 instance=ExtResource("4_nvn5h")]
+position = Vector2(632, 158)
+scale = Vector2(1.0747819, 1.0744737)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree14" parent="Trees" unique_id=440797685 instance=ExtResource("4_nvn5h")]
+position = Vector2(496, 159)
+scale = Vector2(0.950486, 0.9301162)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree15" parent="Trees" unique_id=1605083242 instance=ExtResource("4_nvn5h")]
+position = Vector2(838, 564)
+scale = Vector2(1.0215429, 1.1116835)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree16" parent="Trees" unique_id=1562883502 instance=ExtResource("4_nvn5h")]
+position = Vector2(144.00002, 761.00006)
+scale = Vector2(1.1452304, 1.1400714)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree17" parent="Trees" unique_id=117429883 instance=ExtResource("4_nvn5h")]
+position = Vector2(1119, 164.99997)
+scale = Vector2(1.1456847, 1.0936471)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree18" parent="Trees" unique_id=875985884 instance=ExtResource("4_nvn5h")]
+position = Vector2(322, 761)
+scale = Vector2(1.201111, 1.1755983)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree19" parent="Trees" unique_id=12956906 instance=ExtResource("4_nvn5h")]
+position = Vector2(591.00006, 1557.0001)
+scale = Vector2(0.9426333, 0.8940844)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="Tree20" parent="Trees" unique_id=138290863 instance=ExtResource("4_nvn5h")]
+position = Vector2(951.00006, 159)
+scale = Vector2(1.181314, 1.1187981)
+sprite_frames = ExtResource("5_8sb3d")
+
+[node name="GoalIslandTrees" type="Node2D" parent="." unique_id=1457705399]
+y_sort_enabled = true
+position = Vector2(2503, -307)
+
+[node name="Tree" parent="GoalIslandTrees" unique_id=1203603973 instance=ExtResource("4_nvn5h")]
+position = Vector2(-1284, 1855)
+scale = Vector2(0.91041744, 0.91807616)
+sprite_frames = ExtResource("7_oo116")
+
+[node name="Tree2" parent="GoalIslandTrees" unique_id=1368743752 instance=ExtResource("4_nvn5h")]
+position = Vector2(-301.00006, 1663)
+scale = Vector2(0.90681326, 0.8604097)
+sprite_frames = ExtResource("7_oo116")
+
+[node name="Tree3" parent="GoalIslandTrees" unique_id=1398091375 instance=ExtResource("4_nvn5h")]
+position = Vector2(-2303.0005, 1874)
+scale = Vector2(0.99412525, 0.9663038)
+sprite_frames = ExtResource("7_oo116")
+
+[node name="Tree4" parent="GoalIslandTrees" unique_id=527656718 instance=ExtResource("4_nvn5h")]
+position = Vector2(-962, 1142)
+scale = Vector2(1.2352074, 1.145074)
+sprite_frames = ExtResource("7_oo116")
+
+[node name="Tree5" parent="GoalIslandTrees" unique_id=784972024 instance=ExtResource("4_nvn5h")]
+position = Vector2(-2250, 1260.0001)
+scale = Vector2(0.8409739, 0.9022613)
+sprite_frames = ExtResource("7_oo116")
+
+[node name="Tree6" parent="GoalIslandTrees" unique_id=1486619179 instance=ExtResource("4_nvn5h")]
+position = Vector2(-858, 1601)
+scale = Vector2(0.88572556, 0.95690763)
+sprite_frames = ExtResource("7_oo116")
+
+[node name="Tree7" parent="GoalIslandTrees" unique_id=1796896641 instance=ExtResource("4_nvn5h")]
+position = Vector2(-946.9999, 478)
+scale = Vector2(1.140012, 1.0656894)
+sprite_frames = ExtResource("7_oo116")
+
+[node name="Tree8" parent="GoalIslandTrees" unique_id=45976373 instance=ExtResource("4_nvn5h")]
+position = Vector2(-2071.9998, 741)
+scale = Vector2(0.9238967, 0.8405191)
+sprite_frames = ExtResource("7_oo116")
+
+[node name="Tree9" parent="GoalIslandTrees" unique_id=79678654 instance=ExtResource("4_nvn5h")]
+position = Vector2(-1168.9999, 469)
+scale = Vector2(0.8809659, 0.9538683)
+sprite_frames = ExtResource("7_oo116")
+
+[node name="Tree10" parent="GoalIslandTrees" unique_id=336820357 instance=ExtResource("4_nvn5h")]
+position = Vector2(-1578, 1593)
+scale = Vector2(1.1887994, 1.1315321)
+sprite_frames = ExtResource("7_oo116")
+
+[node name="Tree11" parent="GoalIslandTrees" unique_id=1646204647 instance=ExtResource("4_nvn5h")]
+position = Vector2(-446, 452)
+scale = Vector2(0.99783194, 0.9487263)
+sprite_frames = ExtResource("7_oo116")
+
+[node name="Tree12" parent="GoalIslandTrees" unique_id=1933152515 instance=ExtResource("4_nvn5h")]
+position = Vector2(-1531, 868)
+scale = Vector2(1.2351161, 1.1818894)
+sprite_frames = ExtResource("8_v7k7n")
+
+[node name="Tree13" parent="GoalIslandTrees" unique_id=1513374305 instance=ExtResource("4_nvn5h")]
+position = Vector2(-1805, 1128)
+scale = Vector2(0.90378326, 0.9827504)
+sprite_frames = ExtResource("8_v7k7n")
+
+[node name="Tree14" parent="GoalIslandTrees" unique_id=155185872 instance=ExtResource("4_nvn5h")]
+position = Vector2(-1330.0001, 1134)
+scale = Vector2(0.9702769, 0.9232949)
+sprite_frames = ExtResource("8_v7k7n")
+
+[node name="Tree15" parent="GoalIslandTrees" unique_id=2050600293 instance=ExtResource("4_nvn5h")]
+position = Vector2(-1188.0001, 863.0001)
+scale = Vector2(1.2558501, 1.1712801)
+sprite_frames = ExtResource("8_v7k7n")
+
+[node name="Tree16" parent="GoalIslandTrees" unique_id=260408530 instance=ExtResource("4_nvn5h")]
+position = Vector2(-1201, 1390)
+scale = Vector2(0.87932515, 0.82832503)
+
+[node name="Tree17" parent="GoalIslandTrees" unique_id=505151660 instance=ExtResource("4_nvn5h")]
+position = Vector2(-1541, 1395)
+scale = Vector2(0.7401985, 0.80740535)
+
+[node name="Tree18" parent="GoalIslandTrees" unique_id=2058211660 instance=ExtResource("4_nvn5h")]
+position = Vector2(-1358, 865)
+scale = Vector2(1.0763276, 1.0084227)
+
+[node name="Tree19" parent="GoalIslandTrees" unique_id=2010227449 instance=ExtResource("4_nvn5h")]
+position = Vector2(-1424.9999, 1127)
+scale = Vector2(1.00063, 0.911434)
+sprite_frames = ExtResource("9_mxx05")
+
+[node name="Tree20" parent="GoalIslandTrees" unique_id=1237308358 instance=ExtResource("4_nvn5h")]
+position = Vector2(-2458, 393)
+scale = Vector2(0.95, 0.95)
+sprite_frames = ExtResource("9_mxx05")
+
+[node name="Tree21" parent="GoalIslandTrees" unique_id=1629894105 instance=ExtResource("4_nvn5h")]
+position = Vector2(-599, 926.0001)
+scale = Vector2(0.864437, 0.876015)
+
+[node name="OnTheGround" type="Node2D" parent="." unique_id=1776062478]
+
+[node name="Tree" parent="OnTheGround" unique_id=1710731331 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(495, 166)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Tree4" parent="OnTheGround" unique_id=1109411983 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(167, 81.00002)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Tree26" parent="OnTheGround" unique_id=133171084 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(2198, 189.00003)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Tree25" parent="OnTheGround" unique_id=2006846674 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(1990, 1433)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Tree28" parent="OnTheGround" unique_id=173631041 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(2287, 1469)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Tree29" parent="OnTheGround" unique_id=666464666 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(1733, 525)
+scale = Vector2(1.024, 0.931)
+
+[node name="Tree32" parent="OnTheGround" unique_id=1279779428 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(1441, 141)
+scale = Vector2(1.024, 0.931)
+
+[node name="Tree11" parent="OnTheGround" unique_id=1414793670 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(2289, 1525)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Tree18" parent="OnTheGround" unique_id=1285279301 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(1792, 1095)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Tree12" parent="OnTheGround" unique_id=1941696423 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(99, 567)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Tree13" parent="OnTheGround" unique_id=321102673 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(1925, 167.00006)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Tree14" parent="OnTheGround" unique_id=912671209 instance=ExtResource("4_nvn5h")]
+position = Vector2(1747, 1550)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Tree15" parent="OnTheGround" unique_id=2091463219 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(2012, 904)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Tree17" parent="OnTheGround" unique_id=1958440531 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(801, 155)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Tree21" parent="OnTheGround" unique_id=1901408236 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(1104, 1288.0001)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Tree20" parent="OnTheGround" unique_id=885620001 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(1549, 1282.0001)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Tree19" parent="OnTheGround" unique_id=116497570 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(707, 1551)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Tree22" parent="OnTheGround" unique_id=782765015 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(438, 1540)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Tree23" parent="OnTheGround" unique_id=1373786965 instance=ExtResource("4_nvn5h")]
+y_sort_enabled = true
+position = Vector2(231, 1240)
+scale = Vector2(1.22391, 1.11329)
+
+[node name="Flor" parent="." unique_id=1078505553 instance=ExtResource("10_buomb")]
+position = Vector2(2145, 1466)
+
+[node name="Player" parent="." unique_id=296354958 instance=ExtResource("11_nvn5h")]
+position = Vector2(210, 168)
+player_name = "StoryWeaver"
+sprite_frames = ExtResource("12_8sb3d")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=935166807]
+limit_left = 0
+limit_top = -12
+limit_right = 2311
+limit_bottom = 1678
+editor_draw_limits = true
+
+[node name="Zona Centro" type="Area2D" parent="." unique_id=458378363]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zona Centro" unique_id=1655365653]
+position = Vector2(1120, 836.5)
+shape = SubResource("RectangleShape2D_rq065")
+
+[node name="Patrullero" type="CharacterBody2D" parent="." unique_id=2118523977]
+position = Vector2(-1, 3)
+collision_mask = 19
+script = ExtResource("14_5do88")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Patrullero" unique_id=992643457]
+position = Vector2(1132, 864.00006)
+scale = Vector2(0.3547486, 0.29582366)
+sprite_frames = SubResource("SpriteFrames_1f1qa")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Patrullero" unique_id=282013201]
+position = Vector2(1126, 916)
+shape = SubResource("CircleShape2D_5afyr")
+
+[node name="Camera2D" type="Camera2D" parent="Patrullero" unique_id=1310360486]
+scale = Vector2(1e-05, 1e-05)
+limit_left = 0
+limit_top = -12
+limit_right = 2311
+limit_bottom = 1678
+editor_draw_limits = true
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Patrullero" unique_id=2126347898]
+
+[connection signal="body_entered" from="Zona Centro" to="." method="_on_zona_centro_body_entered"]
