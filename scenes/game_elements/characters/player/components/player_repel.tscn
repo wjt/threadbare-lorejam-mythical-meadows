@@ -164,7 +164,7 @@ script = ExtResource("1_y1fpu")
 [node name="AirStream" type="Area2D" parent="." unique_id=1185536811]
 unique_name_in_owner = true
 collision_layer = 0
-collision_mask = 256
+collision_mask = 257
 
 [node name="AirStreamCollision" type="CollisionShape2D" parent="AirStream" unique_id=482921981]
 unique_name_in_owner = true

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://broe5i5cdy5iv"]
+
+[ext_resource type="SpriteFrames" uid="uid://xqo7myafrn48" path="res://scenes/game_elements/characters/enemies/Golem/components/Golem_frames.tres" id="1_iu1sh"]
+[ext_resource type="Script" uid="uid://d0bbe1bsx1x8e" path="res://scenes/game_elements/characters/enemies/Golem/components/golem.gd" id="1_joykk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_joykk"]
+size = Vector2(134, 136)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b33fo"]
+radius = 200.68384
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kjf07"]
+size = Vector2(136, 162)
+
+[node name="Golem1" type="CharacterBody2D" unique_id=293491138 groups=["golem"]]
+script = ExtResource("1_joykk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=375526576]
+position = Vector2(-2, -12)
+shape = SubResource("RectangleShape2D_joykk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1574478482]
+position = Vector2(0, -12.5)
+scale = Vector2(1, 1.2403846)
+sprite_frames = ExtResource("1_iu1sh")
+animation = &"Golem_Move"
+frame = 5
+frame_progress = 1.0
+
+[node name="VisionArea" type="Area2D" parent="." unique_id=205866804]
+
+[node name="Vision" type="CollisionShape2D" parent="VisionArea" unique_id=1759003548]
+position = Vector2(0, -12)
+shape = SubResource("CircleShape2D_b33fo")
+debug_color = Color(0.7, 0, 0.1400002, 0.41960785)
+
+[node name="HitBox" type="Area2D" parent="." unique_id=1313335842]
+collision_mask = 19
+
+[node name="Hit" type="CollisionShape2D" parent="HitBox" unique_id=1722762333]
+position = Vector2(-1, -14)
+shape = SubResource("RectangleShape2D_kjf07")
+debug_color = Color(0, 0.92941177, 0.5137255, 0.41960785)

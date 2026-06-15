@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0k2wndjj0ifm" path="res://addons/dialogue_manager/components/title_list.gd" id="1_5qqmd"]
 
-[node name="TitleList" type="VBoxContainer"]
+[node name="TitleList" type="VBoxContainer" unique_id=1206950614]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -12,12 +12,12 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_5qqmd")
 
-[node name="FilterEdit" type="LineEdit" parent="."]
+[node name="FilterEdit" type="LineEdit" parent="." unique_id=1843058978]
 layout_mode = 2
 placeholder_text = "Filter titles"
 clear_button_enabled = true
 
-[node name="List" type="ItemList" parent="."]
+[node name="List" type="ItemList" parent="." unique_id=395876532]
 layout_mode = 2
 size_flags_vertical = 3
 allow_reselect = true

@@ -46,9 +46,14 @@ func repel_once() -> void:
 
 
 func _on_air_stream_body_entered(body: Node2D) -> void:
+	# cambio temporalmente para detectar al golem
+	#print("body detectado: ", body.name) # <- temporalmente
 	if body.has_method("got_repelled"):
 		var direction := global_position.direction_to(body.global_position)
 		body.got_repelled(direction)
+	# solo daña al golem
+	#if body.is_in_group("golem"):
+	#	body.take_damage()
 
 
 func _animate() -> void:
