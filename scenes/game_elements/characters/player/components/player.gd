@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
 @tool
-class_name Player
+class_name MinigamePlayer
 extends CharacterBody2D
 
 signal mode_changed(mode: Mode)
@@ -190,7 +190,7 @@ func defeat(falling: bool = false) -> void:
 	if mode == Player.Mode.DEFEATED:
 		return
 
-	mode = Player.Mode.DEFEATED
+	mode = MinigamePlayer.Mode.DEFEATED
 
 	# Stop moving the player.
 	velocity = Vector2.ZERO

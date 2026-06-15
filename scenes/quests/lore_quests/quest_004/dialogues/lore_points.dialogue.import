@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://di7rctapm06gm"
+path="res://.godot/imported/lore_points.dialogue-ec4e0504e293238d41bda1ed2c7a5b23.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/dialogues/lore_points.dialogue"
+dest_files=["res://.godot/imported/lore_points.dialogue-ec4e0504e293238d41bda1ed2c7a5b23.tres"]
+
+[params]
+
+defaults=true

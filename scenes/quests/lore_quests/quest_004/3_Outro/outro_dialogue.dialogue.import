@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://4tw06rtrrw6e"
+path="res://.godot/imported/outro_dialogue.dialogue-8cd8d30f7a52f459fba5a4ae05eb174b.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/3_Outro/outro_dialogue.dialogue"
+dest_files=["res://.godot/imported/outro_dialogue.dialogue-8cd8d30f7a52f459fba5a4ae05eb174b.tres"]
+
+[params]
+
+defaults=true

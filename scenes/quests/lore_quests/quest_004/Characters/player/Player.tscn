@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://cn1wrvv24kf37"]
+
+[ext_resource type="Script" uid="uid://cpxvcntnwckvf" path="res://scenes/quests/lore_quests/quest_004/Characters/player/player.gd" id="1_o1nk3"]
+[ext_resource type="SpriteFrames" uid="uid://vwf8e1v8brdp" path="res://scenes/quests/template_quests/NO_EDIT/NO_EDIT_player_components/NO_EDIT_player.tres" id="2_fpub2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpub2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpbtj"]
+
+[sub_resource type="Animation" id="Animation_fpub2"]
+resource_name = "idle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bpbtj"]
+_data = {
+&"idle": SubResource("Animation_fpub2")
+}
+
+[node name="Player" type="CharacterBody2D" unique_id=1861952375]
+script = ExtResource("1_o1nk3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1482093289]
+position = Vector2(3, -4)
+rotation = -0.004994432
+scale = Vector2(1.0255681, 0.9219858)
+sprite_frames = ExtResource("2_fpub2")
+animation = &"walk"
+frame_progress = 0.92490333
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2133149213]
+light_mask = 7
+visibility_layer = 7
+shape = SubResource("RectangleShape2D_fpub2")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=260564372]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1055460908]
+visible = false
+light_mask = 7
+visibility_layer = 7
+shape = SubResource("RectangleShape2D_bpbtj")
+
+[node name="Timer" type="Timer" parent="." unique_id=1441923811]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2137056613]
+libraries/ = SubResource("AnimationLibrary_bpbtj")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=939042897]
+position_smoothing_enabled = true
+
+[node name="PlayerHealthBar" type="ProgressBar" parent="." unique_id=792123654 groups=["player"]]
+modulate = Color(0.782921, 0.930511, 0.28242835, 1)
+self_modulate = Color(0.6877677, 0.9929176, 0.19921017, 1)
+offset_left = -68.0
+offset_top = -49.000004
+offset_right = -8.0
+offset_bottom = -39.000004
+rotation = -0.011038661
+scale = Vector2(1.941619, 1.619188)
+value = 100.0
+show_percentage = false

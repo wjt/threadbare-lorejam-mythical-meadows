@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bakbjuyw571bt"]
+
+[ext_resource type="Script" uid="uid://dymrt1r0k7l4d" path="res://scenes/quests/lore_quests/quest_004/Characters/player/bossbullet.gd" id="1_huir2"]
+[ext_resource type="Texture2D" uid="uid://bhqanyxhpxpm" path="res://assets/first_party/rocks/Rock_Idle.png" id="2_huir2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ecea8"]
+
+[node name="Bossbullet" type="Area2D" unique_id=664779329]
+script = ExtResource("1_huir2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1791113247]
+position = Vector2(0, 1)
+scale = Vector2(0.557, 0.543)
+texture = ExtResource("2_huir2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1903654648]
+shape = SubResource("CircleShape2D_ecea8")

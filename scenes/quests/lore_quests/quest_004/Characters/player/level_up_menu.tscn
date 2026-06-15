@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bq7o7yarko3x"]
+
+[node name="LevelUpMenu" type="Node2D" unique_id=2059960457]
+
+[node name="Control" type="Control" parent="." unique_id=1779716996]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

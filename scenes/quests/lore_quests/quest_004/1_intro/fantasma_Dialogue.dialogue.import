@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://di7g2isi47w6m"
+path="res://.godot/imported/fantasma_Dialogue.dialogue-5cdc3afa467e14e5c7bf4c67acb0b1db.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/1_intro/fantasma_Dialogue.dialogue"
+dest_files=["res://.godot/imported/fantasma_Dialogue.dialogue-5cdc3afa467e14e5c7bf4c67acb0b1db.tres"]
+
+[params]
+
+defaults=true

@@ -459,7 +459,7 @@ unique_name_in_owner = true
 root_node = NodePath("../../PlayerRepel")
 libraries/ = SubResource("AnimationLibrary_1n58k")
 
-[connection signal="running_changed" from="InputWalkBehavior" to="PlayerDustParticles" method="set_emitting"]
 [connection signal="running_changed" from="InputWalkBehavior" to="AnimationPlayer" method="_on_input_walk_behavior_running_changed"]
+[connection signal="running_changed" from="InputWalkBehavior" to="PlayerDustParticles" method="set_emitting"]
 [connection signal="aiming_changed" from="PlayerHook" to="." method="_on_player_hook_aiming_changed"]
 [connection signal="body_entered" from="PlayerHarm/HitBox" to="PlayerHarm" method="_on_hit_box_body_entered"]

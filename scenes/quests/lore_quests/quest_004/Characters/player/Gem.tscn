@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://pil6fm8nqdbq"]
+
+[ext_resource type="Script" uid="uid://bbopjbbxu1f1b" path="res://scenes/quests/lore_quests/quest_004/Characters/player/gem.gd" id="1_l1w3b"]
+[ext_resource type="Texture2D" uid="uid://bfqjvai7ajhw3" path="res://assets/third_party/tiny-swords/Deco/01.png" id="2_wa4qc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k7i2x"]
+
+[node name="Gem" type="Area2D" unique_id=75351007]
+script = ExtResource("1_l1w3b")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1050422332]
+position = Vector2(-2, 0)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_wa4qc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=46667058]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_k7i2x")

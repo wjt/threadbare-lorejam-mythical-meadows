@@ -1,0 +1,134 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+~ start
+StoryWeaver: ¿Dónde… estoy?
+StoryWeaver: El barco…
+StoryWeaver: Recuerdo la tormenta. Las olas. El golpe contra las rocas.
+StoryWeaver: Después de eso, nada.
+StoryWeaver: Si esta es la tierra de la carta, entonces sí llegué a las Praderas Míticas.
+StoryWeaver: Aunque no precisamente como esperaba.
+StoryWeaver: Filomena dijo que siguiera el hilo si lo encontraba.
+StoryWeaver: Entonces será mejor avanzar.
+StoryWeaver: Tal vez el barco quedó cerca.
+StoryWeaver: O... tal vez estas tierras no quieren que vuelva.
+
+=> END
+
+~ Fantasma1
+
+StoryWeaver: ¿Hola?
+Fantasma del Camino: El mar todavía canta.
+Fantasma del Camino: Eso significa que alguien ha llegado.
+StoryWeaver: Estoy buscando respuestas. Una cartógrafa me envió.
+Fantasma del Camino: Los cartógrafos siempre llegan tarde.
+Fantasma del Camino: Dibujan líneas sobre cosas que ya cambiaron.
+StoryWeaver: ¿Qué pasó aquí?
+Fantasma del Camino: Vivimos aquí.
+Fantasma del Camino: Eso fue lo primero que pasó.
+Fantasma del Camino: Luego aprendimos a pedirle favores a la tierra.
+Fantasma del Camino: Eso fue lo último que debimos hacer.
+
+=> END
+
+~ Fantasma2
+StoryWeaver: Hay otra figura junto al camino...
+StoryWeaver: ¿Puedes escucharme?
+Fantasma del Pueblo: Te escucho desde antes de que llegaras.
+Fantasma del Pueblo: Estas tierras oyen primero. Luego deciden si responden.
+StoryWeaver: ¿Este lugar fue un pueblo?
+Fantasma del Pueblo: Fue más que eso.
+Fantasma del Pueblo: Había casas, mercados, canciones, niños corriendo entre las flores.
+Fantasma del Pueblo: Nadie caminaba solo.
+StoryWeaver: Ahora no queda nada.
+Fantasma del Pueblo: Queda demasiado.
+Fantasma del Pueblo: Ese es el problema.
+=> END
+
+~ Fantasma3
+StoryWeaver: Estás mirando esas flores.
+StoryWeaver: ¿Eran importantes?
+Fantasma de las Flores: Cada familia cuidaba una.
+Fantasma de las Flores: Decíamos que mientras florecieran, el hogar seguiría vivo.
+StoryWeaver: Algunas parecen moverse.
+Fantasma de las Flores: No se mueven.
+Fantasma de las Flores: Recuerdan.
+StoryWeaver: ¿Recuerdan a quienes vivían aquí?
+Fantasma de las Flores: Sus manos.
+Fantasma de las Flores: Sus canciones.
+Fantasma de las Flores: Sus pequeñas promesas.
+Fantasma de las Flores: Regar la tierra. Cuidar el río. Volver antes de que anochezca.
+StoryWeaver: ¿Y qué les pasó?
+Fantasma de las Flores: Pidieron que la magia nunca se apagara.
+Fantasma de las Flores: La magia escuchó.
+Fantasma de las Flores: Y luego olvidó cómo detenerse.
+=> END
+
+~ Fantasma4
+
+StoryWeaver: Este letrero está destruido.
+StoryWeaver: Apenas puedo leerlo.
+Fantasma del Letrero: Mercado al este.
+Fantasma del Letrero: Casas al norte.
+Fantasma del Letrero: Santuario al final del hilo.
+StoryWeaver: ¿Un santuario?
+Fantasma del Letrero: Allí guardaban lo que jamás debió tocarse.
+StoryWeaver: ¿Un arma?
+Fantasma del Letrero: No.
+Fantasma del Letrero: Una respuesta.
+Fantasma del Letrero: Pero las respuestas también pueden disparar.
+StoryWeaver: Eso no suena muy tranquilizador.
+Fantasma del Letrero: Nada en estas tierras fue hecho para tranquilizarte.
+
+=> END
+
+~ Fantasma5
+
+StoryWeaver: Tú pareces diferente a los otros.
+StoryWeaver: Como si estuvieras vigilando algo.
+Fantasma Guardián: Los guardianes fueron los primeros en jurar proteger estas tierras.
+StoryWeaver: ¿Y tú eras uno de ellos?
+Fantasma Guardián: Fui guardián.
+Fantasma Guardián: Luego fui aldeano.
+Fantasma Guardián: Luego fui advertencia.
+StoryWeaver: ¿Advertencia para quién?
+Fantasma Guardián: Para quienes llegan creyendo que el pasado está indefenso.
+StoryWeaver: Yo no vine a hacer daño.
+Fantasma Guardián: Nadie lo hace al principio.
+Fantasma Guardián: El daño casi siempre empieza como curiosidad.
+
+=> END
+
+~ ObjetoMagico
+
+StoryWeaver: Ahí está.
+StoryWeaver: No parece un arma.
+StoryWeaver: Pero todo este lugar me está diciendo que voy a necesitarlo.
+Fantasma Desconocido: No dispares para destruir.
+Fantasma Desconocido: Dispara para abrir camino.
+StoryWeaver: ¿Quién dijo eso?
+Fantasma Desconocido: El mismo lugar que te dejó entrar.
+StoryWeaver: Entonces... gracias, supongo.
+
+=> END
+
+~ Fantasma6
+
+StoryWeaver: Ese debe ser el marcador de hilo de Filomena.
+Fantasma Tejedor: Ella no hizo el hilo.
+StoryWeaver: ¿Entonces quién?
+Fantasma Tejedor: Nosotros.
+Fantasma Tejedor: Antes de perdernos, intentamos dejar caminos.
+Fantasma Tejedor: Antes de callarnos, intentamos dejar voces.
+StoryWeaver: ¿El hilo lleva al centro de las Praderas?
+Fantasma Tejedor: Lleva a lo que queda.
+StoryWeaver: ¿Y qué queda?
+Fantasma Tejedor: Una herramienta.
+Fantasma Tejedor: Una herida.
+Fantasma Tejedor: A veces son lo mismo.
+StoryWeaver: Necesito seguir.
+Fantasma Tejedor: Entonces toma lo que encuentres al final.
+Fantasma Tejedor: Pero recuerda esto:
+Fantasma Tejedor: Las Praderas no atacan por odio.
+Fantasma Tejedor: Atacan porque aún creen que están protegiendo un hogar.
+
+=> END

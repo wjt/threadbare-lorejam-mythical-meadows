@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://dr4mrwqqqkjk6"]
+
+[ext_resource type="Shader" uid="uid://ccveinbfoawyp" path="res://scenes/quests/lore_quests/quest_004/3_Outro/fireGreen.gdshader" id="1_2sq1e"]
+[ext_resource type="Texture2D" uid="uid://bus3ddyi0pt1l" path="res://scenes/quests/lore_quests/quest_004/assets/sprite/fuegoAnimado.png" id="2_sxh05"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bcwek"]
+shader = ExtResource("1_2sq1e")
+shader_parameter/hue_shift = -0.78399998974
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2v8k"]
+atlas = ExtResource("2_sxh05")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qiy6t"]
+atlas = ExtResource("2_sxh05")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ao4m7"]
+atlas = ExtResource("2_sxh05")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q47gc"]
+atlas = ExtResource("2_sxh05")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ctot"]
+atlas = ExtResource("2_sxh05")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_faxa1"]
+atlas = ExtResource("2_sxh05")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2xh8"]
+atlas = ExtResource("2_sxh05")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6b6qm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2v8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qiy6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ao4m7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q47gc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ctot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_faxa1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2xh8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_2sq1e"]
+offsets = PackedFloat32Array(0, 0.549326)
+colors = PackedColorArray(0.13734296, 0.67149454, 0.21412468, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sxh05"]
+gradient = SubResource("Gradient_2sq1e")
+width = 128
+height = 128
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bcwek"]
+blend_mode = 1
+light_mode = 2
+
+[sub_resource type="Gradient" id="Gradient_s2v8k"]
+offsets = PackedFloat32Array(0, 0.40471813)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qiy6t"]
+gradient = SubResource("Gradient_s2v8k")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="FireGreen" type="Node2D" unique_id=1522978623]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1219415934]
+material = SubResource("ShaderMaterial_bcwek")
+sprite_frames = SubResource("SpriteFrames_6b6qm")
+autoplay = "default"
+frame_progress = 0.5110578
+
+[node name="PointLight2D" type="PointLight2D" parent="AnimatedSprite2D" unique_id=1068658828]
+color = Color(0.20068213, 0.4489209, 0.15711164, 1)
+energy = 1.4
+texture = SubResource("GradientTexture2D_sxh05")
+height = 256.0
+
+[node name="Volumetric" type="Sprite2D" parent="AnimatedSprite2D/PointLight2D" unique_id=1907786652]
+modulate = Color(0.05214186, 0.15237749, 0.08008564, 0.6313726)
+material = SubResource("CanvasItemMaterial_bcwek")
+texture = SubResource("GradientTexture2D_qiy6t")

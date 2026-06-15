@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://buyqpx3nxhj1h"]
+
+[ext_resource type="Script" uid="uid://bi28j4caw0cm8" path="res://scenes/quests/lore_quests/quest_004/world.gd" id="1_m4jct"]
+[ext_resource type="PackedScene" path="res://scenes/quests/lore_quests/quest_004/Characters/player/Player.tscn" id="2_3m43o"]
+[ext_resource type="Texture2D" uid="uid://bvron1ojmm2ua" path="res://assets/first_party/tiles/template/floor_tiles.png" id="2_7s3qy"]
+[ext_resource type="PackedScene" uid="uid://dogu80gu8vid5" path="res://scenes/quests/lore_quests/quest_004/Characters/Enemies/Enemy.tscn" id="3_7s3qy"]
+[ext_resource type="PackedScene" uid="uid://pil6fm8nqdbq" path="res://scenes/quests/lore_quests/quest_004/Characters/player/Gem.tscn" id="5_rncf2"]
+[ext_resource type="PackedScene" uid="uid://cvi40smn0v4jg" path="res://scenes/quests/lore_quests/quest_004/Characters/player/UpgradeMenu.tscn" id="5_tqcym"]
+
+[node name="World" type="Node2D" unique_id=2007389905]
+script = ExtResource("1_m4jct")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=287200746]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1247373361]
+motion_mirroring = Vector2(256, 256)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=759358414]
+texture = ExtResource("2_7s3qy")
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Player" parent="." unique_id=1861952375 instance=ExtResource("2_3m43o")]
+position = Vector2(137, 230)
+
+[node name="Enemy" parent="." unique_id=1257094839 instance=ExtResource("3_7s3qy")]
+position = Vector2(432, 320)
+
+[node name="Timer" type="Timer" parent="." unique_id=313386257]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=893451439]
+
+[node name="XPBar" type="ProgressBar" parent="CanvasLayer" unique_id=161416890]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 27.0
+grow_horizontal = 2
+show_percentage = false
+
+[node name="UpgradeMenu" parent="CanvasLayer" unique_id=143733894 instance=ExtResource("5_tqcym")]
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=1213178050]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -56.0
+offset_top = 24.0
+offset_right = 26.0
+offset_bottom = 69.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "05:00"
+
+[node name="Gem" parent="." unique_id=75351007 instance=ExtResource("5_rncf2")]
+
+[editable path="Player"]

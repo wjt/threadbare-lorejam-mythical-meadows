@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dheteiel8ss6b"]
+
+[ext_resource type="Script" uid="uid://qfbgrhx157oa" path="res://scenes/quests/lore_quests/quest_004/1_intro/fantasma_dialogue.gd" id="1_ntbxh"]
+[ext_resource type="Texture2D" uid="uid://ct6un3y3888i0" path="res://scenes/quests/lore_quests/quest_004/assets/images/Ghost.png" id="2_bb1u0"]
+[ext_resource type="Script" uid="uid://du8wfijr35r35" path="res://scenes/game_elements/props/interact_area/interact_area.gd" id="3_ynixl"]
+[ext_resource type="Script" uid="uid://edcifob4jc4s" path="res://scenes/game_logic/talk_behavior.gd" id="4_bb1u0"]
+[ext_resource type="Texture2D" uid="uid://b5ooaiyxdrp6a" path="res://scenes/game_elements/components/light_texture_256x256.tres" id="5_ynixl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wjota"]
+radius = 50.0
+height = 100.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1pyc"]
+size = Vector2(52, 61)
+
+[node name="FantasmaNpc" type="CharacterBody2D" unique_id=1716409055]
+script = ExtResource("1_ntbxh")
+float_height = null
+float_speed = null
+metadata/_custom_type_script = "uid://dl6rgfwdn3qp4"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=498038104]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_wjota")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1453244160]
+modulate = Color(1, 1, 1, 0.84705883)
+position = Vector2(1, -0.9999981)
+scale = Vector2(1.233, 1.233)
+texture = ExtResource("2_bb1u0")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=301633531 node_paths=PackedStringArray("marker")]
+unique_name_in_owner = true
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("3_ynixl")
+marker = NodePath("Marker2D")
+metadata/_custom_type_script = "uid://du8wfijr35r35"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=737203945]
+visible = false
+position = Vector2(0, -23.5)
+shape = SubResource("RectangleShape2D_u1pyc")
+debug_color = Color(0.600391, 0.54335, 0, 0.42)
+
+[node name="Marker2D" type="Marker2D" parent="InteractArea" unique_id=1447135589]
+position = Vector2(0, -88)
+
+[node name="TalkBehavior" type="Node" parent="." unique_id=661156029 node_paths=PackedStringArray("interact_area")]
+unique_name_in_owner = true
+script = ExtResource("4_bb1u0")
+dialogue = null
+title = "start"
+interact_area = NodePath("../InteractArea")
+metadata/_custom_type_script = "uid://edcifob4jc4s"
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1804791280]
+position = Vector2(3, 2)
+energy = 0.92
+texture = ExtResource("5_ynixl")
+texture_scale = 2.08

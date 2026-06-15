@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cogpke7xp28xe"]
+
+[ext_resource type="FontFile" uid="uid://dq34vcwm6fw6w" path="res://scenes/quests/lore_quests/quest_004/assets/Fonts/Pixelzone.ttf" id="1_pgtfi"]
+[ext_resource type="Script" uid="uid://dk4lwgx77k1fk" path="res://scenes/quests/lore_quests/quest_004/3_Outro/credits.gd" id="2_mf6f7"]
+[ext_resource type="AudioStream" uid="uid://drmflic4r4wgo" path="res://scenes/quests/lore_quests/quest_004/assets/music/MythicalMeadowsOriginalTheme.ogg" id="3_pgtfi"]
+
+[node name="Credits" type="Control" unique_id=767094681]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_mf6f7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=362720017]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1259587998]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_pgtfi")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Timer" type="Timer" parent="." unique_id=1066045770]
+wait_time = 0.429
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1775946123]
+stream = ExtResource("3_pgtfi")

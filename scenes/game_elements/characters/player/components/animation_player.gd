@@ -1,10 +1,8 @@
-# SPDX-FileCopyrightText: The Threadbare Authors
-# SPDX-License-Identifier: MPL-2.0
 extends AnimationPlayer
 
 var _is_player_running: bool
 
-@onready var player: Player = owner
+@onready var player = owner
 @onready var player_sprite: AnimatedSprite2D = %PlayerSprite
 @onready var player_repel: PlayerRepel = %PlayerRepel
 @onready var player_hook: PlayerHook = %PlayerHook

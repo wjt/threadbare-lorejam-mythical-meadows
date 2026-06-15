@@ -185,4 +185,4 @@ editor_draw_limits = true
 
 [node name="ScreenOverlay" parent="." unique_id=283219515 instance=ExtResource("28_r1i2b")]
 
-[connection signal="goal_reached" from="FillGameLogic" to="FillGameLogic/LevelCompletedAnimation" method="play" binds= ["goal_completed"]]
+[connection signal="goal_reached" from="FillGameLogic" to="FillGameLogic/LevelCompletedAnimation" method="play" binds=["goal_completed"]]

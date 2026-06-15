@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://dogu80gu8vid5"]
+
+[ext_resource type="Script" uid="uid://bdglhh87gi01g" path="res://scenes/quests/lore_quests/quest_004/Characters/Enemies/enemy.gd" id="1_lsl6h"]
+[ext_resource type="Texture2D" uid="uid://d150yxipa135w" path="res://scenes/quests/lore_quests/quest_004/assets/sprite/lobo JAM.png" id="2_86r0k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03ul1"]
+atlas = ExtResource("2_86r0k")
+region = Rect2(0, 0, 155, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggnes"]
+atlas = ExtResource("2_86r0k")
+region = Rect2(155, 0, 155, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pofyc"]
+atlas = ExtResource("2_86r0k")
+region = Rect2(310, 0, 155, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okub0"]
+atlas = ExtResource("2_86r0k")
+region = Rect2(465, 0, 155, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hn8dp"]
+atlas = ExtResource("2_86r0k")
+region = Rect2(620, 0, 155, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ephcv"]
+atlas = ExtResource("2_86r0k")
+region = Rect2(775, 0, 155, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_61dei"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03ul1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggnes")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pofyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okub0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hn8dp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ephcv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_86r0k"]
+size = Vector2(136, 84)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_03ul1"]
+size = Vector2(135, 70)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1257094839 groups=["enemies"]]
+collision_layer = 131
+collision_mask = 528
+script = ExtResource("1_lsl6h")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=247891838]
+sprite_frames = SubResource("SpriteFrames_61dei")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1706543610 groups=["enemies"]]
+position = Vector2(-7, 0)
+shape = SubResource("RectangleShape2D_86r0k")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1266458079]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1653941422]
+position = Vector2(-6.5, 3)
+shape = SubResource("RectangleShape2D_03ul1")

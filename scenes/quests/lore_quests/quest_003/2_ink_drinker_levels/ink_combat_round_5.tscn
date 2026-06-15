@@ -233,4 +233,4 @@ editor_draw_limits = true
 
 [node name="ScreenOverlay" type="CanvasLayer" parent="." unique_id=2065907666]
 
-[connection signal="goal_reached" from="FillGameLogic" to="FillGameLogic/LevelCompletedAnimation" method="play" binds= ["goal_completed"]]
+[connection signal="goal_reached" from="FillGameLogic" to="FillGameLogic/LevelCompletedAnimation" method="play" binds=["goal_completed"]]

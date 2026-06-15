@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cwpj5pb7ipdj3"]
+
+[ext_resource type="Script" uid="uid://bcddqnxthpmix" path="res://intro_carta.gd" id="1_t3bwm"]
+[ext_resource type="FontFile" uid="uid://dq34vcwm6fw6w" path="res://scenes/quests/lore_quests/quest_004/assets/Fonts/Pixelzone.ttf" id="2_p4hjo"]
+[ext_resource type="Texture2D" uid="uid://ckuxam34ovr4o" path="res://scenes/quests/lore_quests/quest_004/assets/images/NewLogo.jpeg" id="3_pmx77"]
+[ext_resource type="Script" uid="uid://c8405c212rbn6" path="res://scenes/game_elements/props/background_music/components/background_music.gd" id="4_pmx77"]
+[ext_resource type="AudioStream" uid="uid://drmflic4r4wgo" path="res://scenes/quests/lore_quests/quest_004/assets/music/MythicalMeadowsOriginalTheme.ogg" id="5_bjsfp"]
+
+[node name="IntroCarta" type="Control" unique_id=1553433768]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t3bwm")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=284286576]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1008052848]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = 60.0
+offset_right = -120.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7176471, 1, 0.47843137, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 8
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("2_p4hjo")
+theme_override_font_sizes/font_size = 32
+autowrap_mode = 2
+
+[node name="Timer" type="Timer" parent="." unique_id=1095007656]
+
+[node name="Logo" type="TextureRect" parent="." unique_id=2066615751]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 239.0
+offset_top = 114.0
+offset_right = -250.0
+offset_bottom = -172.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_pmx77")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BackgroundMusic" type="Node" parent="." unique_id=827266189]
+script = ExtResource("4_pmx77")
+stream = ExtResource("5_bjsfp")
+metadata/_custom_type_script = "uid://c8405c212rbn6"

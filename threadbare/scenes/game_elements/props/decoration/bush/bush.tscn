@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://crqjcicx0vdu"]
+
+[ext_resource type="Script" uid="uid://jllabtpjc46i" path="res://scenes/game_elements/props/decoration/animated_decoration.gd" id="1_a26qx"]
+[ext_resource type="SpriteFrames" uid="uid://dm5jcge3jb7p1" path="res://scenes/game_elements/props/decoration/bush/components/bush_spriteframes_green_large.tres" id="2_a26qx"]
+[ext_resource type="Script" uid="uid://cms2wqtbxjl1h" path="res://scenes/game_elements/props/decoration/random_frame_animated_sprite.gd" id="3_p6nhn"]
+
+[node name="Bush" type="Node2D" unique_id=1198690320]
+script = ExtResource("1_a26qx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=483601180]
+unique_name_in_owner = true
+position = Vector2(0, -14)
+sprite_frames = ExtResource("2_a26qx")
+autoplay = "default"
+script = ExtResource("3_p6nhn")

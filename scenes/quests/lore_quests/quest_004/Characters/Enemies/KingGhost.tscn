@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://jsp3cme5g0pb"]
+
+[ext_resource type="Script" uid="uid://bdkyr8hswjere" path="res://scenes/quests/lore_quests/quest_004/Characters/Enemies/KingGhost.gd" id="1_jb8vj"]
+[ext_resource type="Script" uid="uid://du8wfijr35r35" path="res://scenes/game_elements/props/interact_area/interact_area.gd" id="2_jb8vj"]
+[ext_resource type="Texture2D" uid="uid://ccpiaktlv5d4g" path="res://scenes/quests/lore_quests/quest_004/assets/sprite/Espiritu JAM.png" id="2_tejfd"]
+[ext_resource type="Script" uid="uid://edcifob4jc4s" path="res://scenes/game_logic/talk_behavior.gd" id="4_gf1w7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ca1jy"]
+radius = 269.0
+height = 1240.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gf1w7"]
+atlas = ExtResource("2_tejfd")
+region = Rect2(0, 0, 719, 695)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ca1jy"]
+atlas = ExtResource("2_tejfd")
+region = Rect2(719, 0, 719, 695)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d3qrx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gf1w7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ca1jy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3qrx"]
+size = Vector2(533, 787)
+
+[node name="KingGhost" type="CharacterBody2D" unique_id=936193625]
+motion_mode = 1
+script = ExtResource("1_jb8vj")
+metadata/_custom_type_script = "uid://dl6rgfwdn3qp4"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2067095340]
+shape = SubResource("CapsuleShape2D_ca1jy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1501951126]
+sprite_frames = SubResource("SpriteFrames_d3qrx")
+autoplay = "default"
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1915130342 node_paths=PackedStringArray("marker")]
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("2_jb8vj")
+marker = NodePath("Marker2D")
+metadata/_custom_type_script = "uid://du8wfijr35r35"
+
+[node name="Marker2D" type="Marker2D" parent="InteractArea" unique_id=692844676]
+visible = false
+position = Vector2(0, -88)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=1602482043]
+position = Vector2(-0.5, 25.5)
+shape = SubResource("RectangleShape2D_d3qrx")
+debug_color = Color(0.6, 0.54509807, 0, 0.41960785)
+
+[node name="TalkBehavior" type="Node" parent="." unique_id=36259796 node_paths=PackedStringArray("interact_area")]
+unique_name_in_owner = true
+script = ExtResource("4_gf1w7")
+dialogue = null
+title = "start"
+interact_area = NodePath("../InteractArea")
+metadata/_custom_type_script = "uid://edcifob4jc4s"

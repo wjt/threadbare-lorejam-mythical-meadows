@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_rp1q0")
 title = "Mythical Meadows"
+authors = Array[String]([""])
 first_scene = "uid://bsptn2yxyv22"
 threads_to_collect = 1
 is_lore_quest = true

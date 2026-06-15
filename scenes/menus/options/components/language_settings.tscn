@@ -41,5 +41,5 @@ theme_type_variation = &"FlatButton"
 toggle_mode = true
 text = "Español"
 
-[connection signal="pressed" from="HBoxContainer/EnglishButton" to="HBoxContainer" method="_on_button_pressed" binds= ["en"]]
-[connection signal="pressed" from="HBoxContainer/SpanishButton" to="HBoxContainer" method="_on_button_pressed" binds= ["es"]]
+[connection signal="pressed" from="HBoxContainer/EnglishButton" to="HBoxContainer" method="_on_button_pressed" binds=["en"]]
+[connection signal="pressed" from="HBoxContainer/SpanishButton" to="HBoxContainer" method="_on_button_pressed" binds=["es"]]

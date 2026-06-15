@@ -1,0 +1,189 @@
+~ start
+
+Story Weaver: Por fin terminó...
+Story Weaver: El ruido se apagó.
+Story Weaver: Pero estas praderas siguen respirando.
+Story Weaver: Parece ser que siempre fueron ciertas las leyendas de estas tierras...
+Story Weaver: No vine a conquistarlas.
+Story Weaver: Vine a escuchar lo que quedaba de ellas.
+
+do animation_player.play(&"walk_on")
+do animation_player.animation_finished
+
+Ente: Hola, valiente aventurero... has llegado al borde del recuerdo.
+
+Story Weaver: ¿Eres quien ha estado llamando desde la niebla?
+
+Ente: No soy una voz. Soy lo que queda de este lugar.
+
+Story Weaver: Entonces las Praderas Míticas fueron reales.
+
+Ente: Más reales de lo que los mapas se atreven a mostrar.
+
+Ente: Aquí hubo caminos, hogares, canciones al caer la tarde.
+
+Ente: La hierba no cubría ruinas. Cubría plazas.
+
+Story Weaver: ¿Plazas?
+
+Ente: Donde ahora sopla el viento, antes se reunían muchas manos.
+
+Ente: Manos que sembraban. Manos que compartían. Manos que pedían.
+
+Story Weaver: ¿Qué pedían?
+
+Ente: Al principio, solo lo necesario.
+
+Ente: Un poco de lluvia cuando el cielo se cerraba.
+
+Ente: Calor cuando el frío entraba por las puertas.
+
+Ente: Luz para los niños que temían la noche.
+
+Story Weaver: ¿Y alguien respondía?
+
+Ente: Siempre hay algo en el mundo que responde cuando se le llama con respeto.
+
+Story Weaver: ¿Hablas de ti?
+
+Ente: Hablo de un huésped que llegó cuando la tierra todavía tenía nombre.
+
+Ente: No venía a gobernar. No venía a castigar.
+
+Ente: Venía con las manos llenas.
+
+Story Weaver: ¿Qué les dio?
+
+Ente: Pan donde ya no había cosecha.
+
+Ente: Agua donde la piedra se había vuelto seca.
+
+Ente: Alivio para los cuerpos cansados.
+
+Ente: Esperanza para un pueblo que olvidó cómo esperar.
+
+Story Weaver: Suena como una bendición.
+
+Ente: Lo fue.
+
+Ente: Las bendiciones suelen empezar así.
+
+Ente: Pequeñas. Luminosas. Agradecidas.
+
+Story Weaver: Pero algo cambió.
+
+Ente: Las puertas dejaron de cerrarse.
+
+Ente: Cada noche llegaban más cuencos vacíos.
+
+Ente: Cada mañana, más voces pedían antes de dar los buenos días.
+
+Story Weaver: ¿Dejaron de cultivar?
+
+Ente: Dejaron de mirar la tierra.
+
+Ente: Dejaron de escucharla.
+
+Ente: Si una raíz no crecía, pedían otra.
+
+Ente: Si el río bajaba débil, pedían más agua.
+
+Ente: Si alguien enfermaba, no preguntaban por qué. Solo extendían las manos.
+
+Story Weaver: Entonces el lugar empezó a agotarse.
+
+Ente: No de golpe.
+
+Ente: Las tragedias pacientes son las más difíciles de ver.
+
+Ente: Primero, las flores perdieron su olor.
+
+Ente: Luego, los árboles dieron frutos sin semilla.
+
+Ente: Después, la tierra aceptaba la lluvia... pero ya no la recordaba.
+
+Story Weaver: ¿Y el huésped?
+
+Ente: Seguía dando.
+
+Ente: Porque eso era lo único que sabía hacer.
+
+Ente: Y porque nadie le enseñó a decir basta.
+
+Story Weaver: ¿Los aldeanos lo sabían?
+
+Ente: Algunos sí.
+
+Ente: Bajaban la mirada cuando pedían.
+
+Ente: Otros decían que era un regalo infinito.
+
+Ente: Los más jóvenes nacieron creyendo que el mundo debía abrirse con solo desearlo.
+
+Story Weaver: ¿Qué pasó al final?
+
+Ente: Un día, las manos se extendieron... y no cayó nada sobre ellas.
+
+Ente: Ni pan.
+
+Ente: Ni lluvia.
+
+Ente: Ni luz.
+
+Ente: Solo silencio.
+
+Story Weaver: ¿El huésped desapareció?
+
+Ente: No.
+
+Ente: A veces desaparecer sería más fácil.
+
+Ente: Lo que da demasiado no siempre se va.
+
+Ente: A veces se queda, pero cambiado.
+
+Story Weaver: ¿Por eso las praderas están así?
+
+Ente: La tierra no murió.
+
+Ente: Solo dejó de confiar.
+
+Ente: Cerró sus caminos, escondió sus ríos y cubrió sus casas con hierba.
+
+Ente: No por odio.
+
+Ente: Por descanso.
+
+Story Weaver: Entonces no vine a salvarlas.
+
+Ente: No.
+
+Ente: Salvar no siempre significa reparar.
+
+Ente: A veces significa no volver a tomar.
+
+Story Weaver: ¿Y qué debo hacer ahora?
+
+Ente: Recordar.
+
+Ente: Recordar que aquí hubo un pueblo.
+
+Ente: Recordar que recibió demasiado.
+
+Ente: Recordar que incluso la magia se cansa cuando nadie la cuida.
+
+Story Weaver: Lo recordaré.
+
+Ente: Entonces las Praderas Míticas podrán dormir.
+
+Ente: Y cuando hables de ellas...
+
+Ente: No digas que fueron castigadas.
+
+Ente: Di que, por fin, se les permitió descansar.
+
+Story Weaver: Lo haré.
+
+
+
+=> END
