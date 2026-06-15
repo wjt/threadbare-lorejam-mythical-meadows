@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dgej5yuikkbtu"]
+
+[ext_resource type="Script" uid="uid://cnb8gbvliwpwh" path="res://scenes/quests/lore_quests/quest_004/piano_projectile.gd" id="1_tid5m"]
+[ext_resource type="Texture2D" uid="uid://cmnk6lm2h427o" path="res://scenes/quests/lore_quests/quest_004/proyectil_v1.png" id="2_kflw0"]
+[ext_resource type="Texture2D" uid="uid://d1y6mgelwlls7" path="res://scenes/quests/lore_quests/quest_004/Otros/circle _v1.png" id="3_kflw0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yio50"]
+radius = 16.0
+
+[node name="PianoProjectile" type="Area2D" unique_id=1322105021]
+script = ExtResource("1_tid5m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=832080892]
+texture = ExtResource("2_kflw0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1509644046]
+shape = SubResource("CircleShape2D_yio50")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1460309801]
+position = Vector2(-1.9073486e-06, 0)
+scale = Vector2(7.149999, 6.2500005)
+color = Color(1, 0.22745098, 1, 1)
+energy = 9.75
+texture = ExtResource("3_kflw0")
+texture_scale = 0.75
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

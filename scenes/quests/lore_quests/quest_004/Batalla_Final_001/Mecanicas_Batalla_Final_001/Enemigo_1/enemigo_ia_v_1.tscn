@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://cw7ly5l1fydgv"]
+
+[ext_resource type="Script" uid="uid://birxre55qgvoc" path="res://scenes/quests/lore_quests/quest_004/Camino_Mythical_Meadows_001/enemigo_ia_v3.gd" id="1_p06vv"]
+[ext_resource type="SpriteFrames" uid="uid://cun7y2iaouf66" path="res://scenes/quests/lore_quests/quest_004/Batalla_Final_001/Sprites_Batalla_Final_001/storyvoretorch_frames_blue_v1.tres" id="2_bvhv2"]
+[ext_resource type="AudioStream" uid="uid://y72lfaro4y2" path="res://scenes/quests/lore_quests/quest_004/Otros/789632__sadiquecat__pizzabox-hit.wav" id="3_7w5ae"]
+[ext_resource type="AudioStream" uid="uid://7kije8e27ljq" path="res://scenes/quests/lore_quests/quest_004/Otros/641899__colorscrimsontears__explode-rpg-1.wav" id="4_mprd7"]
+[ext_resource type="Texture2D" uid="uid://d1y6mgelwlls7" path="res://scenes/quests/lore_quests/quest_004/Otros/circle _v1.png" id="5_p06vv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jvuf3"]
+radius = 42.047592
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l24jr"]
+radius = 152.89539
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sny6h"]
+radius = 94.04786
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6bv6x"]
+radius = 46.09772
+
+[node name="EnemigoIA-PRUEBA" type="CharacterBody2D" unique_id=897868487 groups=["chaser_enemy"]]
+collision_layer = 257
+collision_mask = 528
+script = ExtResource("1_p06vv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=540006932]
+sprite_frames = ExtResource("2_bvhv2")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2127452005]
+shape = SubResource("CircleShape2D_jvuf3")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1507920673]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=612377345]
+shape = SubResource("CircleShape2D_l24jr")
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=1168700030]
+collision_layer = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=1629892815]
+scale = Vector2(0.6, 0.6)
+shape = SubResource("CircleShape2D_sny6h")
+
+[node name="AttackCooldown" type="Timer" parent="." unique_id=2038253186]
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1630982306]
+offset_left = -26.0
+offset_top = -84.0
+offset_right = 27.0
+offset_bottom = -57.0
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=361879724]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1298027030]
+shape = SubResource("CircleShape2D_6bv6x")
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="." unique_id=1197900544]
+stream = ExtResource("3_7w5ae")
+
+[node name="DefeatSound" type="AudioStreamPlayer2D" parent="." unique_id=741804086]
+stream = ExtResource("4_mprd7")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=409448102]
+position = Vector2(7.6293945e-06, 1)
+scale = Vector2(20.5, 19.6)
+color = Color(1, 0.627451, 0.08627451, 1)
+energy = 0.48
+texture = ExtResource("5_p06vv")
+texture_scale = 3.71
+
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]

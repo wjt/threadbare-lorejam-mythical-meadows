@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://i62lbr0egti"
+path="res://.godot/imported/Dialogo_castillo.dialogue-dd1473e687877306e6e12233d790cd69.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Npcs_Historia_001/Dialogo_castillo.dialogue"
+dest_files=["res://.godot/imported/Dialogo_castillo.dialogue-dd1473e687877306e6e12233d790cd69.tres"]
+
+[params]
+
+defaults=true

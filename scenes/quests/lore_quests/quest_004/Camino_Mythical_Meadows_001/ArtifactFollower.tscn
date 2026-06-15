@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://c2inik3m1bx10"]
+
+[ext_resource type="Texture2D" uid="uid://ct7m322at33ki" path="res://scenes/quests/lore_quests/quest_004/Otros/artefacto.png" id="1_bgkeo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vh3j"]
+atlas = ExtResource("1_bgkeo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orfjk"]
+atlas = ExtResource("1_bgkeo")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2jbt"]
+atlas = ExtResource("1_bgkeo")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0opg7"]
+atlas = ExtResource("1_bgkeo")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwja7"]
+atlas = ExtResource("1_bgkeo")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mifg7"]
+atlas = ExtResource("1_bgkeo")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tr8s1"]
+atlas = ExtResource("1_bgkeo")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gtow"]
+atlas = ExtResource("1_bgkeo")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ookpo"]
+atlas = ExtResource("1_bgkeo")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qnopa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vh3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orfjk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2jbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0opg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwja7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mifg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tr8s1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gtow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ookpo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ArtifactFollower" type="Node2D" unique_id=1271877509]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=911458845]
+sprite_frames = SubResource("SpriteFrames_qnopa")

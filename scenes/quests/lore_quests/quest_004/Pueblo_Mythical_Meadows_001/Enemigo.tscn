@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://drun6xroi0gr2"]
+
+[ext_resource type="Script" uid="uid://dewrv18ed2i2x" path="res://scenes/quests/lore_quests/quest_004/Pueblo_Mythical_Meadows_001/enemigo_v1_v1_001.gd" id="1_0tft2"]
+[ext_resource type="Texture2D" uid="uid://cmnk6lm2h427o" path="res://scenes/quests/lore_quests/quest_004/proyectil_v1.png" id="2_od32e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_od32e"]
+radius = 43.289722
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yu6ys"]
+radius = 66.94027
+
+[node name="Enemigo" type="CharacterBody2D" unique_id=1241828327]
+script = ExtResource("1_0tft2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1659423324]
+texture = ExtResource("2_od32e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1884403942]
+shape = SubResource("CircleShape2D_od32e")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=19897016]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2088288476]
+shape = SubResource("CircleShape2D_yu6ys")

@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://df2uyjdiqlxn3"]
+
+[ext_resource type="Script" uid="uid://c66ahg1ie1lfj" path="res://scenes/quests/lore_quests/quest_004/Castillo_001/capibararey.gd" id="1_57say"]
+[ext_resource type="Texture2D" uid="uid://dmpvoypspemas" path="res://scenes/quests/lore_quests/quest_004/Castillo_001/REYBARA.png" id="1_sj6mu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57say"]
+atlas = ExtResource("1_sj6mu")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwnsr"]
+atlas = ExtResource("1_sj6mu")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_750go"]
+atlas = ExtResource("1_sj6mu")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvcey"]
+atlas = ExtResource("1_sj6mu")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfbnu"]
+atlas = ExtResource("1_sj6mu")
+region = Rect2(0, 384, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nsafw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57say")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwnsr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_750go")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvcey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfbnu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_20qjj"]
+radius = 57.939625
+
+[node name="Capibararey" type="CharacterBody2D" unique_id=473703983]
+script = ExtResource("1_57say")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1432738019]
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_nsafw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1358859011]
+shape = SubResource("CircleShape2D_20qjj")

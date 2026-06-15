@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cv3sndpuaq2yo"]
+
+[ext_resource type="Script" uid="uid://c8gmw43oi8cna" path="res://scenes/quests/lore_quests/quest_004/Gatos/gatos_base_001.gd" id="1_lj3ax"]
+[ext_resource type="Texture2D" uid="uid://4kjbqqjmglv3" path="res://scenes/quests/lore_quests/quest_004/Otros/gatos/Gato_Gris_v1.png" id="2_p3q3f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_engws"]
+radius = 30.066593
+
+[node name="GatosBase001" type="CharacterBody2D" unique_id=955397892]
+z_index = -1
+script = ExtResource("1_lj3ax")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=918934600]
+texture = ExtResource("2_p3q3f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=214794352]
+shape = SubResource("CircleShape2D_engws")

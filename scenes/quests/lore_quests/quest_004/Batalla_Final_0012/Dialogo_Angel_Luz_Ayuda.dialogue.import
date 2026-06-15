@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bhfbb4juunrc6"
+path="res://.godot/imported/Dialogo_Angel_Luz_Ayuda.dialogue-f389e0cc7917f36b15be3e739f7b1b71.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Batalla_Final_0012/Dialogo_Angel_Luz_Ayuda.dialogue"
+dest_files=["res://.godot/imported/Dialogo_Angel_Luz_Ayuda.dialogue-f389e0cc7917f36b15be3e739f7b1b71.tres"]
+
+[params]
+
+defaults=true

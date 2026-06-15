@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://cpitqq327ck05"]
+
+[ext_resource type="Texture2D" uid="uid://ct7m322at33ki" path="res://scenes/quests/lore_quests/quest_004/Otros/artefacto.png" id="1_3pj72"]
+[ext_resource type="Script" uid="uid://dirva6jvh7r8g" path="res://scenes/quests/lore_quests/quest_004/Camino_Mythical_Meadows_001/artifact_pickup.gd" id="1_y5l6k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y5l6k"]
+radius = 16.03122
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upjbx"]
+atlas = ExtResource("1_3pj72")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djenv"]
+atlas = ExtResource("1_3pj72")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ic4u"]
+atlas = ExtResource("1_3pj72")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51y12"]
+atlas = ExtResource("1_3pj72")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nifcw"]
+atlas = ExtResource("1_3pj72")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpvap"]
+atlas = ExtResource("1_3pj72")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4upgr"]
+atlas = ExtResource("1_3pj72")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ff4qn"]
+atlas = ExtResource("1_3pj72")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0p0uo"]
+atlas = ExtResource("1_3pj72")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2haad"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upjbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djenv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ic4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51y12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nifcw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpvap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4upgr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ff4qn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0p0uo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ArtifactPickup" type="Area2D" unique_id=640897079]
+script = ExtResource("1_y5l6k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=667919059]
+shape = SubResource("CircleShape2D_y5l6k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=116068129]
+sprite_frames = SubResource("SpriteFrames_2haad")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

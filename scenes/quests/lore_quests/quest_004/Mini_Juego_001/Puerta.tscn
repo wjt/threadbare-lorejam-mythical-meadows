@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://r6elgvmy6m8g"]
+
+[ext_resource type="Script" uid="uid://cu1x7omcqhmrx" path="res://scenes/quests/lore_quests/quest_004/Mini_Juego_001/puerta.gd" id="1_afkv4"]
+[ext_resource type="Texture2D" uid="uid://is2ih4anm55m" path="res://scenes/quests/lore_quests/quest_004/Otros/Fire_v1_luna.png" id="1_sy0pd"]
+[ext_resource type="Texture2D" uid="uid://d1y6mgelwlls7" path="res://scenes/quests/lore_quests/quest_004/Otros/circle _v1.png" id="3_cknnd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_afkv4"]
+size = Vector2(84, 310)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cknnd"]
+atlas = ExtResource("1_sy0pd")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkfe8"]
+atlas = ExtResource("1_sy0pd")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ncde"]
+atlas = ExtResource("1_sy0pd")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4lfx"]
+atlas = ExtResource("1_sy0pd")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qb7e4"]
+atlas = ExtResource("1_sy0pd")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qf3pk"]
+atlas = ExtResource("1_sy0pd")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r602k"]
+atlas = ExtResource("1_sy0pd")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8usis"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cknnd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkfe8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ncde")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4lfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qb7e4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qf3pk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r602k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Puerta" type="Node2D" unique_id=1117048993]
+script = ExtResource("1_afkv4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=460833610]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=387599799]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_afkv4")
+
+[node name="Fuego1" type="AnimatedSprite2D" parent="." unique_id=649065262]
+position = Vector2(1, -60)
+sprite_frames = SubResource("SpriteFrames_8usis")
+frame = 2
+
+[node name="Fuego2" type="AnimatedSprite2D" parent="." unique_id=1659612836]
+position = Vector2(1, 65)
+sprite_frames = SubResource("SpriteFrames_8usis")
+frame = 4
+
+[node name="Fuego3" type="AnimatedSprite2D" parent="." unique_id=248857353]
+sprite_frames = SubResource("SpriteFrames_8usis")
+frame = 3
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1572098188]
+position = Vector2(-1, 19)
+scale = Vector2(1, 1.235786)
+color = Color(0.8744055, 0.5016802, 0.96620363, 1)
+energy = 3.85
+texture = ExtResource("3_cknnd")
+texture_scale = 14.95
+height = 311.0
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=1733235786]
+position = Vector2(3, -46.999992)
+scale = Vector2(1, 1.235786)
+color = Color(0.8744055, 0.5016802, 0.96620363, 1)
+energy = 3.85
+texture = ExtResource("3_cknnd")
+texture_scale = 14.95
+height = 311.0
+
+[node name="PointLight2D3" type="PointLight2D" parent="." unique_id=1166093466]
+position = Vector2(-2, 89.99999)
+scale = Vector2(1, 1.235786)
+color = Color(0.8744055, 0.5016802, 0.96620363, 1)
+energy = 3.85
+texture = ExtResource("3_cknnd")
+texture_scale = 14.95
+height = 311.0

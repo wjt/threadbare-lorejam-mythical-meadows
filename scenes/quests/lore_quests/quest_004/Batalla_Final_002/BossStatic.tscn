@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://udshvs33ggch"]
+
+[ext_resource type="Script" uid="uid://0i4h0le2724x" path="res://scenes/quests/lore_quests/quest_004/Batalla_Final_002/boss_static_Luna_v1.gd" id="1_31i1u"]
+[ext_resource type="Texture2D" uid="uid://4ut8511vdwub" path="res://scenes/quests/lore_quests/quest_004/Batalla_Final_002/angel_beta1.png" id="2_el0k5"]
+[ext_resource type="AudioStream" uid="uid://cc7bvj2q1q4gx" path="res://scenes/quests/lore_quests/quest_004/Mini_Juego_001/lluvia/321654__inspectorj__thunder-very-close-no-rain-c.wav" id="3_el0k5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vaflc"]
+atlas = ExtResource("2_el0k5")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrc0x"]
+atlas = ExtResource("2_el0k5")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2aoh"]
+atlas = ExtResource("2_el0k5")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dsf5w"]
+atlas = ExtResource("2_el0k5")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5wtd"]
+atlas = ExtResource("2_el0k5")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7lub"]
+atlas = ExtResource("2_el0k5")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oq8vb"]
+atlas = ExtResource("2_el0k5")
+region = Rect2(384, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f376a"]
+atlas = ExtResource("2_el0k5")
+region = Rect2(576, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eyhem"]
+atlas = ExtResource("2_el0k5")
+region = Rect2(0, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy4lc"]
+atlas = ExtResource("2_el0k5")
+region = Rect2(192, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ytc1"]
+atlas = ExtResource("2_el0k5")
+region = Rect2(384, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5s7p"]
+atlas = ExtResource("2_el0k5")
+region = Rect2(576, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_no78h"]
+atlas = ExtResource("2_el0k5")
+region = Rect2(0, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iv5bo"]
+atlas = ExtResource("2_el0k5")
+region = Rect2(192, 576, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hf3mm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vaflc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrc0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2aoh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dsf5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5wtd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7lub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oq8vb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f376a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eyhem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oy4lc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ytc1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5s7p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no78h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iv5bo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2gcu3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lnib1"]
+
+[node name="BossStatic" type="CharacterBody2D" unique_id=501971998]
+collision_layer = 257
+collision_mask = 513
+script = ExtResource("1_31i1u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=410891755]
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_hf3mm")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1112022140]
+shape = SubResource("CircleShape2D_2gcu3")
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=421564318]
+offset_left = -264.0
+offset_top = -259.0
+offset_right = 266.0
+offset_bottom = -232.0
+max_value = 20.0
+value = 20.0
+show_percentage = false
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=1051185255]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=2069931023]
+shape = SubResource("CircleShape2D_lnib1")
+
+[node name="ThunderSound" type="AudioStreamPlayer2D" parent="." unique_id=522572669]
+stream = ExtResource("3_el0k5")

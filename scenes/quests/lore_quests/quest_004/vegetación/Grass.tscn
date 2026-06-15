@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://rvtd1wlkfsy2"]
+
+[ext_resource type="Script" uid="uid://c8nrk8rv8v4b3" path="res://scenes/quests/lore_quests/quest_004/vegetación/grass.gd" id="1_nq61r"]
+[ext_resource type="Texture2D" uid="uid://bbx4n74b817c2" path="res://scenes/quests/lore_quests/quest_004/vegetación/cesped1.2.png" id="2_1rjno"]
+
+[node name="Grass" type="Node2D" unique_id=1102586476]
+z_index = -1
+script = ExtResource("1_nq61r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=647737637]
+texture = ExtResource("2_1rjno")

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cji8qlfsmnk5v"]
+
+[ext_resource type="Script" uid="uid://bgd8fb6wc4gjq" path="res://scenes/quests/lore_quests/quest_004/Angeles/angel_luna_deco.gd" id="1_7bm6s"]
+[ext_resource type="Texture2D" uid="uid://yas7baej8t12" path="res://scenes/quests/lore_quests/quest_004/Angeles/Angel_Luz.png" id="2_7bm6s"]
+[ext_resource type="Texture2D" uid="uid://d1y6mgelwlls7" path="res://scenes/quests/lore_quests/quest_004/Otros/circle _v1.png" id="3_tdu6g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sv1ed"]
+radius = 49.010204
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pu52g"]
+radius = 28.284271
+
+[node name="Angel_Luna_Deco" type="Node2D" unique_id=474316546]
+z_index = -1
+script = ExtResource("1_7bm6s")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=336155288]
+texture = ExtResource("2_7bm6s")
+
+[node name="InteractLabel" type="Label" parent="." unique_id=408872548]
+visible = false
+offset_left = -36.0
+offset_top = -54.0
+offset_right = 41.0
+offset_bottom = -31.0
+text = "[ESPACIO]"
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=431239016]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=778363748]
+shape = SubResource("CircleShape2D_sv1ed")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1116914236]
+color = Color(1, 0.03137255, 1, 1)
+energy = 8.57
+texture = ExtResource("3_tdu6g")
+texture_scale = 15.1
+height = 40.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=32634716]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1521551624]
+shape = SubResource("CircleShape2D_pu52g")

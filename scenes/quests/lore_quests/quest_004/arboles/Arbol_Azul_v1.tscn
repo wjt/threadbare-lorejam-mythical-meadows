@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cp4rw1qxbu5wf"]
+
+[ext_resource type="Script" uid="uid://rkof64gods7x" path="res://scenes/quests/lore_quests/quest_004/arboles/arbol_azul_v_1.gd" id="1_28hrk"]
+[ext_resource type="Texture2D" uid="uid://s508bcwpdfsw" path="res://scenes/quests/lore_quests/quest_004/arboles/Tree_Patches_Blue_arbol_azul_v1.png" id="2_jcvia"]
+[ext_resource type="Script" uid="uid://bjqlqg6un0h3v" path="res://scenes/quests/lore_quests/quest_004/arboles/arbol_azul_v_1_animacion.gd" id="3_jcvia"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcvrb"]
+atlas = ExtResource("2_jcvia")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27654"]
+atlas = ExtResource("2_jcvia")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ym642"]
+atlas = ExtResource("2_jcvia")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fotr"]
+atlas = ExtResource("2_jcvia")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mdmf"]
+atlas = ExtResource("2_jcvia")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b07bq"]
+atlas = ExtResource("2_jcvia")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oam05"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jcvrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27654")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym642")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fotr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mdmf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b07bq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jcvia"]
+radius = 20.615528
+
+[node name="ArbolAzulV1" type="Node2D" unique_id=359945128]
+script = ExtResource("1_28hrk")
+
+[node name="ArbolAzulV1_Animacion" type="AnimatedSprite2D" parent="." unique_id=715808943]
+position = Vector2(1, -81)
+sprite_frames = SubResource("SpriteFrames_oam05")
+frame_progress = 0.17272183
+script = ExtResource("3_jcvia")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=881001141]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1357472103]
+shape = SubResource("CircleShape2D_jcvia")

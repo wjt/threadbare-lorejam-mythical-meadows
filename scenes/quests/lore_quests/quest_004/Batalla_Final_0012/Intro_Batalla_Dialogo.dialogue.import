@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bblj0nx1g4a63"
+path="res://.godot/imported/Intro_Batalla_Dialogo.dialogue-3f31938aef060101a62693d5e34f9daf.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Batalla_Final_0012/Intro_Batalla_Dialogo.dialogue"
+dest_files=["res://.godot/imported/Intro_Batalla_Dialogo.dialogue-3f31938aef060101a62693d5e34f9daf.tres"]
+
+[params]
+
+defaults=true

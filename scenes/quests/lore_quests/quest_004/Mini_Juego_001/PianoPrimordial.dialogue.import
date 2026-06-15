@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cmyfy035gyg22"
+path="res://.godot/imported/PianoPrimordial.dialogue-24c99168e9d6df266e0d5e88cd7ed30c.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Mini_Juego_001/PianoPrimordial.dialogue"
+dest_files=["res://.godot/imported/PianoPrimordial.dialogue-24c99168e9d6df266e0d5e88cd7ed30c.tres"]
+
+[params]
+
+defaults=true

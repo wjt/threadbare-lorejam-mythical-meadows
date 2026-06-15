@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://6mjc7py2cgw5"]
+
+[ext_resource type="Texture2D" uid="uid://d3cxumdod8tus" path="res://scenes/quests/lore_quests/quest_004/Otros/estatuas_v1/estatua_capibara_v1.png" id="1_l6lol"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xatkn"]
+size = Vector2(119.5, 206.75)
+
+[node name="EstatuaCapibaraV1001" type="Node2D" unique_id=1274653431]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1476066678]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=200715895]
+position = Vector2(-1, -2.375)
+shape = SubResource("RectangleShape2D_xatkn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=378914495]
+position = Vector2(0, -1)
+texture = ExtResource("1_l6lol")

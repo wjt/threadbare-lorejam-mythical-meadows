@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://nivit6we14mn"]
+
+[ext_resource type="Script" uid="uid://rkof64gods7x" path="res://scenes/quests/lore_quests/quest_004/arboles/arbol_azul_v_1.gd" id="1_3rkgy"]
+[ext_resource type="Texture2D" uid="uid://dtu0anu1qp5xr" path="res://scenes/quests/lore_quests/quest_004/arboles/Tree_Patches_Red_v1.png" id="2_3rkgy"]
+[ext_resource type="Script" uid="uid://bjqlqg6un0h3v" path="res://scenes/quests/lore_quests/quest_004/arboles/arbol_azul_v_1_animacion.gd" id="3_h21sj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4iyp5"]
+atlas = ExtResource("2_3rkgy")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h21sj"]
+atlas = ExtResource("2_3rkgy")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7ajn"]
+atlas = ExtResource("2_3rkgy")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7wf0"]
+atlas = ExtResource("2_3rkgy")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2wl2"]
+atlas = ExtResource("2_3rkgy")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxtpc"]
+atlas = ExtResource("2_3rkgy")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oam05"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4iyp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h21sj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7ajn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7wf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2wl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxtpc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_887nk"]
+radius = 67.0
+height = 184.0
+
+[node name="ArbolRojoV1" type="Node2D" unique_id=359945128]
+z_index = -1
+script = ExtResource("1_3rkgy")
+
+[node name="ArbolAzulV1_Animacion" type="AnimatedSprite2D" parent="." unique_id=715808943]
+position = Vector2(1, -81)
+sprite_frames = SubResource("SpriteFrames_oam05")
+frame_progress = 0.66302824
+script = ExtResource("3_h21sj")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=881001141]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1357472103]
+position = Vector2(1, -81)
+shape = SubResource("CapsuleShape2D_887nk")

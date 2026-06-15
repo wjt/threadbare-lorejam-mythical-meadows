@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://wxnhdypqn1g8"]
+
+[ext_resource type="Texture2D" uid="uid://fok05g8nrv2a" path="res://scenes/quests/lore_quests/quest_004/Otros/estatuas_v1/Estatua_Angel_Luna.png" id="1_k12qi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xatkn"]
+size = Vector2(119.5, 206.75)
+
+[node name="EstatuaLuna" type="Node2D" unique_id=1274653431]
+z_index = -3
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1476066678]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=200715895]
+position = Vector2(-1, -2.375)
+shape = SubResource("RectangleShape2D_xatkn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=378914495]
+position = Vector2(0, -1)
+texture = ExtResource("1_k12qi")

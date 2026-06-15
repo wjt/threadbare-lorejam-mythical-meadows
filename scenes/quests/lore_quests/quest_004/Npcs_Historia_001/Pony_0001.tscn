@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://e67jjavwrrle"]
+
+[ext_resource type="Script" uid="uid://cfrvkacecx056" path="res://scenes/quests/lore_quests/quest_004/Npcs_Historia_001/pony_0001.gd" id="1_ep0j3"]
+[ext_resource type="Texture2D" uid="uid://dm5rlixskek4t" path="res://scenes/quests/lore_quests/quest_004/Npcs_Historia_001/Pony_00011.png" id="1_gdiis"]
+[ext_resource type="Resource" uid="uid://i62lbr0egti" path="res://scenes/quests/lore_quests/quest_004/Npcs_Historia_001/Dialogo_castillo.dialogue" id="2_sn7os"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ep0j3"]
+atlas = ExtResource("1_gdiis")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sn7os"]
+atlas = ExtResource("1_gdiis")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1633d"]
+atlas = ExtResource("1_gdiis")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvue4"]
+atlas = ExtResource("1_gdiis")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n58ux"]
+atlas = ExtResource("1_gdiis")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kpdo"]
+atlas = ExtResource("1_gdiis")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31x5f"]
+atlas = ExtResource("1_gdiis")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8mmr"]
+atlas = ExtResource("1_gdiis")
+region = Rect2(384, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxs2l"]
+atlas = ExtResource("1_gdiis")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8x0y4"]
+atlas = ExtResource("1_gdiis")
+region = Rect2(128, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lsev"]
+atlas = ExtResource("1_gdiis")
+region = Rect2(256, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkflq"]
+atlas = ExtResource("1_gdiis")
+region = Rect2(384, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_088hw"]
+atlas = ExtResource("1_gdiis")
+region = Rect2(0, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yipyq"]
+atlas = ExtResource("1_gdiis")
+region = Rect2(128, 384, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1o77t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ep0j3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sn7os")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1633d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvue4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n58ux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kpdo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31x5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8mmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxs2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8x0y4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lsev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkflq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_088hw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yipyq")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jhxkg"]
+radius = 83.294655
+
+[node name="Pony0001" type="Node2D" unique_id=1512429886]
+script = ExtResource("1_ep0j3")
+dialogue = ExtResource("2_sn7os")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=474630168]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_1o77t")
+animation = &"Idle"
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1932965855]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=1888419313]
+shape = SubResource("CircleShape2D_jhxkg")
+
+[node name="InteractLabel" type="Label" parent="." unique_id=271836368]
+offset_left = -66.0
+offset_top = -90.0
+offset_right = 72.0
+offset_bottom = -67.0
+text = "Presiona ESPACIO"

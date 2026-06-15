@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c5xtd22m5xrbl"
+path="res://.godot/imported/Dialogo_Derrota_Angel_Luna.dialogue-ee6af6cbedddaf9261439311c0e488b3.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Batalla_Final_002/Dialogo_Derrota_Angel_Luna.dialogue"
+dest_files=["res://.godot/imported/Dialogo_Derrota_Angel_Luna.dialogue-ee6af6cbedddaf9261439311c0e488b3.tres"]
+
+[params]
+
+defaults=true

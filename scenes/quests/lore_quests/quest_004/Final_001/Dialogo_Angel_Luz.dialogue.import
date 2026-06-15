@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dgqtkp5qt4pp6"
+path="res://.godot/imported/Dialogo_Angel_Luz.dialogue-c404e5f216e1d7d8db5fe819dd20deee.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Final_001/Dialogo_Angel_Luz.dialogue"
+dest_files=["res://.godot/imported/Dialogo_Angel_Luz.dialogue-c404e5f216e1d7d8db5fe819dd20deee.tres"]
+
+[params]
+
+defaults=true

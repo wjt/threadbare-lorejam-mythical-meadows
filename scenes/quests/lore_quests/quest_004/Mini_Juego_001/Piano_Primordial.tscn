@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://iiapfyoqwjgm"]
+
+[ext_resource type="Script" uid="uid://bqnutg1407sst" path="res://scenes/quests/lore_quests/quest_004/Mini_Juego_001/piano_primordial.gd" id="1_gww3o"]
+[ext_resource type="AudioStream" uid="uid://dsyf04pxeetn4" path="res://scenes/quests/lore_quests/quest_004/Otros/musicca-piano-3s.mp3" id="2_v1j5h"]
+[ext_resource type="Texture2D" uid="uid://kufyxg017xw2" path="res://scenes/quests/lore_quests/quest_004/Batalla_Final_002/Piano_v1_animated.png" id="3_uw5a4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7yif8"]
+radius = 52.03845
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8s02"]
+atlas = ExtResource("3_uw5a4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggutx"]
+atlas = ExtResource("3_uw5a4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m48te"]
+atlas = ExtResource("3_uw5a4")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aybs4"]
+atlas = ExtResource("3_uw5a4")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqg3e"]
+atlas = ExtResource("3_uw5a4")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m5wme"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8s02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggutx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m48te")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aybs4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqg3e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="PianoItem" type="Area2D" unique_id=796619672]
+script = ExtResource("1_gww3o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1026119452]
+shape = SubResource("CircleShape2D_7yif8")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=537845228]
+stream = ExtResource("2_v1j5h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1922337333]
+sprite_frames = SubResource("SpriteFrames_m5wme")

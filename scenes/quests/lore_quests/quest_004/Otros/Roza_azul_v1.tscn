@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cdd1h1y3cswkl"]
+
+[ext_resource type="Script" uid="uid://b0qrkrl6mkqsb" path="res://scenes/quests/lore_quests/quest_004/Otros/roza_azul_v_1.gd" id="1_8s4tq"]
+[ext_resource type="Texture2D" uid="uid://ck25hwue1pwej" path="res://scenes/quests/lore_quests/quest_004/Otros/rosaazul1.png" id="1_clc7r"]
+[ext_resource type="Texture2D" uid="uid://d1y6mgelwlls7" path="res://scenes/quests/lore_quests/quest_004/Otros/circle _v1.png" id="2_8s4tq"]
+
+[node name="RozaAzulV1" type="Node2D" unique_id=51016487]
+script = ExtResource("1_8s4tq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1960472655]
+texture = ExtResource("1_clc7r")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1593066070]
+position = Vector2(1, -1)
+scale = Vector2(12.150001, 10.225)
+color = Color(0, 0.03137255, 1, 1)
+energy = 2.41
+texture = ExtResource("2_8s4tq")
+texture_scale = 3.72

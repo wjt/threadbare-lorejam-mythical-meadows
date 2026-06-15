@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bsdoi3pr6s8qr"
+path="res://.godot/imported/Dialogo_Angel_Luna.dialogue-12a2a86c0671221059e56d79e69e46ac.tres"
+
+[deps]
+
+source_file="res://scenes/quests/lore_quests/quest_004/Castillo_001_Final/Dialogo_Angel_Luna.dialogue"
+dest_files=["res://.godot/imported/Dialogo_Angel_Luna.dialogue-12a2a86c0671221059e56d79e69e46ac.tres"]
+
+[params]
+
+defaults=true

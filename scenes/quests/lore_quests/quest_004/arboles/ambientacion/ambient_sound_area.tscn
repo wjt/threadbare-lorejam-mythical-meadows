@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bxmkmtuhnqj3l"]
+
+[ext_resource type="Script" uid="uid://dradfcvqqvhat" path="res://scenes/quests/lore_quests/quest_004/arboles/ambientacion/area_sonido_bosque_2d.gd" id="1_3cikv"]
+[ext_resource type="AudioStream" uid="uid://vgr28w2aalr1" path="res://scenes/quests/lore_quests/quest_004/arboles/ambientacion/ForestAmbient.ogg" id="1_86bkl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3cikv"]
+size = Vector2(3244.625, 604.5)
+
+[node name="AmbientSoundArea" type="Area2D" unique_id=317976820]
+script = ExtResource("1_3cikv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2095309197]
+position = Vector2(852.6875, 1)
+shape = SubResource("RectangleShape2D_3cikv")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=857264303]
+stream = ExtResource("1_86bkl")

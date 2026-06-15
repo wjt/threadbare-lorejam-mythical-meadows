@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://iej0rltgfnha"]
+
+[ext_resource type="Script" uid="uid://dppkcx0ufsbp1" path="res://scenes/quests/lore_quests/quest_004/change_level_zone.gd" id="1_kfm7n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qig5b"]
+size = Vector2(91, 62)
+
+[node name="ChangeLevelZone" type="Area2D" unique_id=1100916874]
+script = ExtResource("1_kfm7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2001137254]
+shape = SubResource("RectangleShape2D_qig5b")

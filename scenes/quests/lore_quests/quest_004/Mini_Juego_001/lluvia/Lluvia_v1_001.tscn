@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://t7gg6nu6ta4x"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3c5fh"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_01g06"]
+_limits = [0.0, 0.3, 0.0, 1.0]
+_data = [Vector2(0.008823529, 0.011699647), 0.0, 0.0, 0, 0, Vector2(0.27941176, 0.29545987), 0.0, 0.0, 0, 0, Vector2(0.49705884, 0.3), 0.0, 0.0, 0, 0, Vector2(0.66470593, 0.3), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_51267"]
+curve = SubResource("Curve_01g06")
+
+[sub_resource type="Gradient" id="Gradient_gae7u"]
+colors = PackedColorArray(1, 1, 1, 0.078431375, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_y4bey"]
+gradient = SubResource("Gradient_gae7u")
+
+[sub_resource type="Curve" id="Curve_pf2mi"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_53a8q"]
+_limits = [0.0, 30.0, 0.0, 1.0]
+_data = [Vector2(0, 15.471479), 0.0, 0.0, 0, 0, Vector2(0.05588235, 22.508732), 0.0, 0.0, 0, 0, Vector2(0.11470588, 27.956928), 0.0, 0.0, 0, 0, Vector2(0.25294116, 30), 0.0, 0.0, 0, 0, Vector2(0.9882353, 30), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="Curve" id="Curve_tcq81"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_jn3sw"]
+curve_x = SubResource("Curve_pf2mi")
+curve_y = SubResource("Curve_53a8q")
+curve_z = SubResource("Curve_tcq81")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jv0da"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(650, 1, 1)
+gravity = Vector3(0, 4000, 0)
+scale_min = 0.19999999
+scale_max = 2.0
+scale_over_velocity_curve = SubResource("CurveXYZTexture_jn3sw")
+color_initial_ramp = SubResource("GradientTexture1D_y4bey")
+alpha_curve = SubResource("CurveTexture_51267")
+
+[node name="LluviaV1001" type="Node2D" unique_id=2030178965]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=574016194]
+material = SubResource("CanvasItemMaterial_3c5fh")
+position = Vector2(1, 0)
+amount = 1000
+preprocess = 0.5
+visibility_rect = Rect2(-700, 0, 1400, 800)
+process_material = SubResource("ParticleProcessMaterial_jv0da")

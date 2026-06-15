@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://bc28rswruicks"]
+
+[ext_resource type="Texture2D" uid="uid://kufyxg017xw2" path="res://scenes/quests/lore_quests/quest_004/Batalla_Final_002/Piano_v1_animated.png" id="1_bwydw"]
+[ext_resource type="Script" uid="uid://dm2hjdcw4jkti" path="res://scenes/quests/lore_quests/quest_004/piano_ability.gd" id="1_hte7q"]
+[ext_resource type="PackedScene" uid="uid://dgej5yuikkbtu" path="res://scenes/quests/lore_quests/quest_004/piano_projectile.tscn" id="2_5p3ox"]
+[ext_resource type="Texture2D" uid="uid://d1y6mgelwlls7" path="res://scenes/quests/lore_quests/quest_004/Otros/circle _v1.png" id="4_24ykx"]
+[ext_resource type="AudioStream" uid="uid://dsyf04pxeetn4" path="res://scenes/quests/lore_quests/quest_004/Otros/musicca-piano-3s.mp3" id="5_dhali"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hte7q"]
+atlas = ExtResource("1_bwydw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5p3ox"]
+atlas = ExtResource("1_bwydw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24ykx"]
+atlas = ExtResource("1_bwydw")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhali"]
+atlas = ExtResource("1_bwydw")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhg4n"]
+atlas = ExtResource("1_bwydw")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ahlqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hte7q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5p3ox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24ykx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhali")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhg4n")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hte7q"]
+radius = 326.4598
+
+[node name="PianoAbility" type="Node2D" unique_id=118761820]
+script = ExtResource("1_hte7q")
+projectile_scene = ExtResource("2_5p3ox")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1387064861]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ahlqc")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.6657932
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=167677413]
+
+[node name="Timer" type="Timer" parent="." unique_id=1329323945]
+wait_time = 10.0
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=582460325]
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1048700492]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1323412684]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_hte7q")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=831530938]
+position = Vector2(1.9073486e-06, 1.9073486e-06)
+scale = Vector2(12, 9.299999)
+color = Color(0.9596421, 0.3671819, 0.95605475, 1)
+energy = 9.45
+texture = ExtResource("4_24ykx")
+texture_scale = 1.49
+height = 20.0
+
+[node name="ActivateSound" type="AudioStreamPlayer2D" parent="." unique_id=1431547175]
+stream = ExtResource("5_dhali")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

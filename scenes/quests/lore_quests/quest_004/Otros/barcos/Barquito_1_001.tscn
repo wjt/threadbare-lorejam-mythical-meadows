@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d2k672nhdxbgf"]
+
+[ext_resource type="Script" uid="uid://cq3dj7wju4wk5" path="res://scenes/quests/lore_quests/quest_004/Otros/barcos/barquito_1_001.gd" id="1_jfpg7"]
+[ext_resource type="Texture2D" uid="uid://x6tokda867m2" path="res://scenes/quests/lore_quests/quest_004/Otros/barcos/barquito_1.png" id="2_5m5xq"]
+
+[node name="Barquito1001" type="Node2D" unique_id=1946938477]
+script = ExtResource("1_jfpg7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1692390756]
+texture = ExtResource("2_5m5xq")

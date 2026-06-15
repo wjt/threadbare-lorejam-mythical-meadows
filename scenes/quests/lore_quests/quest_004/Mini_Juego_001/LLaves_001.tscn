@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cts2cnb3iqaqq"]
+
+[ext_resource type="Script" uid="uid://cijb30w5j2vks" path="res://scenes/quests/lore_quests/quest_004/Mini_Juego_001/l_laves_001.gd" id="1_if6a3"]
+[ext_resource type="Texture2D" uid="uid://b6htgtirm85a" path="res://scenes/quests/lore_quests/quest_004/Mini_Juego_001/llaves_moradas.png" id="2_j5u83"]
+[ext_resource type="Texture2D" uid="uid://d1y6mgelwlls7" path="res://scenes/quests/lore_quests/quest_004/Otros/circle _v1.png" id="3_j5u83"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_750ep"]
+radius = 19.0
+
+[node name="LLaves001" type="Area2D" unique_id=1222132248]
+script = ExtResource("1_if6a3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1554080062]
+texture = ExtResource("2_j5u83")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=52318676]
+shape = SubResource("CircleShape2D_750ep")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=105266395]
+color = Color(0.8744055, 0.5016802, 0.96620363, 1)
+energy = 3.85
+texture = ExtResource("3_j5u83")
+texture_scale = 14.95
+height = 311.0
