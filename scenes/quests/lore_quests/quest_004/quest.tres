@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_rp1q0")
 title = "Mythical Meadows"
-first_scene = "uid://bsptn2yxyv22"
+first_scene = "uid://tly8rchbm7gd"
 threads_to_collect = 1
 is_lore_quest = true
 metadata/_custom_type_script = "uid://dts1hwdy3phin"
