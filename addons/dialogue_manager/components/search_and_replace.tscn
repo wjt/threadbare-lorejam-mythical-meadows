@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cijsmjkq21cdq" path="res://addons/dialogue_manager/components/search_and_replace.gd" id="1_8oj1f"]
 
-[node name="SearchAndReplace" type="VBoxContainer"]
+[node name="SearchAndReplace" type="VBoxContainer" unique_id=1351625213]
 visible = false
 anchors_preset = 10
 anchor_right = 1.0
@@ -11,62 +11,62 @@ grow_horizontal = 2
 size_flags_horizontal = 3
 script = ExtResource("1_8oj1f")
 
-[node name="Search" type="HBoxContainer" parent="."]
+[node name="Search" type="HBoxContainer" parent="." unique_id=1531496059]
 layout_mode = 2
 
-[node name="Input" type="LineEdit" parent="Search"]
+[node name="Input" type="LineEdit" parent="Search" unique_id=1034576723]
 layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "Text to search for"
 metadata/_edit_use_custom_anchors = true
 
-[node name="MatchCaseCheckBox" type="CheckBox" parent="Search"]
+[node name="MatchCaseCheckBox" type="CheckBox" parent="Search" unique_id=525512710]
 layout_mode = 2
 text = "Match case"
 
-[node name="VSeparator" type="VSeparator" parent="Search"]
+[node name="VSeparator" type="VSeparator" parent="Search" unique_id=958316081]
 layout_mode = 2
 
-[node name="PreviousButton" type="Button" parent="Search"]
+[node name="PreviousButton" type="Button" parent="Search" unique_id=1171414008]
 layout_mode = 2
 tooltip_text = "Previous"
 flat = true
 
-[node name="ResultLabel" type="Label" parent="Search"]
+[node name="ResultLabel" type="Label" parent="Search" unique_id=403783172]
 layout_mode = 2
 text = "0 of 0"
 
-[node name="NextButton" type="Button" parent="Search"]
+[node name="NextButton" type="Button" parent="Search" unique_id=1253668146]
 layout_mode = 2
 tooltip_text = "Next"
 flat = true
 
-[node name="VSeparator2" type="VSeparator" parent="Search"]
+[node name="VSeparator2" type="VSeparator" parent="Search" unique_id=807502575]
 layout_mode = 2
 
-[node name="ReplaceCheckButton" type="CheckButton" parent="Search"]
+[node name="ReplaceCheckButton" type="CheckButton" parent="Search" unique_id=929828167]
 layout_mode = 2
 text = "Replace"
 
-[node name="Replace" type="HBoxContainer" parent="."]
+[node name="Replace" type="HBoxContainer" parent="." unique_id=1933576527]
 visible = false
 layout_mode = 2
 
-[node name="ReplaceLabel" type="Label" parent="Replace"]
+[node name="ReplaceLabel" type="Label" parent="Replace" unique_id=384717613]
 layout_mode = 2
 text = "Replace with:"
 
-[node name="Input" type="LineEdit" parent="Replace"]
+[node name="Input" type="LineEdit" parent="Replace" unique_id=2002565665]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ReplaceButton" type="Button" parent="Replace"]
+[node name="ReplaceButton" type="Button" parent="Replace" unique_id=727703365]
 layout_mode = 2
 disabled = true
 text = "Replace"
 flat = true
 
-[node name="ReplaceAllButton" type="Button" parent="Replace"]
+[node name="ReplaceAllButton" type="Button" parent="Replace" unique_id=1047189190]
 layout_mode = 2
 disabled = true
 text = "Replace all"

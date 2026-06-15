@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://c728g77vt54pq"]
+
+[ext_resource type="Script" path="res://scenes/quests/lore_quests/quest_004/01-El_umbral_del_sueño/intro_storybook.gd" id="1_i"]
+[ext_resource type="Texture2D" path="res://scenes/menus/storybook/Textures/book_turn_right.png" id="2_b"]
+[ext_resource type="Theme" uid="uid://cvitou84ni7qe" path="res://scenes/ui_elements/components/theme.tres" id="3_theme"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b"]
+atlas = ExtResource("2_b")
+region = Rect2(0, 0, 999, 720)
+
+[node name="IntroStorybook" type="CanvasLayer" unique_id=1940806526]
+process_mode = 3
+layer = 60
+script = ExtResource("1_i")
+pages = PackedStringArray("[center][i]The Last Petal[/i][/center]\n\nLong ago, every dream was woven on a single Loom, and at its heart grew a flower — the Stellaria — whose petals held all we remember, imagine and feel.\n\nThen the Void crept in, thread by thread, and the petals fell. Only the last petal still clings.", "[center][i]The Weaver Wakes[/i][/center]\n\nYou are the Storyweaver, called from sleep to gather what was lost.\n\nThree threads remain — Memory, Imagination and Spirit. Hum to the old stones and they will rise to carry you; pull each thread back toward the Loom.", "[center][i]Before the Petal Falls[/i][/center]\n\nThrough golden meadows, a keeper's garden, a forgetting forest and a fleeing night...\n\nFind the three threads. Bring them to Noria's Loom. Make the Stellaria bloom — before the last petal lets go.")
+
+[node name="Black" type="ColorRect" parent="." unique_id=175813369]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Book" type="TextureRect" parent="." unique_id=1203097073]
+theme = ExtResource("3_theme")
+unique_name_in_owner = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -260.0
+offset_right = 360.0
+offset_bottom = 260.0
+pivot_offset = Vector2(360, 260)
+mouse_filter = 2
+texture = SubResource("AtlasTexture_b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PageText" type="RichTextLabel" parent="Book" unique_id=968653695]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 150.0
+offset_top = 130.0
+offset_right = -150.0
+offset_bottom = -140.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+theme_override_colors/default_color = Color(0.2, 0.16, 0.12, 1)
+theme_override_font_sizes/normal_font_size = 28
+
+[node name="Hint" type="Label" parent="." unique_id=1753794512]
+theme = ExtResource("3_theme")
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -40.0
+offset_right = 180.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.85, 0.85, 0.9, 0.85)
+text = "▶  clic / Enter"
+horizontal_alignment = 1
